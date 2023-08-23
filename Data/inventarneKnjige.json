@@ -1,0 +1,42 @@
+﻿[
+  {
+    "nazivInventarneKnjige": "IK1",
+    "primerak": {
+      "inventarniBroj": "1771",
+      "nabavnaCena": "713",
+      "dostupnost": "SLOBODNA",
+      "datumRaspolaganja": "2023-07-15",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-3239-3",
+        "udk": "12345",
+        "jezik": "srpski",
+        "godinaIzdanja": "2019",
+        "format": "13.5x20.5 cm",
+        "vrstaKoricenja": "TVRDO",
+        "citanost": "57",
+        "knjiga": {
+          "nazivKnjige": "Zlocin i kazna",
+          "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+          "autor": {
+            "ime": "Fjodor",
+            "prezime": "Dostojevski",
+            "drzava": "Rusija"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": "75"
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    },
+    "ogranak": {
+      "id": "1",
+      "naziv": "ogranak1",
+      "brTelefona": "1234567890"
+    }
+  }
+]
