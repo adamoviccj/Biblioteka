@@ -1,0 +1,27 @@
+[
+  {
+    "naziv ogranka": "ogranakA",
+    "email": "obicnibibliotekar00@gmail.com",
+    "ime": "marija",
+    "prezime": "zhivanovicc",
+    "jmbg": "0612002777045",
+    "telefon": "0644180168",
+    "korisnicki nalog": {
+      "username": "0marija",
+      "password": "marija123"
+    }
+  },
+
+  {
+    "naziv ogranka": "ogranakA",
+    "email": "obicnibibliotekar01@gmail.com",
+    "ime": "zoran",
+    "prezime": "savic",
+    "jmbg": "2512998772011",
+    "telefon": "0654592177",
+    "korisnicki nalog": {
+      "username": "0zoran",
+      "password": "zoran123"
+    }
+  }
+]
