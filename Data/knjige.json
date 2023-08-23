@@ -1,0 +1,56 @@
+﻿[
+  {
+    "nazivKnjige": "Zlocin i kazna",
+    "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+    "autor": {
+      "ime": "Fjodor",
+      "prezime": "Dostojevski",
+      "drzava": "Rusija"
+    }
+  },
+  {
+    "nazivKnjige": "Alhemicar",
+    "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+    "autor": {
+      "ime": "Paulo",
+      "prezime": "Koeljo",
+      "drzava": "Brazil"
+    }
+  },
+  {
+    "nazivKnjige": "Sto godina samoce",
+    "opis": "Jedna od najzanimljivijih knjizevnih avantura naseg veka.",
+    "autor": {
+      "ime": "Gabrijel",
+      "prezime": "Garsija Markez",
+      "drzava": "Kolumbija"
+    }
+  },
+  {
+    "nazivKnjige": "Hari Poter i kamen mudrosti",
+    "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
+    "autor": {
+      "ime": "J. K.",
+      "prezime": "Rouling",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "Na Drini cuprija",
+    "opis": "Najpoznatiji roman Ive Andrica.",
+    "autor": {
+      "ime": "Ivo",
+      "prezime": "Andric",
+      "drzava": "Srbija"
+    }
+  },
+  {
+    "nazivKnjige": "Ana Karenjina",
+    "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+    "autor": {
+      "ime": "Lav",
+      "prezime": "Tolstoj",
+      "drzava": "Rusija"
+    }
+  }
+]

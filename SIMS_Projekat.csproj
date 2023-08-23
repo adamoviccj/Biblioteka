@@ -60,8 +60,11 @@
     </ApplicationDefinition>
     <Compile Include="Command\BaseCommand.cs" />
     <Compile Include="Command\SubmitClanCommand.cs" />
+    <Compile Include="Model\Autor.cs" />
     <Compile Include="Model\Clan.cs" />
     <Compile Include="Model\ClanskaKarta.cs" />
+    <Compile Include="Model\Izdavac.cs" />
+    <Compile Include="Model\Knjiga.cs" />
     <Compile Include="Model\KorisnickiNalog.cs" />
     <Compile Include="Model\Korisnik.cs" />
     <Compile Include="Model\ObicanBibliotekar.cs" />
