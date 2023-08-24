@@ -29,5 +29,16 @@ namespace SIMS_Projekat.Repository
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(Korisnici, Formatting.Indented));
         }
 
+        public Korisnik GetKorisnikByUsernameAndPassword(string username, string password)
+        {
+            foreach (Korisnik korisnik in Korisnici)
+            {
+                if (korisnik.nalog.username == username && korisnik.nalog.password == password)
+                {
+                    return korisnik;
+                }
+            }
+            return null;
+        }
     }
 }

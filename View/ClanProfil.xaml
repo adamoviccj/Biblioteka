@@ -1,0 +1,14 @@
+﻿<Window x:Class="SIMS_Projekat.View.ClanProfil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="ClanProfil" Height="600" Width="450">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Margin="10,10,10,10" Height="25" Click="ShowIznajmljivanjaBtn_Click">Prikazi moja iznajmljivanja</Button>
+        </StackPanel>
+    </Grid>
+</Window>

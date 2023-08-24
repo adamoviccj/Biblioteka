@@ -1,7 +1,12 @@
 ﻿[
   {
     "id": "1",
-    "naziv": "ogranak1",
+    "naziv": "ogranakA",
     "brTelefona": "1234567890"
+  },
+  {
+    "id": "2",
+    "naziv": "ogranakB",
+    "brTelefona": "12345"
   }
 ]
