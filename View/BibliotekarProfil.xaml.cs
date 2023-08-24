@@ -71,6 +71,12 @@ namespace SIMS_Projekat.View
 
             }
 
+            private void IznajmiKnjigu_Click(object sender, RoutedEventArgs e)
+            {
+                IznajmljivanjeBibliotekar iznajmljivanjeBibliotekar = new IznajmljivanjeBibliotekar(null, null, null);
+                iznajmljivanjeBibliotekar.Show();
+            }
+
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SIMS_Projekat.enums;
 using SIMS_Projekat.Model;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace SIMS_Projekat.Repository
     public class PrimerakRepository
     {
         public List<Primerak> Primerci { get; set; }
-        public string FilePath = "../../Data/pimerci.json";
+        public string FilePath = "../../Data/primerci.json";
 
         public PrimerakRepository()
         {
@@ -41,6 +42,19 @@ namespace SIMS_Projekat.Repository
                 }
             }
             return null;
+        }
+
+        public List<Primerak> FindSlobodnePrimerke(string nazivKnjige)
+        {
+            List<Primerak> slobodni = new List<Primerak>();
+            foreach (Primerak primerak in Primerci)
+            {
+                if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige && primerak.dostupnost == Dostupnost.SLOBODNA)
+                {
+                    slobodni.Add(primerak);
+                }
+            }
+            return slobodni;
         }
     }
 }

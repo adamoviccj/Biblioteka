@@ -60,19 +60,33 @@
     </ApplicationDefinition>
     <Compile Include="Command\BaseCommand.cs" />
     <Compile Include="Command\SubmitClanCommand.cs" />
+    <Compile Include="enums\Dostupnost.cs" />
+    <Compile Include="enums\TipKoricenja.cs" />
     <Compile Include="Model\Autor.cs" />
+    <Compile Include="Model\Biblioteka.cs" />
     <Compile Include="Model\Clan.cs" />
     <Compile Include="Model\ClanskaKarta.cs" />
+    <Compile Include="Model\InventarnaKnjiga.cs" />
+    <Compile Include="Model\IzdanjeKnjige.cs" />
     <Compile Include="Model\Izdavac.cs" />
+    <Compile Include="Model\Iznajmljivanje.cs" />
     <Compile Include="Model\Knjiga.cs" />
     <Compile Include="Model\KorisnickiNalog.cs" />
     <Compile Include="Model\Korisnik.cs" />
     <Compile Include="Model\ObicanBibliotekar.cs" />
+    <Compile Include="Model\Ogranak.cs" />
+    <Compile Include="Model\Primerak.cs" />
     <Compile Include="Model\VisiBibliotekar.cs" />
+    <Compile Include="Repository\AutorRepository.cs" />
     <Compile Include="Repository\ClanRepository.cs" />
     <Compile Include="Repository\ClanskaKartaRepository.cs" />
+    <Compile Include="Repository\IzdanjeKnjigeRepository.cs" />
+    <Compile Include="Repository\IzdavacRepository.cs" />
+    <Compile Include="Repository\IznajmljivanjeRepository.cs" />
+    <Compile Include="Repository\KnjigaRepository.cs" />
     <Compile Include="Repository\KorisnikRepository.cs" />
     <Compile Include="Repository\ObicanBibliotekarRepository.cs" />
+    <Compile Include="Repository\PrimerakRepository.cs" />
     <Compile Include="Repository\VisiBibliotekarRepository.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
@@ -81,6 +95,9 @@
     </Compile>
     <Compile Include="View\EditClan.xaml.cs">
       <DependentUpon>EditClan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\IznajmljivanjeBibliotekar.xaml.cs">
+      <DependentUpon>IznajmljivanjeBibliotekar.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
@@ -105,6 +122,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\EditClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IznajmljivanjeBibliotekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,10 +156,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Data\autori.json" />
+    <None Include="Data\biblioteke.json" />
     <None Include="Data\clanovi.json" />
     <None Include="Data\clanskeKarte.json" />
+    <None Include="Data\inventarneKnjige.json" />
+    <None Include="Data\izdanjaKnjige.json" />
+    <None Include="Data\izdavaci.json" />
+    <None Include="Data\iznajmljivanja.json" />
+    <None Include="Data\knjige.json" />
     <None Include="Data\korisnici.json" />
     <None Include="Data\obicniBibliotekari.json" />
+    <None Include="Data\ogranci.json" />
+    <None Include="Data\primerci.json" />
     <None Include="Data\visiBibliotekari.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
