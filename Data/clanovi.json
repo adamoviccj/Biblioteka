@@ -1,6 +1,7 @@
 [
   {
     "email": "markom@gmail.com",
+    "broj clanske karte": "20231",
     "ime": "marko",
     "prezime": "markovic",
     "jmbg": "0512001772014",
@@ -8,11 +9,11 @@
     "korisnicki nalog": {
       "username": "2markom",
       "password": "marko123"
-    },
-    "broj clanske karte": "20231"
+    }
   },
   {
     "email": "anamilos@gmail.com",
+    "broj clanske karte": "20232",
     "ime": "ana",
     "prezime": "milosevic",
     "jmbg": "0710999777009",
@@ -20,11 +21,11 @@
     "korisnicki nalog": {
       "username": "2anamil",
       "password": "ana123"
-    },
-    "broj clanske karte": "20232"
+    }
   },
   {
     "email": "helenass@gmail.com",
+    "broj clanske karte": "20233",
     "ime": "helena",
     "prezime": "simonovic",
     "jmbg": "3010998777119",
@@ -32,11 +33,11 @@
     "korisnicki nalog": {
       "username": "2helenasim",
       "password": "helena123"
-    },
-    "broj clanske karte": "20233"
+    }
   },
   {
     "email": "vasilijetomic@gmail.com",
+    "broj clanske karte": "20234",
     "ime": "vasilije",
     "prezime": "tomic",
     "jmbg": "1508002772334",
@@ -44,11 +45,11 @@
     "korisnicki nalog": {
       "username": "2vasilijetom",
       "password": "vasilije123"
-    },
-    "broj clanske karte": "20234"
+    }
   },
   {
     "email": "e",
+    "broj clanske karte": "195",
     "ime": "e",
     "prezime": "e",
     "jmbg": "e",
@@ -56,7 +57,42 @@
     "korisnicki nalog": {
       "username": "2ee",
       "password": "ee"
-    },
-    "broj clanske karte": "195"
+    }
+  },
+  {
+    "email": "dgsgdsgdsa",
+    "broj clanske karte": "92",
+    "ime": "dgsgsd",
+    "prezime": "gsdgdsgsdgds",
+    "jmbg": "gsdg",
+    "telefon": "dsgdsgdsgsdg",
+    "korisnicki nalog": {
+      "username": "dsgsdgdsgds",
+      "password": "gsdgsdgsdg"
+    }
+  },
+  {
+    "email": "hfdhdfh",
+    "broj clanske karte": "472",
+    "ime": "dfhdfh",
+    "prezime": "dfhdf",
+    "jmbg": "hfdhdfhfdhfd",
+    "telefon": "hdfhfdhdfh",
+    "korisnicki nalog": {
+      "username": "dfhdfhdhdf",
+      "password": "hdfhdfhfdhdfhfd"
+    }
+  },
+  {
+    "email": "dgdsgds",
+    "broj clanske karte": "592",
+    "ime": "OBRISI",
+    "prezime": "OVE GORE",
+    "jmbg": "dgagdsg",
+    "telefon": "sgsdgs",
+    "korisnicki nalog": {
+      "username": "gdsgds",
+      "password": "gdsgdsgsdgsd"
+    }
   }
 ]

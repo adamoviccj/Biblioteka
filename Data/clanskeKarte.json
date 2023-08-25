@@ -19,9 +19,25 @@
     "clanstvo": 1,
     "datum placanja": "2023-08-23T00:00:00"
   },
+
   {
     "broj clanske karte": "195",
     "clanstvo": 3,
     "datum placanja": "2023-08-23T13:37:45.2252452+02:00"
+  },
+  {
+    "broj clanske karte": "92",
+    "clanstvo": 2,
+    "datum placanja": "2023-08-25T13:35:38.2277036+02:00"
+  },
+  {
+    "broj clanske karte": "472",
+    "clanstvo": 0,
+    "datum placanja": "2023-08-25T13:36:25.273665+02:00"
+  },
+  {
+    "broj clanske karte": "592",
+    "clanstvo": 2,
+    "datum placanja": "2023-08-25T13:42:07.4190547+02:00"
   }
 ]

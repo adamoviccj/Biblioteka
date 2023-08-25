@@ -16,7 +16,7 @@ namespace SIMS_Projekat.Repository
 
         public ClanRepository()
         {
-            GetAllClanovi();
+            Clanovi = GetAllClanovi();
         }
         /*
         public void GetAllClanovi()
@@ -28,7 +28,7 @@ namespace SIMS_Projekat.Repository
         public List<Clan> GetAllClanovi()
         {
             string json = File.ReadAllText(FilePath);
-            List<Clan> clanovi = JsonConvert.DeserializeObject<List<Clan>>(json);
+            List<Clan> clanovi = JsonConvert.DeserializeObject<List<Clan>>(json);    
             return clanovi;
         }
 
