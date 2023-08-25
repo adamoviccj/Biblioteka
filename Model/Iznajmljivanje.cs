@@ -10,19 +10,19 @@ namespace SIMS_Projekat.Model
     public class Iznajmljivanje
     {
         [JsonProperty("datumIznajmljivanja")]
-        public DateTime datumIznajmljivanja;
+        public DateTime datumIznajmljivanja { get; set; }
 
         [JsonProperty("datumVracanja")]
-        public DateTime? datumVracanja;
+        public DateTime? datumVracanja { get; set; }
 
         [JsonProperty("brojZahtevaZaProduzavanje")]
-        public int brojZahtevaZaProduzavanje;
+        public int brojZahtevaZaProduzavanje { get; set; }
 
         [JsonProperty("clan")]
-        public Clan clan;
+        public Clan clan { get; set; }
 
         [JsonProperty("primerak")]
-        public Primerak primerak;
+        public Primerak primerak { get; set; }
 
 
 

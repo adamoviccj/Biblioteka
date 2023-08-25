@@ -11,34 +11,34 @@ namespace SIMS_Projekat.Model
     public class IzdanjeKnjige
     {
         [JsonProperty("isbn")]
-        public string isbn;
+        public string isbn { get; set; }
 
         [JsonProperty("udk")]
-        public string udk;
+        public string udk { get; set; }
 
         [JsonProperty("jezik")]
-        public string jezik;
+        public string jezik { get; set; }
 
         [JsonProperty("godinaIzdanja")]
-        public string godinaIzdanja;
+        public string godinaIzdanja { get; set; }
 
         [JsonProperty("format")]
-        public string format;
+        public string format { get; set; }
 
         [JsonProperty("vrstaKoricenja")]
-        public TipKoricenja vrstaKoricenja;
+        public TipKoricenja vrstaKoricenja { get;set; }
 
         [JsonProperty("citanost")]
-        public int citanost;
+        public int citanost { get; set; }
 
         [JsonProperty("knjiga")]
-        public Knjiga knjiga;
+        public Knjiga knjiga { get; set; }
 
         [JsonProperty("biblioteka")]
-        public Biblioteka biblioteka;
+        public Biblioteka biblioteka { get; set; }
 
         [JsonProperty("izdavac")]
-        public Izdavac izdavac;
+        public Izdavac izdavac { get; set; }
 
         public IzdanjeKnjige()
         {

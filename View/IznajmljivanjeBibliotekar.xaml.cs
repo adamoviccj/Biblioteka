@@ -26,6 +26,7 @@ namespace SIMS_Projekat.View
     {
         public ObservableCollection<Knjiga> Knjige { get; set; }
         public ObservableCollection<Primerak> Primerci { get; set; }
+        public ObservableCollection<Primerak> Slobodni { get; set; }
         public ObservableCollection<Clan> Clanovi { get; set; }
         public Knjiga SelectedKnjiga { get; set; }
         public Primerak SelectedPrimerak { get; set; }
@@ -48,9 +49,10 @@ namespace SIMS_Projekat.View
             _izdanjeKnjigeRepository = app.IzdanjeKnjigeRepository;
             _primerakRepository = app.PrimerakRepository;
             _iznajmljivanjeRepository = app.IznajmljivanjeRepository;
-
+            SelectedKnjiga = selectedKnjiga;
             SelectedPrimerak = selectedPrimerak;
             SelectedClan = selectedClan;
+
 
             if (SelectedKnjiga == null)
             {
@@ -66,7 +68,7 @@ namespace SIMS_Projekat.View
                 Primerci = new ObservableCollection<Primerak>(_primerakRepository.GetAllPrimerci());
             } else
             {
-                Primerci = new ObservableCollection<Primerak>(_primerakRepository.FindSlobodnePrimerke(selectedKnjiga.nazivKnjige));
+                Primerci = new ObservableCollection<Primerak>(Primerci.Where(x=>x.izdanjeKnjige.knjiga.nazivKnjige == SelectedKnjiga.nazivKnjige));
             }
             Clanovi = new ObservableCollection<Clan>(_clanRepository.GetAllClanovi());
             
@@ -93,45 +95,7 @@ namespace SIMS_Projekat.View
             }
         }
 
-        public class RootObject
-        {
-           public List<Clan> Clanovi { get; set; }
-        }
-
-        private void OnShown(object sender, EventArgs e)
-        {
-            string jsonStr = File.ReadAllText("../../Data/clanovi.json");
-            var parsed = JsonConvert.DeserializeObject<List<Clan>>(jsonStr);
-
-            List<string> clanNames = parsed.Select(clan => clan.ime + " " + clan.prezime).ToList();
-            comboBox1.ItemsSource = clanNames;
-        }
-
-        private void OnShownKnjige(object sender, EventArgs e)
-        {
-            string jsonstr = File.ReadAllText("../../Data/knjige.json");
-            var parsed = JsonConvert.DeserializeObject<List<Knjiga>>(jsonstr);
-
-            List<string> knjigeNames = parsed.Select(knjiga => knjiga.nazivKnjige).ToList();
-            comboBoxKnjige.ItemsSource = knjigeNames;
-        }
-
-        private void OnShownPrimerci(object sender, EventArgs e)
-        {
-            string jsonstr = File.ReadAllText("../../Data/primerci.json");
-            var parsed = JsonConvert.DeserializeObject<List<Primerak>>(jsonstr);
-
-            List<string> knjigeNames = parsed.Select(primerak => primerak.inventarniBroj).ToList();
-            primerakCombo.ItemsSource = knjigeNames;
-        }
-
-        private void Window_Loaded(object sender, EventArgs e)
-        {
-            OnShown(sender, e);
-            OnShownKnjige(sender, e);
-            OnShownPrimerci(sender, e);
-
-        }
+        
 
 
     }

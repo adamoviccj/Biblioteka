@@ -10,13 +10,13 @@ namespace SIMS_Projekat.Model
     public class Knjiga
     {
         [JsonProperty ("nazivKnjige")]
-        public string nazivKnjige;
+        public string nazivKnjige { get; set; }
 
         [JsonProperty ("opis")]
-        public string opis;
+        public string opis { get; set; }
 
         [JsonProperty ("autor")]
-        public Autor autor;
+        public Autor autor { get; set; }
 
         public Knjiga()
         {

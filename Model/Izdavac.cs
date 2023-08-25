@@ -10,10 +10,10 @@ namespace SIMS_Projekat.Model
     public class Izdavac
     {
         [JsonProperty ("naziv")]
-        public string naziv;
+        public string naziv { get; set; }
 
         [JsonProperty ("drzava")]
-        public string drzava;
+        public string drzava { get; set; }
 
         public Izdavac()
         {
