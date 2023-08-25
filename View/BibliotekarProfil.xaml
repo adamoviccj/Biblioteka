@@ -28,14 +28,14 @@
                     <SolidColorBrush x:Key="ColumnHeaderBackground" Color="#FFF1D9E6"/>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Ime" Binding="{Binding ime}" Foreground="Black" />
-                    <DataGridTextColumn Header="Prezime" Binding="{Binding prezime}" Foreground="Black" />
-                    <DataGridTextColumn Header="Email" Binding="{Binding email}" Foreground="Black" />
-                    <DataGridTextColumn Header="Username" Binding="{Binding nalog.username}" Foreground="Black" />
-                    <DataGridTextColumn Header="Password" Binding="{Binding nalog.password}" Foreground="Black" />
-                    <DataGridTextColumn Header="Telefon" Binding="{Binding telefon}" Foreground="Black" />
-                    <DataGridTextColumn Header="Jmbg" Binding="{Binding jmbg}" Foreground="Black" />
-                    <DataGridTextColumn Header="Broj Članske Karte" Binding="{Binding brClanskeKarte}" Foreground="Black" />
+                    <DataGridTextColumn Header="ime" Binding="{Binding ime}" Foreground="Black" />
+                    <DataGridTextColumn Header="prezime" Binding="{Binding prezime}" Foreground="Black" />
+                    <DataGridTextColumn Header="email" Binding="{Binding email}" Foreground="Black" />
+                    <DataGridTextColumn Header="username" Binding="{Binding nalog.username}" Foreground="Black" />
+                    <DataGridTextColumn Header="password" Binding="{Binding nalog.password}" Foreground="Black" />
+                    <DataGridTextColumn Header="telefon" Binding="{Binding telefon}" Foreground="Black" />
+                    <DataGridTextColumn Header="jmbg" Binding="{Binding jmbg}" Foreground="Black" />
+                    <DataGridTextColumn Header="broj clanske karte" Binding="{Binding brClanskeKarte}" Foreground="Black" />
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -44,6 +44,7 @@
             <Button Content="Obrisi člana" Click="ObrisiClana_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
             <Button Content="Izmeni člana" Click="IzmeniClana_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14"/>
             <Button Content="Iznajmi knjigu" Click="IznajmiKnjigu_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14"/>
+
 
         </StackPanel>
     </Grid>

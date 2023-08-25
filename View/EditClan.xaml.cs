@@ -21,6 +21,8 @@ namespace SIMS_Projekat.View
     /// </summary>
     public partial class EditClan : Window
     {
+        
+
         public EditClan(Clan selectedClan)
         {
             MessageBox.Show("a");

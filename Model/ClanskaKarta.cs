@@ -14,13 +14,13 @@ namespace SIMS_Projekat.Model
     public class ClanskaKarta
     {
         [JsonProperty("broj clanske karte")]
-        public string brClanskeKarte;
+        public string brClanskeKarte { get; set; }
 
         [JsonProperty("clanstvo")]
-        public TipClanstva clanstvo;
+        public TipClanstva clanstvo { get; set; }
 
         [JsonProperty("datum placanja")]
-        private DateTime datumPlacanja;
+        private DateTime datumPlacanja { get; set; }
 
         public ClanskaKarta() { }
 
