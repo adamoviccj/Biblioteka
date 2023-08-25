@@ -18,5 +18,19 @@ namespace SIMS_Projekat.Model
         [JsonProperty("primerak")]
         public Primerak primerak;
 
+        [JsonProperty("clan")]
+        public Clan clan;
+
+        public Rezervacija()
+        {
+        }
+
+        public Rezervacija(DateTime datumRezervacije, Knjiga knjiga, Primerak primerak, Clan clan)
+        {
+            this.datumRezervacije = datumRezervacije;
+            this.knjiga = knjiga;
+            this.primerak = primerak;
+            this.clan = clan;
+        }
     }
 }
