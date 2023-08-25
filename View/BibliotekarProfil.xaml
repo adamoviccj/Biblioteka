@@ -31,8 +31,8 @@
                     <DataGridTextColumn Header="Ime" Binding="{Binding ime}" Foreground="Black" />
                     <DataGridTextColumn Header="Prezime" Binding="{Binding prezime}" Foreground="Black" />
                     <DataGridTextColumn Header="Email" Binding="{Binding email}" Foreground="Black" />
-                    <DataGridTextColumn Header="Username" Binding="{Binding username}" Foreground="Black" />
-                    <DataGridTextColumn Header="Password" Binding="{Binding password}" Foreground="Black" />
+                    <DataGridTextColumn Header="Username" Binding="{Binding nalog.username}" Foreground="Black" />
+                    <DataGridTextColumn Header="Password" Binding="{Binding nalog.password}" Foreground="Black" />
                     <DataGridTextColumn Header="Telefon" Binding="{Binding telefon}" Foreground="Black" />
                     <DataGridTextColumn Header="Jmbg" Binding="{Binding jmbg}" Foreground="Black" />
                     <DataGridTextColumn Header="Broj Članske Karte" Binding="{Binding brClanskeKarte}" Foreground="Black" />

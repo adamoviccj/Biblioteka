@@ -44,7 +44,6 @@ namespace SIMS_Projekat.View
             Clanovi = new ObservableCollection<Clan>(_clanRepository.GetAllClanovi());
 
 
-
             }
 
             private void DodajClana_Click(object sender, RoutedEventArgs e)

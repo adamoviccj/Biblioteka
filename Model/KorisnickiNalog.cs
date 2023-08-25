@@ -12,10 +12,12 @@ namespace SIMS_Projekat.Model
 
 
         [JsonProperty("username")]
-        public string username;
+        public string username { get; set; }
+
 
         [JsonProperty("password")]
-        public string password;
+        public string password { get; set; }
+
 
         public KorisnickiNalog() { }
 
