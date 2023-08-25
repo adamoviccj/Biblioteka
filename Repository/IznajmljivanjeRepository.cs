@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SIMS_Projekat.Model;
+using SIMS_Projekat.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,10 +14,16 @@ namespace SIMS_Projekat.Repository
     {
         public List<Iznajmljivanje> Iznajmljivanja { get; set; }
         public string FilePath = "../../Data/iznajmljivanja.json";
+        public List<Iznajmljivanje> IznajmljivanjaClana { get; set; }
 
         public IznajmljivanjeRepository()
         {
-            GetAllIznajmljivanja();
+            Iznajmljivanja = GetAllIznajmljivanja();
+            if (LogIn.LoggedUser != null)
+            {
+                IznajmljivanjaClana = GetAllIznajmljivanjaForClan(LogIn.LoggedUser.jmbg);
+            }
+            
         }
 
         public List<Iznajmljivanje> GetAllIznajmljivanja()

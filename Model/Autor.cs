@@ -10,13 +10,13 @@ namespace SIMS_Projekat.Model
     public class Autor
     {
         [JsonProperty("ime")]
-        public string ime;
+        public string ime { get; set; }
 
         [JsonProperty("prezime")]
-        public string prezime;
+        public string prezime { get; set; }
 
         [JsonProperty ("drzava")]
-        public string drzava;
+        public string drzava { get; set; }
 
         public Autor()
         {

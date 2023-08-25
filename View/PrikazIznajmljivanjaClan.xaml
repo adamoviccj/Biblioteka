@@ -6,17 +6,35 @@
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
         Title="PrikazIznajmljivanjaClan" Height="460" Width="800">
-    <Grid Margin="2, 0, -2, 0">
-        <DataGrid ItemsSource="{Binding Iznajmljivanja}" SelectedItem="{Binding SelectedIznajmljivanje}"
-                  Margin="16, 12,16,104" SelectionMode="Single" AutoGenerateColumns="False" Name="iznajmljivanjaDataGrid" IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Naziv knjige" Width="150" Binding="{Binding primerak.izdanjeKnjige.knjiga.nazivKnjige}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Primerak" Width="150" Binding="{Binding primerak.inventarniBroj}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Datum iznajmljivanja" Width="150" Binding="{Binding datumIznajmljivanja}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Datum vracanja" Width="150" Binding="{Binding datumVracanja}"></DataGridTextColumn>
-            </DataGrid.Columns>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="MOJA IZNAJMLJIVANJA" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFECEFF6">
+            <DataGrid x:Name="iznajmljivanjaDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+                      RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
+                      HeadersVisibility="Column" ItemsSource="{Binding Iznajmljivanja}">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="ColumnHeaderBackround" Color="#FFF1D9E6"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Knjiga" Binding="{Binding primerak.izdanjeKnjige.knjiga.nazivKnjige}"/>
+                    <DataGridTextColumn Header="Primerak" Binding="{Binding primerak.inventarniBroj}"/>
+                    <DataGridTextColumn Header="Datum iznajmljivanja" Binding="{Binding datumIznajmljivanja,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Datum vracanja" Binding="{Binding datumVracanja,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Broj zahteva za produzavanje" Binding="{Binding brojZahtevaZaProduzavanje}"/>
+                </DataGrid.Columns>
+            </DataGrid>
             
-        </DataGrid>
-        
+        </Grid>
     </Grid>
 </Window>

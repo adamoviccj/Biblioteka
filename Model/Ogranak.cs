@@ -10,13 +10,13 @@ namespace SIMS_Projekat.Model
     public class Ogranak
     {
         [JsonProperty("id")]
-        public int id;
+        public int id { get; set; }
 
         [JsonProperty("lokacija")]
-        public string lokacija;
+        public string lokacija { get; set; }
 
         [JsonProperty("brTelefona")]
-        public string brTelefona;
+        public string brTelefona { get; set; }
 
         public Ogranak()
         {

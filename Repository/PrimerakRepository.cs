@@ -14,10 +14,14 @@ namespace SIMS_Projekat.Repository
     {
         public List<Primerak> Primerci { get; set; }
         public string FilePath = "../../Data/primerci.json";
+        public List<Primerak> SlobodniPrimerci { get; set; }
+        public Knjiga SelectedKnjiga { get; set; }
+
 
         public PrimerakRepository()
         {
-            GetAllPrimerci();
+            Primerci = GetAllPrimerci();
+
         }
 
         public List<Primerak> GetAllPrimerci()
@@ -44,12 +48,12 @@ namespace SIMS_Projekat.Repository
             return null;
         }
 
-        public List<Primerak> FindSlobodnePrimerke(string nazivKnjige)
+        public List<Primerak> FindSlobodnePrimerkeZaKnjigu(string nazivKnjige)
         {
             List<Primerak> slobodni = new List<Primerak>();
             foreach (Primerak primerak in Primerci)
             {
-                if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige && primerak.dostupnost == Dostupnost.SLOBODNA)
+                if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige)
                 {
                     slobodni.Add(primerak);
                 }

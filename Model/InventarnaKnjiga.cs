@@ -10,13 +10,13 @@ namespace SIMS_Projekat.Model
     public class InventarnaKnjiga
     {
         [JsonProperty("nazivInventarneKnjige")]
-        public string nazivInventarneKnjige;
+        public string nazivInventarneKnjige { get; set; }
 
         [JsonProperty("primerak")]
-        public Primerak primerak;
+        public Primerak primerak { get; set; }
 
         [JsonProperty("ogranak")]
-        public Ogranak ogranak;
+        public Ogranak ogranak { get; set; }
 
         public InventarnaKnjiga()
         {
