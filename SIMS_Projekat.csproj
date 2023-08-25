@@ -102,6 +102,9 @@
     <Compile Include="View\EditClan.xaml.cs">
       <DependentUpon>EditClan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\IstorijaIznajmljivanja.xaml.cs">
+      <DependentUpon>IstorijaIznajmljivanja.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\IznajmljivanjeBibliotekar.xaml.cs">
       <DependentUpon>IznajmljivanjeBibliotekar.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\EditClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IstorijaIznajmljivanja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
