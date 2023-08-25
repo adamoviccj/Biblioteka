@@ -31,6 +31,18 @@ namespace SIMS_Projekat.Repository
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(Iznajmljivanja, Formatting.Indented));
         }
 
+        public List<Iznajmljivanje> GetAllIznajmljivanjaForClan(string jmbg)
+        {
+             List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            foreach (Iznajmljivanje iznajmljivanje in GetAllIznajmljivanja())
+            {
+                if (iznajmljivanje.clan.jmbg == jmbg)
+                {
+                    iznajmljivanja.Add(iznajmljivanje);
+                }
+            }
+            return iznajmljivanja;
+        }
 
     }
 }

@@ -21,14 +21,18 @@ namespace SIMS_Projekat.View
     /// </summary>
     public partial class LogIn : Window
     {
+        private KorisnikRepository korisnikRepository;
         private ClanRepository clanRepository;
         private ObicanBibliotekarRepository obicanBibliotekarRepository;
         private VisiBibliotekarRepository specijalizovanBibliotekarRepository;
+
+        public static Korisnik LoggedUser { get; set; }
 
         public LogIn()
         {
             InitializeComponent();
 
+            korisnikRepository = new KorisnikRepository();
             clanRepository = new ClanRepository();
             obicanBibliotekarRepository = new ObicanBibliotekarRepository();
             specijalizovanBibliotekarRepository = new VisiBibliotekarRepository();
@@ -38,6 +42,15 @@ namespace SIMS_Projekat.View
         {
             string username = usernameTextBox.Text;
             string password = passwordBox.Password;
+            Korisnik korisnik = korisnikRepository.GetKorisnikByUsernameAndPassword(username, password);
+            if (korisnik == null)
+            {
+                MessageBox.Show("Pogresno korisnicko ime ili lozinka!", "Warning", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            } else
+            {
+                LoggedUser = korisnik;
+            }
 
             // Provjeri uneseno korisničko ime i lozinku u svim repozitorijumima
             //KorisnickiNalog nalog = TryLoginInRepositories(username, password);
@@ -74,6 +87,12 @@ namespace SIMS_Projekat.View
                 //visiBibliotekarWindow.Show();
             }
             */
+            else if(username.StartsWith("2"))
+            {
+                MessageBox.Show("Ulogovali ste se na clana.", "Dobrodosli", MessageBoxButton.OK, MessageBoxImage.Information);
+                var clanProfil = new ClanProfil();
+                clanProfil.Show();
+            }
             else
             {
                 MessageBox.Show("Nista.", "Nista", MessageBoxButton.OK, MessageBoxImage.Error);
