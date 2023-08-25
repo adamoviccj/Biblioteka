@@ -43,7 +43,8 @@
             <Button Content="Registracija novog člana" Click="DodajClana_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" RenderTransformOrigin="-0.011,0.546" />
             <Button Content="Obrisi člana" Click="ObrisiClana_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
             <Button Content="Izmeni člana" Click="IzmeniClana_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14"/>
-            <Button Content="Iznajmi knjigu" Click="IznajmiKnjigu_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14"/>
+            <Button Content="Iznajmi knjigu" Click="IznajmiKnjigu_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+            <Button Content="Istorija iznajmljivanja" Click="ShowIstorijaIznajmljivanja_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
 
 
         </StackPanel>

@@ -125,6 +125,10 @@ namespace SIMS_Projekat.View
                 iznajmljivanjeBibliotekar.Show();
             }
 
-
+            private void ShowIstorijaIznajmljivanja_Click(object sender, RoutedEventArgs e)
+            {
+                IstorijaIznajmljivanja istorijaIznajmljivanja = new IstorijaIznajmljivanja();
+                istorijaIznajmljivanja.Show();
+            }
         }
     }

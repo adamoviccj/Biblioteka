@@ -70,6 +70,7 @@ namespace SIMS_Projekat.View
             SelectedPrimerak = selectedPrimerak;
             SelectedClan = selectedClan;
             primerci = _primerakRepository.GetAllPrimerci();
+            
 
             if (SelectedKnjiga == null)
             {
@@ -113,7 +114,21 @@ namespace SIMS_Projekat.View
             iznajmljivanje.datumVracanja = null;
             iznajmljivanje.primerak = SelectedPrimerak;
             iznajmljivanje.clan = SelectedClan;
-            Primerak primerak = _primerakRepository.FindPrimerakByInventarniBroj(iznajmljivanje.primerak.inventarniBroj);
+            Primerak primerak = new Primerak();
+            try
+            {
+                primerak = _primerakRepository.FindPrimerakByInventarniBroj(iznajmljivanje.primerak.inventarniBroj);
+                if (primerak == null)
+                {
+                    MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            } catch(Exception e1)
+            {
+                MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            
             primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
             _primerakRepository.Save();
             _iznajmljivanjeRepository.Iznajmljivanja.Add(iznajmljivanje);
