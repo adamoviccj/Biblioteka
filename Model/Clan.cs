@@ -65,6 +65,25 @@ namespace SIMS_Projekat.Model
             }
             return null;
         }
+
+        public override string ToString()
+        {
+            return $"Email: {email}, Ime: {ime}, Prezime: {prezime}, JMBG: {jmbg}, Telefon: {telefon}, Username: {nalog.username}, Password: {nalog.password} ,Broj Članske Karte: {brClanskeKarte}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Clan other = (Clan)obj;
+            return email == other.email;
+        }
+
+        public override int GetHashCode()
+        {
+            return email.GetHashCode();
+        }
     }
 }
 

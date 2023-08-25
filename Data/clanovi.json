@@ -1,19 +1,7 @@
 [
   {
-    "email": "markom@gmail.com",
-    "broj clanske karte": "20231",
-    "ime": "marko",
-    "prezime": "markovic",
-    "jmbg": "0512001772014",
-    "telefon": "0656128215",
-    "korisnicki nalog": {
-      "username": "markom",
-      "password": "marko123"
-    }
-  },
-  {
-    "email": "anamilos@gmail.com",
     "broj clanske karte": "20232",
+    "email": "anamilos@gmail.com",
     "ime": "ana",
     "prezime": "milosevic",
     "jmbg": "0710999777009",
@@ -24,8 +12,8 @@
     }
   },
   {
-    "email": "helenass@gmail.com",
     "broj clanske karte": "20233",
+    "email": "helenass@gmail.com",
     "ime": "helena",
     "prezime": "simonovic",
     "jmbg": "3010998777119",
@@ -36,8 +24,8 @@
     }
   },
   {
-    "email": "vasilijetomic@gmail.com",
     "broj clanske karte": "20234",
+    "email": "vasilijetomic@gmail.com",
     "ime": "vasilije",
     "prezime": "tomic",
     "jmbg": "1508002772334",
@@ -48,8 +36,8 @@
     }
   },
   {
-    "email": "e",
     "broj clanske karte": "195",
+    "email": "e",
     "ime": "e",
     "prezime": "e",
     "jmbg": "e",
@@ -60,8 +48,8 @@
     }
   },
   {
-    "email": "dgsgdsgdsa",
     "broj clanske karte": "92",
+    "email": "dgsgdsgdsa",
     "ime": "dgsgsd",
     "prezime": "gsdgdsgsdgds",
     "jmbg": "gsdg",
@@ -72,8 +60,8 @@
     }
   },
   {
-    "email": "hfdhdfh",
     "broj clanske karte": "472",
+    "email": "hfdhdfh",
     "ime": "dfhdfh",
     "prezime": "dfhdf",
     "jmbg": "hfdhdfhfdhfd",
@@ -84,8 +72,8 @@
     }
   },
   {
-    "email": "dgdsgds",
     "broj clanske karte": "592",
+    "email": "dgdsgds",
     "ime": "OBRISI",
     "prezime": "OVE GORE",
     "jmbg": "dgagdsg",

@@ -96,13 +96,13 @@ namespace SIMS_Projekat.View
                     clanskaKartaRepository.Save();
                 }
 
+
                 clanRepository.Clanovi.Remove(selectedClan);
                 clanRepository.Save();
-
                 MessageBox.Show("Clan uspesno obrisan!");
 
                 // Refresh the DataGrid if necessary
-                // membersDataGrid.Items.Refresh();
+                membersDataGrid.Items.Refresh();
             }
             else
             {
