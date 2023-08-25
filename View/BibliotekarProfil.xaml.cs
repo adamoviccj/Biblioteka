@@ -25,11 +25,13 @@ namespace SIMS_Projekat.View
 
     {
             public ObservableCollection<Clan> Clanovi { get; set; }
+            public Clan SelectedClan { get; set; }
 
 
 
-            
-            private ClanRepository _clanRepository;
+
+
+        private ClanRepository _clanRepository;
 
             public BibliotekarProfil()
             {
@@ -45,6 +47,9 @@ namespace SIMS_Projekat.View
 
 
 
+
+
+
             }
 
             private void DodajClana_Click(object sender, RoutedEventArgs e)
@@ -53,17 +58,60 @@ namespace SIMS_Projekat.View
                 regClana.Show();
             }
 
-            private void IzmeniClana_Click(object sender, RoutedEventArgs e)
+        private void IzmeniClana_Click(object sender, RoutedEventArgs e)
+        {
+            ClanRepository clanRepository = new ClanRepository();
+
+            // Get the selected item from the DataGrid
+            Clan selectedClan = membersDataGrid.SelectedItem as Clan;
+
+            if (selectedClan != null)
             {
-
+                new EditClan(selectedClan).Show();
+                // Refresh the DataGrid if necessary
+                // membersDataGrid.Items.Refresh();
             }
-
-            private void ObrisiClana_Click(object sender, RoutedEventArgs e)
+            else
             {
-
+                MessageBox.Show("Niste izabrali clana za izmenu!");
             }
+        }
 
-            private void Odjava_Click(object sender, RoutedEventArgs e)
+
+
+        private void ObrisiClana_Click(object sender, RoutedEventArgs e)
+        {
+            ClanRepository clanRepository = new ClanRepository();
+            ClanskaKartaRepository clanskaKartaRepository = new ClanskaKartaRepository();
+
+            // Get the selected item from the DataGrid
+            Clan selectedClan = membersDataGrid.SelectedItem as Clan;
+
+            if (selectedClan != null)
+            {
+                ClanskaKarta clanskaKarta = clanskaKartaRepository.GetClanskaKartaByBr(selectedClan.brClanskeKarte);
+                if (clanskaKarta != null)
+                {
+                    clanskaKartaRepository.ClanskeKarte.Remove(clanskaKarta);
+                    clanskaKartaRepository.Save();
+                }
+
+                clanRepository.Clanovi.Remove(selectedClan);
+                clanRepository.Save();
+
+                MessageBox.Show("Clan uspesno obrisan!");
+
+                // Refresh the DataGrid if necessary
+                // membersDataGrid.Items.Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Niste izabrali clana za brisanje!");
+            }
+        }
+
+
+        private void Odjava_Click(object sender, RoutedEventArgs e)
 
             {
                 MainWindow main = new MainWindow();   //zatvoriti preth prozore
