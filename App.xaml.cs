@@ -26,6 +26,7 @@ namespace SIMS_Projekat
         public IzdanjeKnjigeRepository IzdanjeKnjigeRepository { get; set; }
         public PrimerakRepository PrimerakRepository { get; set; }
         public IznajmljivanjeRepository IznajmljivanjeRepository { get; set; }
+        public RezervacijaRepository RezervacijaRepository { get; set; }
 
 
 
