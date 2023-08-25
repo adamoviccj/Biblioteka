@@ -89,6 +89,7 @@
     <Compile Include="Repository\KorisnikRepository.cs" />
     <Compile Include="Repository\ObicanBibliotekarRepository.cs" />
     <Compile Include="Repository\PrimerakRepository.cs" />
+    <Compile Include="Repository\RezervacijaRepository.cs" />
     <Compile Include="Repository\VisiBibliotekarRepository.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
