@@ -10,22 +10,22 @@ namespace SIMS_Projekat.Model
     public class Korisnik
     {
         [JsonProperty("email")]
-        public string email;
+        public string email { get; set;}
 
         [JsonProperty("ime")]
-        public string ime;
+        public string ime { get; set; }
 
         [JsonProperty("prezime")]
-        public string prezime;
+        public string prezime { get; set; }
 
         [JsonProperty("jmbg")]
-        public string jmbg;
+        public string jmbg { get; set; }
 
         [JsonProperty("telefon")]
-        public string telefon;
+        public string telefon { get; set; }
 
         [JsonProperty("korisnicki nalog")]
-        public KorisnickiNalog nalog;
+        public KorisnickiNalog nalog { get; set; }
 
         public Korisnik()
         {
