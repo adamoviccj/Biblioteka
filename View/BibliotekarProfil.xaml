@@ -22,7 +22,13 @@
                     <SolidColorBrush Color="White"/>
                 </Button.Background>
             </Button>
-            <TextBlock Text="OBIČAN BIBLIOTEKAR" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="143,0,0,0"/>
+
+            <Button Content="Odjava" Click="Odjava_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="562,-10,0,0" Height="23" Width="47" Grid.Column="1">
+                <Button.Background>
+                    <SolidColorBrush Color="White"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Text="OBIČAN BIBLIOTEKAR" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="145,-9,0,9"/>
         </Grid>
         <Grid Grid.Row="1" Background="#FFECEFF6">
             <Grid.ColumnDefinitions>

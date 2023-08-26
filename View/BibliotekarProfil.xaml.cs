@@ -121,8 +121,16 @@ namespace SIMS_Projekat.View
         private void Odjava_Click(object sender, RoutedEventArgs e)
 
             {
-                MainWindow main = new MainWindow();   //zatvoriti preth prozore
-                main.Show();
+
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != Application.Current.MainWindow)
+                {
+                    window.Close();
+                }
+            }
+            //MainWindow main = new MainWindow();   //zatvoriti preth prozore
+                //main.Show();
 
             }
 

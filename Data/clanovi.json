@@ -61,14 +61,14 @@
   },
   {
     "broj clanske karte": "879",
-    "email": "rf rf",
+    "email": "rfrf",
     "ime": " rf ",
     "prezime": " rf",
     "jmbg": " rf",
     "telefon": " r",
     "korisnicki nalog": {
-      "username": " r",
-      "password": "r"
+      "username": " rrr",
+      "password": "rrr"
     }
   },
   {
@@ -93,6 +93,18 @@
     "korisnicki nalog": {
       "username": "34rv",
       "password": "3434rf"
+    }
+  },
+  {
+    "broj clanske karte": "610",
+    "email": "jovan",
+    "ime": "jovan",
+    "prezime": "jovan",
+    "jmbg": "jovannn",
+    "telefon": "jovan",
+    "korisnicki nalog": {
+      "username": "jovan",
+      "password": "jovan123"
     }
   }
 ]
