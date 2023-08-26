@@ -112,24 +112,16 @@ namespace SIMS_Projekat.View
             Iznajmljivanje iznajmljivanje = new Iznajmljivanje();
             iznajmljivanje.datumIznajmljivanja = DateTime.Now;
             iznajmljivanje.datumVracanja = null;
-            iznajmljivanje.primerak = SelectedPrimerak;
-            iznajmljivanje.clan = SelectedClan;
-            Primerak primerak = new Primerak();
-            try
-            {
-                primerak = _primerakRepository.FindPrimerakByInventarniBroj(iznajmljivanje.primerak.inventarniBroj);
-                if (primerak == null)
-                {
-                    MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-            } catch(Exception e1)
+            if (_primerakRepository.FindPrimerakByInventarniBroj(SelectedPrimerak.inventarniBroj) == null)
             {
                 MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            iznajmljivanje.primerak = SelectedPrimerak;
+            iznajmljivanje.clan = SelectedClan;
             
-            primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
+            
+            iznajmljivanje.primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
             _primerakRepository.Save();
             _iznajmljivanjeRepository.Iznajmljivanja.Add(iznajmljivanje);
             _iznajmljivanjeRepository.Save();
