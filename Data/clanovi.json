@@ -7,7 +7,7 @@
     "jmbg": "0512001772014",
     "telefon": "0656128215",
     "korisnicki nalog": {
-      "username": "2markom",
+      "username": "markom",
       "password": "marko123"
     }
   },
@@ -93,18 +93,6 @@
     "korisnicki nalog": {
       "username": "34rv",
       "password": "3434rf"
-    }
-  },
-  {
-    "broj clanske karte": "715",
-    "email": "weff",
-    "ime": "rere",
-    "prezime": "evf",
-    "jmbg": "efv",
-    "telefon": "ve",
-    "korisnicki nalog": {
-      "username": "wefc",
-      "password": "evfr"
     }
   }
 ]
