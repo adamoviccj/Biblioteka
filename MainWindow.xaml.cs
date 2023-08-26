@@ -29,6 +29,8 @@ namespace SIMS_Projekat
         private void PregledKnjigaButton_Click(object sender, RoutedEventArgs e)
         {
             //otvori pregled knjiga ovde
+            PrikazKnjiga prikazKnjiga = new PrikazKnjiga();
+            prikazKnjiga.Show();
         }
 
         private void UlogujteSeButton_Click(object sender, RoutedEventArgs e)
