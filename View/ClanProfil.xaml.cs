@@ -30,5 +30,11 @@ namespace SIMS_Projekat.View
             var iznajmljivanjaTable = new PrikazIznajmljivanjaClan();
             iznajmljivanjaTable.Show();
         }
+
+        private void KreirajRezervacijuBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var kreirajRezervaciju = new KreiranjeRezervacijeClan(null);
+            kreirajRezervaciju.Show();
+        }
     }
 }

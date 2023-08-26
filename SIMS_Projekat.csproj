@@ -111,6 +111,9 @@
     <Compile Include="View\KreiranjeRezervacijeBibliotekar.xaml.cs">
       <DependentUpon>KreiranjeRezervacijeBibliotekar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KreiranjeRezervacijeClan.xaml.cs">
+      <DependentUpon>KreiranjeRezervacijeClan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\KreiranjeRezervacijeBibliotekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KreiranjeRezervacijeClan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
