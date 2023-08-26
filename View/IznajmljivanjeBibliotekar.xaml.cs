@@ -24,7 +24,7 @@ namespace SIMS_Projekat.View
     /// <summary>
     /// Interaction logic for IznajmljivanjeBibliotekar.xaml
     /// </summary>
-    public partial class IznajmljivanjeBibliotekar : Window, INotifyPropertyChanged
+    public partial class IznajmljivanjeBibliotekar : Window
     {
         public ObservableCollection<Knjiga> Knjige { get; set; }
 
@@ -32,16 +32,11 @@ namespace SIMS_Projekat.View
 
         public ObservableCollection<Primerak> slobodniPrimerci;
 
-        public ObservableCollection<Primerak> Primerci
-        {
-            get { return slobodniPrimerci; }
-            set { slobodniPrimerci = value; OnPropertyChanged(nameof(Primerci)); }
-        }
         public ObservableCollection<Primerak> Slobodni { get; set; }
         public ObservableCollection<Clan> Clanovi { get; set; }
 
         private Knjiga _selectedKnjiga;
-        public Knjiga SelectedKnjiga { get { return _selectedKnjiga; } set { _selectedKnjiga = value; fillPrimerci(); } }
+        public Knjiga SelectedKnjiga { get; set; }
         public Primerak SelectedPrimerak { get; set; }
         public Clan SelectedClan { get; set; }
         public ClanRepository _clanRepository;
@@ -54,7 +49,7 @@ namespace SIMS_Projekat.View
 
         public bool CanSelect { get; set; }
 
-        public IznajmljivanjeBibliotekar(Knjiga selectedKnjiga, Clan selectedClan, Primerak selectedPrimerak)
+        public IznajmljivanjeBibliotekar(Knjiga selectedKnjiga, Clan selectedClan)
         {
             InitializeComponent();
             this.DataContext = this;
@@ -65,11 +60,8 @@ namespace SIMS_Projekat.View
             _izdanjeKnjigeRepository = app.IzdanjeKnjigeRepository;
             _primerakRepository = app.PrimerakRepository;
             _iznajmljivanjeRepository = app.IznajmljivanjeRepository;
-            Primerci = new ObservableCollection<Primerak>();
             SelectedKnjiga = selectedKnjiga;
-            SelectedPrimerak = selectedPrimerak;
             SelectedClan = selectedClan;
-            primerci = _primerakRepository.GetAllPrimerci();
             
 
             if (SelectedKnjiga == null)
@@ -86,38 +78,22 @@ namespace SIMS_Projekat.View
 
         }
 
-        private void fillPrimerci()
-        {
-            Primerci.Clear();
-            if (SelectedKnjiga == null)
-            {
-                Primerci = new ObservableCollection<Primerak>(_primerakRepository.GetAllPrimerci());
-            }
-            else
-            {
-                Primerci = new ObservableCollection<Primerak>(primerci.Where(x => x.izdanjeKnjige.knjiga.nazivKnjige == SelectedKnjiga.nazivKnjige && x.dostupnost == enums.Dostupnost.SLOBODNA));
-            }
-        }
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         private void SubmitIznajmljivanje_Click(object sender, RoutedEventArgs e)
         {
             Iznajmljivanje iznajmljivanje = new Iznajmljivanje();
             iznajmljivanje.datumIznajmljivanja = DateTime.Now;
             iznajmljivanje.datumVracanja = null;
-            if (_primerakRepository.FindPrimerakByInventarniBroj(SelectedPrimerak.inventarniBroj) == null)
+            primerci = _primerakRepository.FindSlobodneZaKnjigu(SelectedKnjiga.nazivKnjige);
+            if (primerci.Count == 0)
             {
-                MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Nema slobodnih primeraka odabrane knjige! Mozete izvrsiti rezervaciju!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
+            } else
+            {
+                iznajmljivanje.primerak = primerci.First();
             }
-            iznajmljivanje.primerak = SelectedPrimerak;
+            
             iznajmljivanje.clan = SelectedClan;
             
             

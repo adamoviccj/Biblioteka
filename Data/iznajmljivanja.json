@@ -145,5 +145,103 @@
         }
       }
     }
+  },
+  {
+    "datumIznajmljivanja": "2023-08-26T15:56:18.8532523+02:00",
+    "datumVracanja": null,
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20233",
+      "email": "helenass@gmail.com",
+      "ime": "helena",
+      "prezime": "simonovic",
+      "jmbg": "3010998777119",
+      "telefon": "063844910",
+      "korisnicki nalog": {
+        "username": "2helenasim",
+        "password": "helena123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "1535",
+      "nabavnaCena": 2336.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-01-01T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-4746-5",
+        "udk": "53",
+        "jezik": "srpski",
+        "godinaIzdanja": "2013",
+        "format": "978-86-521-4746-5",
+        "vrstaKoricenja": 0,
+        "citanost": 90,
+        "knjiga": {
+          "nazivKnjige": "Alhemicar",
+          "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+          "autor": {
+            "ime": "Paulo",
+            "prezime": "Koeljo",
+            "drzava": "Brazil"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": 75
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    }
+  },
+  {
+    "datumIznajmljivanja": "2023-08-26T15:56:44.3292106+02:00",
+    "datumVracanja": null,
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "195",
+      "email": "e",
+      "ime": "e",
+      "prezime": "e",
+      "jmbg": "e",
+      "telefon": "e",
+      "korisnicki nalog": {
+        "username": "2ee",
+        "password": "ee"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "3823",
+      "nabavnaCena": 2336.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-01-01T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-4746-5",
+        "udk": "53",
+        "jezik": "srpski",
+        "godinaIzdanja": "2013",
+        "format": "978-86-521-4746-5",
+        "vrstaKoricenja": 0,
+        "citanost": 90,
+        "knjiga": {
+          "nazivKnjige": "Alhemicar",
+          "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+          "autor": {
+            "ime": "Paulo",
+            "prezime": "Koeljo",
+            "drzava": "Brazil"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": 75
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    }
   }
 ]

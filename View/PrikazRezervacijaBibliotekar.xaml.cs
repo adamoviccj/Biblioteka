@@ -28,6 +28,7 @@ namespace SIMS_Projekat.View
         public PrikazRezervacijaBibliotekar()
         {
             InitializeComponent();
+            this.DataContext = this;
             var app = Application.Current as App;
             _rezervacijaRepository = app._rezervacijaRepository;
             
