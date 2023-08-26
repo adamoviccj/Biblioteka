@@ -26,7 +26,7 @@ namespace SIMS_Projekat
         public IzdanjeKnjigeRepository IzdanjeKnjigeRepository { get; set; }
         public PrimerakRepository PrimerakRepository { get; set; }
         public IznajmljivanjeRepository IznajmljivanjeRepository { get; set; }
-        public RezervacijaRepository RezervacijaRepository { get; set; }
+        public RezervacijaRepository _rezervacijaRepository { get; set; }
 
 
 
@@ -43,6 +43,7 @@ namespace SIMS_Projekat
             IzdanjeKnjigeRepository = new IzdanjeKnjigeRepository();
             PrimerakRepository = new PrimerakRepository();
             IznajmljivanjeRepository = new IznajmljivanjeRepository();
+            _rezervacijaRepository = new RezervacijaRepository();
 
 
 

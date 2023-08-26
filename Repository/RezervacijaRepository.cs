@@ -12,10 +12,11 @@ namespace SIMS_Projekat.Repository
     public class RezervacijaRepository
     {
         public List<Rezervacija> Rezervacije { get; set; }
-        public string FilePath = "../Data/rezervacije.json";
+        public string FilePath = "../../Data/rezervacije.json";
 
         public RezervacijaRepository()
         {
+            Rezervacije = GetAllRezervacije();
         }
 
         public List<Rezervacija> GetAllRezervacije()

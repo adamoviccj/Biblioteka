@@ -48,12 +48,25 @@ namespace SIMS_Projekat.Repository
             return null;
         }
 
-        public List<Primerak> FindSlobodnePrimerkeZaKnjigu(string nazivKnjige)
+        public List<Primerak> FindPrimerkeZaKnjigu(string nazivKnjige)
         {
-            List<Primerak> slobodni = new List<Primerak>();
+            List<Primerak> primerci = new List<Primerak>();
             foreach (Primerak primerak in Primerci)
             {
                 if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige)
+                {
+                    primerci.Add(primerak);
+                }
+            }
+            return primerci;
+        }
+
+        public List<Primerak> FindSlobodneZaKnjigu(string nazivKnjige)
+        {
+            List<Primerak> slobodni = new List<Primerak>();
+            foreach(Primerak primerak in Primerci)
+            {
+                if(primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige && primerak.dostupnost==enums.Dostupnost.SLOBODNA)
                 {
                     slobodni.Add(primerak);
                 }

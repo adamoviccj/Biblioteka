@@ -108,6 +108,9 @@
     <Compile Include="View\IznajmljivanjeBibliotekar.xaml.cs">
       <DependentUpon>IznajmljivanjeBibliotekar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KreiranjeRezervacijeBibliotekar.xaml.cs">
+      <DependentUpon>KreiranjeRezervacijeBibliotekar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\IznajmljivanjeBibliotekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KreiranjeRezervacijeBibliotekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,6 +200,7 @@
     <None Include="Data\obicniBibliotekari.json" />
     <None Include="Data\ogranci.json" />
     <None Include="Data\primerci.json" />
+    <None Include="Data\rezervacije.json" />
     <None Include="Data\visiBibliotekari.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
