@@ -94,5 +94,53 @@
         "password": "marko123"
       }
     }
+  },
+  {
+    "datumRezervacije": "2023-08-26T17:39:58.2729428+02:00",
+    "knjiga": {
+      "nazivKnjige": "Sto godina samoce",
+      "opis": "Jedna od najzanimljivijih knjizevnih avantura naseg veka.",
+      "autor": {
+        "ime": "Gabrijel",
+        "prezime": "Garsija Markez",
+        "drzava": "Kolumbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "datumRezervacije": "2023-08-26T17:44:42.3785318+02:00",
+    "knjiga": {
+      "nazivKnjige": "Alhemicar",
+      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+      "autor": {
+        "ime": "Paulo",
+        "prezime": "Koeljo",
+        "drzava": "Brazil"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
   }
 ]

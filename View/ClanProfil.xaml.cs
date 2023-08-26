@@ -36,5 +36,11 @@ namespace SIMS_Projekat.View
             var kreirajRezervaciju = new KreiranjeRezervacijeClan(null);
             kreirajRezervaciju.Show();
         }
+
+        private void ShowMojeRezervacijeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var mojeRezervacije = new PrikazRezervacijaClan();
+            mojeRezervacije.Show();
+        }
     }
 }
