@@ -25,7 +25,7 @@ namespace SIMS_Projekat.View
 
         public EditClan(Clan selectedClan)
         {
-            MessageBox.Show("a");
+            
             InitializeComponent();
             comboBoxClanstvo.Items.Add("DECA");
             comboBoxClanstvo.Items.Add("ODRASLI");
@@ -56,6 +56,10 @@ namespace SIMS_Projekat.View
             clan.telefon = telefonText.Text;
             clan.nalog.password = passwordText.Text;
             clanRepository.Save();
+
+            MessageBox.Show("Član je uspešno izmenjen!");
+
+            Close();
         }
     }
 }
