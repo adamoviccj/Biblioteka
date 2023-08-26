@@ -44,13 +44,15 @@ namespace SIMS_Projekat.View
 
 
             Clanovi = new ObservableCollection<Clan>(_clanRepository.GetAllClanovi());
+            
+            membersDataGrid.Items.Refresh();
 
 
 
 
 
 
-            }
+        }
 
             private void DodajClana_Click(object sender, RoutedEventArgs e)
             {
@@ -70,6 +72,8 @@ namespace SIMS_Projekat.View
                 new EditClan(selectedClan).Show();
                 // Refresh the DataGrid if necessary
                 // membersDataGrid.Items.Refresh();
+                membersDataGrid.Items.Refresh();
+                RefreshClanoviList();
             }
             else
             {
@@ -103,6 +107,9 @@ namespace SIMS_Projekat.View
 
                 // Refresh the DataGrid if necessary
                 membersDataGrid.Items.Refresh();
+
+                RefreshClanoviList();
+
             }
             else
             {
@@ -119,7 +126,24 @@ namespace SIMS_Projekat.View
 
             }
 
-            private void IznajmiKnjigu_Click(object sender, RoutedEventArgs e)
+        private void RefreshButton_Click(object sender, RoutedEventArgs e)
+
+        {
+            RefreshClanoviList();
+
+        }
+
+        private void RefreshClanoviList()
+        {
+            // Osveži ObservableCollection
+            Clanovi.Clear();
+            var updatedClanovi = _clanRepository.GetAllClanovi();
+            foreach (var clan in updatedClanovi)
+            {
+                Clanovi.Add(clan);
+            }
+        }
+        private void IznajmiKnjigu_Click(object sender, RoutedEventArgs e)
             {
                 IznajmljivanjeBibliotekar iznajmljivanjeBibliotekar = new IznajmljivanjeBibliotekar(null,null,null);
                 iznajmljivanjeBibliotekar.Show();
