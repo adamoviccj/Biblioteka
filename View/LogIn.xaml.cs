@@ -52,6 +52,16 @@ namespace SIMS_Projekat.View
                 LoggedUser = korisnik;
             }
 
+            if (LoggedUser is ObicanBibliotekar)
+            {
+                MessageBox.Show("Ulogovali ste se na obicnog bibliotekara.", "Dobrodosli", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                BibliotekarProfil obicanBibliotekarWindow = new BibliotekarProfil();
+                obicanBibliotekarWindow.Show();
+            }
+
+
+
             // Provjeri uneseno korisničko ime i lozinku u svim repozitorijumima
             //KorisnickiNalog nalog = TryLoginInRepositories(username, password);
 
@@ -63,15 +73,15 @@ namespace SIMS_Projekat.View
                     //ClanWindow clanWindow = new ClanWindow();
                     //clanWindow.Show();
                 }
-            */
+
                 if (username.StartsWith("0"))
                 {
                     MessageBox.Show("Ulogovali ste se na obicnog bibliotekara.", "Dobrodosli", MessageBoxButton.OK, MessageBoxImage.Information);
-                
+
                     BibliotekarProfil obicanBibliotekarWindow = new BibliotekarProfil();
                     obicanBibliotekarWindow.Show();
                 }
-
+            */
 
             else if (username.StartsWith("1"))
             {

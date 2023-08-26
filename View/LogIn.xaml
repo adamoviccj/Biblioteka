@@ -15,15 +15,15 @@
         <TextBlock Text="Log In" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
         <StackPanel Grid.Row="1" Background="#FFF1D9E6" Orientation="Horizontal" Margin="0,0,0,10">
-            <Label Content="Username:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
-            <TextBox x:Name="usernameTextBox" Width="200" />
+            <Label Content="Username:   "/>
+            <TextBox x:Name="usernameTextBox" Width="196" Height="39" />
         </StackPanel>
 
         <StackPanel Grid.Row="2" Background="#FFF1D9E6" Orientation="Horizontal" Height="40" VerticalAlignment="Top">
-            <Label Content="Password:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
-            <PasswordBox x:Name="passwordBox" Width="200" />
+            <Label Content="Password: " HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <PasswordBox x:Name="passwordBox" Width="196" />
         </StackPanel>
 
-        <Button  Click="LoginButton_Click" Grid.Row="3" Content="Log In" Width="100" HorizontalAlignment="Center" Margin="0,20,0,0" Background="#FFF1D9E6"/>
+        <Button  BorderBrush="White" BorderThickness="3" Click="LoginButton_Click" Grid.Row="2" Content="Log In" Width="100" HorizontalAlignment="Center" Margin="0,96,0,-93" Background="#FFF1D9E6"/>
     </Grid>
 </Window>
