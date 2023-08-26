@@ -95,7 +95,7 @@ namespace SIMS_Projekat.View
             }
             else
             {
-                Primerci = new ObservableCollection<Primerak>(primerci.Where(x => x.izdanjeKnjige.knjiga.nazivKnjige == SelectedKnjiga.nazivKnjige));
+                Primerci = new ObservableCollection<Primerak>(primerci.Where(x => x.izdanjeKnjige.knjiga.nazivKnjige == SelectedKnjiga.nazivKnjige && x.dostupnost == enums.Dostupnost.SLOBODNA));
             }
         }
 
@@ -136,6 +136,7 @@ namespace SIMS_Projekat.View
             if (iznajmljivanje == null)
             {
                 MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
             else
             {
