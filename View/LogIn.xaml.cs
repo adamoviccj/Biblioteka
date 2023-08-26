@@ -90,8 +90,8 @@ namespace SIMS_Projekat.View
             {
                 
                 MessageBox.Show("Uspesno ulogovan clan.");
-                //ClanWindow clanW = new ClanWindow();
-                //clanW.Show();
+                ClanProfil clanW = new ClanProfil();
+                clanW.Show();
             }
             //}
 
