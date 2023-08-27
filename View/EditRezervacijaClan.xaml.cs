@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,44 +19,43 @@ using System.Windows.Shapes;
 namespace SIMS_Projekat.View
 {
     /// <summary>
-    /// Interaction logic for KreiranjeRezervacijeClan.xaml
+    /// Interaction logic for EditRezervacijaClan.xaml
     /// </summary>
-    public partial class KreiranjeRezervacijeClan : Window
+    public partial class EditRezervacijaClan : Window
     {
         public ObservableCollection<Knjiga> Knjige { get; set; }
         public Knjiga SelectedKnjiga { get; set; }
-
-        private KnjigaRepository _knjigaRepository { get; set; }
         private RezervacijaRepository _rezervacijaRepository { get; set; }
-        public KreiranjeRezervacijeClan(Knjiga selectedKnjiga)
+        private KnjigaRepository _knjigaRepository { get; set; }
+        private Rezervacija rezervacijaForUpdate;
+
+        public EditRezervacijaClan(Rezervacija rezervacija)
         {
             InitializeComponent();
             this.DataContext = this;
+
             var app = Application.Current as App;
             _knjigaRepository = app.KnjigaRepository;
             _rezervacijaRepository = app._rezervacijaRepository;
-            SelectedKnjiga = selectedKnjiga;
+            rezervacijaForUpdate = rezervacija;
 
             Knjige = new ObservableCollection<Knjiga>(_knjigaRepository.GetAllKnjige());
         }
-
-        private void SubmitRezervacija_Click(object sender, RoutedEventArgs e)
+        
+        private void EditRezervacijaBtn_Click(object sender, RoutedEventArgs e)
         {
             Rezervacija rezervacija = new Rezervacija();
-            rezervacija.datumRezervacije = DateTime.Now;
+            rezervacija.knjiga = rezervacijaForUpdate.knjiga;
             rezervacija.clan = (Clan)LogIn.LoggedUser;
-            rezervacija.knjiga = SelectedKnjiga;
-            
-            if (rezervacija == null)
+            if(!_rezervacijaRepository.Edit(rezervacija))
             {
-                MessageBox.Show("Greska u rezervaciji knjige!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Greska u izmeni rezervacije!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             } else
             {
-                _rezervacijaRepository.Create(rezervacija);
-                MessageBox.Show("Rezervacija uspesno obavljena!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                MessageBox.Show("Rezervacija uspesno izvrsena!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+
         }
     }
 }

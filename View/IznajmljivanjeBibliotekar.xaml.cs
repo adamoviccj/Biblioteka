@@ -99,8 +99,7 @@ namespace SIMS_Projekat.View
             
             iznajmljivanje.primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
             _primerakRepository.Save();
-            _iznajmljivanjeRepository.Iznajmljivanja.Add(iznajmljivanje);
-            _iznajmljivanjeRepository.Save();
+            _iznajmljivanjeRepository.Create(iznajmljivanje);
             if (iznajmljivanje == null)
             {
                 MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);

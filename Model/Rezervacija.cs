@@ -9,6 +9,9 @@ namespace SIMS_Projekat.Model
 {
     public class Rezervacija
     {
+        [JsonProperty("id")]
+        public int id { get; set; }
+
         [JsonProperty("datumRezervacije")]
         public DateTime datumRezervacije { get; set; }
 
@@ -22,8 +25,9 @@ namespace SIMS_Projekat.Model
         {
         }
 
-        public Rezervacija(DateTime datumRezervacije, Knjiga knjiga, Clan clan)
+        public Rezervacija(int id, DateTime datumRezervacije, Knjiga knjiga, Clan clan)
         {
+            this.id = id;
             this.datumRezervacije = datumRezervacije;
             this.knjiga = knjiga;
             this.clan = clan;

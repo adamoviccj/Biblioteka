@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "datumRezervacije": "2023-05-01T00:00:00",
     "knjiga": {
       "nazivKnjige": "Zlocin i kazna",
@@ -24,6 +25,7 @@
     }
   },
   {
+    "id": 2,
     "datumRezervacije": "2023-08-26T02:59:32.0536923+02:00",
     "knjiga": {
       "nazivKnjige": "Sto godina samoce",
@@ -48,6 +50,7 @@
     }
   },
   {
+    "id": 3,
     "datumRezervacije": "2023-08-26T03:01:50.5937506+02:00",
     "knjiga": {
       "nazivKnjige": "Hari Poter i kamen mudrosti",
@@ -72,6 +75,7 @@
     }
   },
   {
+    "id": 4,
     "datumRezervacije": "2023-08-26T16:45:34.4281983+02:00",
     "knjiga": {
       "nazivKnjige": "Zlocin i kazna",
@@ -96,6 +100,7 @@
     }
   },
   {
+    "id": 5,
     "datumRezervacije": "2023-08-26T17:39:58.2729428+02:00",
     "knjiga": {
       "nazivKnjige": "Sto godina samoce",
@@ -120,7 +125,158 @@
     }
   },
   {
+    "id": 6,
     "datumRezervacije": "2023-08-26T17:44:42.3785318+02:00",
+    "knjiga": {
+      "nazivKnjige": "Alhemicar",
+      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+      "autor": {
+        "ime": "Paulo",
+        "prezime": "Koeljo",
+        "drzava": "Brazil"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "datumRezervacije": "2023-08-26T20:49:45.6945284+02:00",
+    "knjiga": {
+      "nazivKnjige": "Hari Poter i kamen mudrosti",
+      "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
+      "autor": {
+        "ime": "J. K.",
+        "prezime": "Rouling",
+        "drzava": "UK"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "id": 7,
+    "datumRezervacije": "2023-08-26T20:49:45.6945284+02:00",
+    "knjiga": {
+      "nazivKnjige": "Hari Poter i kamen mudrosti",
+      "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
+      "autor": {
+        "ime": "J. K.",
+        "prezime": "Rouling",
+        "drzava": "UK"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "datumRezervacije": "2023-08-26T20:57:00.6518069+02:00",
+    "knjiga": {
+      "nazivKnjige": "Alhemicar",
+      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+      "autor": {
+        "ime": "Paulo",
+        "prezime": "Koeljo",
+        "drzava": "Brazil"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "id": 8,
+    "datumRezervacije": "2023-08-26T20:57:00.6518069+02:00",
+    "knjiga": {
+      "nazivKnjige": "Alhemicar",
+      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+      "autor": {
+        "ime": "Paulo",
+        "prezime": "Koeljo",
+        "drzava": "Brazil"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "id": 9,
+    "datumRezervacije": "2023-08-27T02:07:26.7287901+02:00",
+    "knjiga": {
+      "nazivKnjige": "Na Drini cuprija",
+      "opis": "Najpoznatiji roman Ive Andrica.",
+      "autor": {
+        "ime": "Ivo",
+        "prezime": "Andric",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "id": 10,
+    "datumRezervacije": "2023-08-27T02:07:40.7504376+02:00",
     "knjiga": {
       "nazivKnjige": "Alhemicar",
       "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",

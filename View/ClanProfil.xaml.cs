@@ -42,5 +42,11 @@ namespace SIMS_Projekat.View
             var mojeRezervacije = new PrikazRezervacijaClan();
             mojeRezervacije.Show();
         }
+
+        private void ShowMojeZahteveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var mojiZahtevi = new PrikazZahtevaClan();
+            mojiZahtevi.Show();
+        }
     }
 }
