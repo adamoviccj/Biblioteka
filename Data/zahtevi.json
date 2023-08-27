@@ -5,7 +5,7 @@
       "id": 5,
       "datumIznajmljivanja": "2023-08-26T15:56:44.3292106+02:00",
       "datumVracanja": null,
-      "brojZahtevaZaProduzavanje": 0,
+      "brojZahtevaZaProduzavanje": 1,
       "clan": {
         "broj clanske karte": "195",
         "email": "e",
@@ -72,7 +72,7 @@
       "id": 2,
       "datumIznajmljivanja": "2023-08-26T00:04:04.195646+02:00",
       "datumVracanja": null,
-      "brojZahtevaZaProduzavanje": 0,
+      "brojZahtevaZaProduzavanje": 1,
       "clan": {
         "broj clanske karte": "20232",
         "email": "anamilos@gmail.com",

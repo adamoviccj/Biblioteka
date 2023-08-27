@@ -174,5 +174,11 @@ namespace SIMS_Projekat.View
                 PrikazRezervacijaBibliotekar prikazRezervacijaBibliotekar = new PrikazRezervacijaBibliotekar();
                 prikazRezervacijaBibliotekar.Show();
             }
+
+            private void ShowZahteve_Click(object sender, RoutedEventArgs e)
+            {
+                PrikazZahtevaBibliotekar prikaz = new PrikazZahtevaBibliotekar();
+                prikaz.Show();
+            }
         }
     }
