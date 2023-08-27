@@ -32,6 +32,11 @@ namespace SIMS_Projekat.Repository
             return zahtevi;
         }
 
+        public List<ZahtevZaProduzavanje> GetAll()
+        {
+            return Zahtevi;
+        }
+
         public void Save()
         {
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(Zahtevi, Formatting.Indented));
@@ -70,7 +75,10 @@ namespace SIMS_Projekat.Repository
             {
                 return;
             }
+            forUpdate.Iznajmljivanje = zahtev.Iznajmljivanje;
+            forUpdate.DatumSlanja = zahtev.DatumSlanja;
             forUpdate.StanjeZahteva = zahtev.StanjeZahteva;
+            forUpdate.Clan = zahtev.Clan;
             Save();
         }
 

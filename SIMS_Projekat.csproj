@@ -139,6 +139,9 @@
     <Compile Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml.cs">
       <DependentUpon>PrikazTrenutnihIznajmljivanjaClan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PrikazZahtevaBibliotekar.xaml.cs">
+      <DependentUpon>PrikazZahtevaBibliotekar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PrikazZahtevaClan.xaml.cs">
       <DependentUpon>PrikazZahtevaClan.xaml</DependentUpon>
     </Compile>
@@ -210,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazZahtevaBibliotekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
