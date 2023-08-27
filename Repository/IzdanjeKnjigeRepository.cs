@@ -16,7 +16,7 @@ namespace SIMS_Projekat.Repository
 
         public IzdanjeKnjigeRepository()
         {
-            GetAllIzdanjaKnjige();
+            Izdanja = GetAllIzdanjaKnjige();
         }
 
         public List<IzdanjeKnjige> GetAllIzdanjaKnjige()
@@ -24,6 +24,11 @@ namespace SIMS_Projekat.Repository
             string json = File.ReadAllText(FilePath);
             List<IzdanjeKnjige> izdanja = JsonConvert.DeserializeObject<List<IzdanjeKnjige>>(json);
             return izdanja;
+        }
+
+        public List<IzdanjeKnjige> GetAll()
+        {
+            return Izdanja;
         }
 
         public void Save()

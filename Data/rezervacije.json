@@ -2,13 +2,30 @@
   {
     "id": 1,
     "datumRezervacije": "2023-05-01T00:00:00",
-    "knjiga": {
-      "nazivKnjige": "Zlocin i kazna",
-      "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
-      "autor": {
-        "ime": "Fjodor",
-        "prezime": "Dostojevski",
-        "drzava": "Rusija"
+    "izdanje knjige": {
+      "isbn": "978-86-521-3239-3",
+      "udk": "12345",
+      "jezik": "srpski",
+      "godinaIzdanja": "2019",
+      "format": "13.5x20.5 cm",
+      "vrstaKoricenja": 0,
+      "citanost": 57,
+      "knjiga": {
+        "nazivKnjige": "Zlocin i kazna",
+        "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+        "autor": {
+          "ime": "Fjodor",
+          "prezime": "Dostojevski",
+          "drzava": "Rusija"
+        }
+      },
+      "biblioteka": {
+        "nazivBiblioteke": "biblioteka1",
+        "brojClanova": 75
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
       }
     },
     "clan": {
@@ -26,238 +43,30 @@
   },
   {
     "id": 2,
-    "datumRezervacije": "2023-08-26T02:59:32.0536923+02:00",
-    "knjiga": {
-      "nazivKnjige": "Sto godina samoce",
-      "opis": "Jedna od najzanimljivijih knjizevnih avantura naseg veka.",
-      "autor": {
-        "ime": "Gabrijel",
-        "prezime": "Garsija Markez",
-        "drzava": "Kolumbija"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20234",
-      "email": "vasilijetomic@gmail.com",
-      "ime": "vasilije",
-      "prezime": "tomic",
-      "jmbg": "1508002772334",
-      "telefon": "0697184465",
-      "korisnicki nalog": {
-        "username": "2vasilijetom",
-        "password": "vasilije123"
-      }
-    }
-  },
-  {
-    "id": 3,
-    "datumRezervacije": "2023-08-26T03:01:50.5937506+02:00",
-    "knjiga": {
-      "nazivKnjige": "Hari Poter i kamen mudrosti",
-      "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
-      "autor": {
-        "ime": "J. K.",
-        "prezime": "Rouling",
-        "drzava": "UK"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "195",
-      "email": "e",
-      "ime": "e",
-      "prezime": "e",
-      "jmbg": "e",
-      "telefon": "e",
-      "korisnicki nalog": {
-        "username": "2ee",
-        "password": "ee"
-      }
-    }
-  },
-  {
-    "id": 4,
-    "datumRezervacije": "2023-08-26T16:45:34.4281983+02:00",
-    "knjiga": {
-      "nazivKnjige": "Zlocin i kazna",
-      "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
-      "autor": {
-        "ime": "Fjodor",
-        "prezime": "Dostojevski",
-        "drzava": "Rusija"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 5,
-    "datumRezervacije": "2023-08-26T17:39:58.2729428+02:00",
-    "knjiga": {
-      "nazivKnjige": "Sto godina samoce",
-      "opis": "Jedna od najzanimljivijih knjizevnih avantura naseg veka.",
-      "autor": {
-        "ime": "Gabrijel",
-        "prezime": "Garsija Markez",
-        "drzava": "Kolumbija"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 6,
-    "datumRezervacije": "2023-08-26T17:44:42.3785318+02:00",
-    "knjiga": {
-      "nazivKnjige": "Alhemicar",
-      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
-      "autor": {
-        "ime": "Paulo",
-        "prezime": "Koeljo",
-        "drzava": "Brazil"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 7,
-    "datumRezervacije": "2023-08-26T20:49:45.6945284+02:00",
-    "knjiga": {
-      "nazivKnjige": "Hari Poter i kamen mudrosti",
-      "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
-      "autor": {
-        "ime": "J. K.",
-        "prezime": "Rouling",
-        "drzava": "UK"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 7,
-    "datumRezervacije": "2023-08-26T20:49:45.6945284+02:00",
-    "knjiga": {
-      "nazivKnjige": "Hari Poter i kamen mudrosti",
-      "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
-      "autor": {
-        "ime": "J. K.",
-        "prezime": "Rouling",
-        "drzava": "UK"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 8,
-    "datumRezervacije": "2023-08-26T20:57:00.6518069+02:00",
-    "knjiga": {
-      "nazivKnjige": "Alhemicar",
-      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
-      "autor": {
-        "ime": "Paulo",
-        "prezime": "Koeljo",
-        "drzava": "Brazil"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 8,
-    "datumRezervacije": "2023-08-26T20:57:00.6518069+02:00",
-    "knjiga": {
-      "nazivKnjige": "Alhemicar",
-      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
-      "autor": {
-        "ime": "Paulo",
-        "prezime": "Koeljo",
-        "drzava": "Brazil"
-      }
-    },
-    "clan": {
-      "broj clanske karte": "20231",
-      "email": "markom@gmail.com",
-      "ime": "marko",
-      "prezime": "markovic",
-      "jmbg": "0512001772014",
-      "telefon": "0656128215",
-      "korisnicki nalog": {
-        "username": "markom",
-        "password": "marko123"
-      }
-    }
-  },
-  {
-    "id": 9,
-    "datumRezervacije": "2023-08-27T02:07:26.7287901+02:00",
-    "knjiga": {
-      "nazivKnjige": "Na Drini cuprija",
-      "opis": "Najpoznatiji roman Ive Andrica.",
-      "autor": {
-        "ime": "Ivo",
-        "prezime": "Andric",
+    "datumRezervacije": "2023-08-27T14:21:31.2028803+02:00",
+    "izdanje knjige": {
+      "isbn": "978-86-521-3239-3",
+      "udk": "12345",
+      "jezik": "srpski",
+      "godinaIzdanja": "2019",
+      "format": "13.5x20.5 cm",
+      "vrstaKoricenja": 0,
+      "citanost": 57,
+      "knjiga": {
+        "nazivKnjige": "Zlocin i kazna",
+        "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+        "autor": {
+          "ime": "Fjodor",
+          "prezime": "Dostojevski",
+          "drzava": "Rusija"
+        }
+      },
+      "biblioteka": {
+        "nazivBiblioteke": "biblioteka1",
+        "brojClanova": 75
+      },
+      "izdavac": {
+        "naziv": "Laguna",
         "drzava": "Srbija"
       }
     },
@@ -275,15 +84,32 @@
     }
   },
   {
-    "id": 10,
-    "datumRezervacije": "2023-08-27T02:07:40.7504376+02:00",
-    "knjiga": {
-      "nazivKnjige": "Alhemicar",
-      "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
-      "autor": {
-        "ime": "Paulo",
-        "prezime": "Koeljo",
-        "drzava": "Brazil"
+    "id": 3,
+    "datumRezervacije": "2023-08-27T14:28:34.6561298+02:00",
+    "izdanje knjige": {
+      "isbn": "978-86-521-4746-5",
+      "udk": "53",
+      "jezik": "srpski",
+      "godinaIzdanja": "2013",
+      "format": "978-86-521-4746-5",
+      "vrstaKoricenja": 0,
+      "citanost": 90,
+      "knjiga": {
+        "nazivKnjige": "Alhemicar",
+        "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+        "autor": {
+          "ime": "Paulo",
+          "prezime": "Koeljo",
+          "drzava": "Brazil"
+        }
+      },
+      "biblioteka": {
+        "nazivBiblioteke": "biblioteka1",
+        "brojClanova": 75
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
       }
     },
     "clan": {

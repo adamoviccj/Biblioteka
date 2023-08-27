@@ -40,7 +40,7 @@ namespace SIMS_Projekat.Repository
         private int GenerateId()
         {
             int maxId = 0;
-            foreach(ZahtevZaProduzavanje zahtev in Zahtevi)
+            foreach (ZahtevZaProduzavanje zahtev in Zahtevi)
             {
                 if (zahtev.Id > maxId)
                 {
@@ -77,14 +77,14 @@ namespace SIMS_Projekat.Repository
         public List<ZahtevZaProduzavanje> GetAllZahteviClana(string jmbg)
         {
             List<ZahtevZaProduzavanje> zahtevi = new List<ZahtevZaProduzavanje>();
-            foreach(ZahtevZaProduzavanje zahtevZaProduzavanje in GetAllZahtevi())
+            foreach (ZahtevZaProduzavanje zahtevZaProduzavanje in GetAllZahtevi())
             {
                 if (zahtevZaProduzavanje.Clan.jmbg == jmbg)
                 {
                     zahtevi.Add(zahtevZaProduzavanje);
                 }
             }
-            return zahtevi; 
+            return zahtevi;
         }
     }
 }

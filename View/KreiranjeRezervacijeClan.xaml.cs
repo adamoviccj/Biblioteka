@@ -22,40 +22,48 @@ namespace SIMS_Projekat.View
     /// </summary>
     public partial class KreiranjeRezervacijeClan : Window
     {
-        public ObservableCollection<Knjiga> Knjige { get; set; }
-        public Knjiga SelectedKnjiga { get; set; }
+        public ObservableCollection<IzdanjeKnjige> Izdanja { get; set; }
+        public IzdanjeKnjige SelectedIzdanje { get; set; }
 
-        private KnjigaRepository _knjigaRepository { get; set; }
+        private IzdanjeKnjigeRepository _izdanjeRepository { get; set; }
         private RezervacijaRepository _rezervacijaRepository { get; set; }
-        public KreiranjeRezervacijeClan(Knjiga selectedKnjiga)
+        private PrimerakRepository _primerakRepository { get; set; }
+        public KreiranjeRezervacijeClan()
         {
             InitializeComponent();
             this.DataContext = this;
             var app = Application.Current as App;
-            _knjigaRepository = app.KnjigaRepository;
+            _izdanjeRepository = app.IzdanjeKnjigeRepository;
             _rezervacijaRepository = app._rezervacijaRepository;
-            SelectedKnjiga = selectedKnjiga;
+            _primerakRepository = app.PrimerakRepository;
 
-            Knjige = new ObservableCollection<Knjiga>(_knjigaRepository.GetAllKnjige());
+            Izdanja = new ObservableCollection<IzdanjeKnjige>(_izdanjeRepository.GetAll());
         }
 
         private void SubmitRezervacija_Click(object sender, RoutedEventArgs e)
         {
             Rezervacija rezervacija = new Rezervacija();
-            rezervacija.datumRezervacije = DateTime.Now;
-            rezervacija.clan = (Clan)LogIn.LoggedUser;
-            rezervacija.knjiga = SelectedKnjiga;
-            
-            if (rezervacija == null)
-            {
-                MessageBox.Show("Greska u rezervaciji knjige!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            } else
-            {
-                _rezervacijaRepository.Create(rezervacija);
-                MessageBox.Show("Rezervacija uspesno obavljena!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
+            rezervacija.DatumRezervacije = DateTime.Now;
+            rezervacija.Clan = (Clan)LogIn.LoggedUser;
+            rezervacija.IzdanjeKnjige = SelectedIzdanje;
 
+
+            string isbn = SelectedIzdanje.isbn;
+            Primerak primerak = _primerakRepository.FindSlobodanPrimerakZaIzdanje(isbn);
+            if (primerak == null)
+            {
+                MessageBox.Show("Trenutno nema slobodnih primeraka!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            else
+            {
+                MessageBox.Show("Rezervacija uspesno obavljena, preuzmite knjigu u roku od dva dana!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
+                primerak.dostupnost = enums.Dostupnost.NA_CEKANJU;
+                _primerakRepository.Update(primerak);
+            }
+
+            _rezervacijaRepository.Create(rezervacija);
+
+
         }
     }
 }

@@ -45,8 +45,9 @@ namespace SIMS_Projekat.View
         private void EditRezervacijaBtn_Click(object sender, RoutedEventArgs e)
         {
             Rezervacija rezervacija = new Rezervacija();
-            rezervacija.knjiga = rezervacijaForUpdate.knjiga;
-            rezervacija.clan = (Clan)LogIn.LoggedUser;
+            rezervacija.IzdanjeKnjige = rezervacijaForUpdate.IzdanjeKnjige;
+
+            rezervacija.Clan = (Clan)LogIn.LoggedUser;
             if(!_rezervacijaRepository.Edit(rezervacija))
             {
                 MessageBox.Show("Greska u izmeni rezervacije!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);

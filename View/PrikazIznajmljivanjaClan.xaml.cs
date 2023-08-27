@@ -64,7 +64,7 @@ namespace SIMS_Projekat.View
                 iznajmljivanje.brojZahtevaZaProduzavanje += 1;
                 _iznajmljivanjeRepository.Save();
             }
-            zahtevZaProduzavanje.InventarniBroj = SelectedIznajmljivanje.primerak.inventarniBroj;
+            zahtevZaProduzavanje.Iznajmljivanje = SelectedIznajmljivanje;
             
 
             zahtevZaProduzavanje.StanjeZahteva = enums.StanjeZahteva.NA_CEKANJU;

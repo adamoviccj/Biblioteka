@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="181*"/>
                 <ColumnDefinition Width="619*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="MOJA ZAHTEVI" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+            <TextBlock Text="MOJI ZAHTEVI" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
         </Grid>
         <Grid Grid.Row="1" Background="#FFECEFF6">
             <DataGrid x:Name="iznajmljivanjaDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
@@ -28,7 +28,7 @@
                 </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Header="Inventarni broj" Binding="{Binding InventarniBroj}"/>
+                    <DataGridTextColumn Header="Iznajmljivanje" Binding="{Binding Iznajmljivanje.id}"/>
                     <DataGridTextColumn Header="Datum slanja" Binding="{Binding DatumSlanja,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
                     <DataGridTextColumn Header="Stanje zahteva" Binding="{Binding StanjeZahteva}" Foreground="Black"/>
                 </DataGrid.Columns>

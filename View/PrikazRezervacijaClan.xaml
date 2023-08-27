@@ -27,11 +27,12 @@
                     <SolidColorBrush x:Key="ColumnHeaderBackround" Color="#FFF1D9E6"/>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding datumRezervacije,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
-                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding knjiga.nazivKnjige}"/>
-                    <DataGridTextColumn Header="Ime autora" Binding="{Binding knjiga.autor.ime}" Foreground="Black"/>
-                    <DataGridTextColumn Header="Prezime autora" Binding="{Binding knjiga.autor.prezime}" Foreground="Black"/>
-                    <DataGridTextColumn Header="Opis" Binding="{Binding knjiga.opis}"/>
+                    <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding DatumRezervacije,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding IzdanjeKnjige.knjiga.nazivKnjige}"/>
+                    <DataGridTextColumn Header="Ime autora" Binding="{Binding IzdanjeKnjige.knjiga.autor.ime}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Prezime autora" Binding="{Binding IzdanjeKnjige.knjiga.autor.prezime}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding IzdanjeKnjige.godinaIzdanja}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Opis" Binding="{Binding IzdanjeKnjige.knjiga.opis}"/>
 
                 </DataGrid.Columns>
             </DataGrid>

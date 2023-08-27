@@ -10,27 +10,27 @@ namespace SIMS_Projekat.Model
     public class Rezervacija
     {
         [JsonProperty("id")]
-        public int id { get; set; }
+        public int Id { get; set; }
 
         [JsonProperty("datumRezervacije")]
-        public DateTime datumRezervacije { get; set; }
+        public DateTime DatumRezervacije { get; set; }
 
-        [JsonProperty("knjiga")]
-        public Knjiga knjiga { get; set; }
+        [JsonProperty("izdanje knjige")]
+        public IzdanjeKnjige IzdanjeKnjige { get; set; }
 
         [JsonProperty("clan")]
-        public Clan clan { get; set; }
+        public Clan Clan { get; set; }
 
         public Rezervacija()
         {
         }
 
-        public Rezervacija(int id, DateTime datumRezervacije, Knjiga knjiga, Clan clan)
+        public Rezervacija(int id, DateTime datumRezervacije, IzdanjeKnjige izdanjeKnjige, Clan clan)
         {
-            this.id = id;
-            this.datumRezervacije = datumRezervacije;
-            this.knjiga = knjiga;
-            this.clan = clan;
+            Id = id;
+            DatumRezervacije = datumRezervacije;
+            IzdanjeKnjige = izdanjeKnjige;
+            Clan = clan;
         }
     }
 }
