@@ -31,10 +31,21 @@
                     <DataGridTextColumn Header="Ime autora" Binding="{Binding autor.ime}" Foreground="Black"/>
                     <DataGridTextColumn Header="Prezime autora" Binding="{Binding autor.prezime}" Foreground="Black"/>
                     <DataGridTextColumn Header="Opis" Binding="{Binding opis}"/>
-                    
+
                 </DataGrid.Columns>
             </DataGrid>
 
         </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,50">
+            <Label Content="Pretraga:" Height="30" Width="100"/>
+            <TextBox Height="30" Width="120" Text="{Binding SearchParam}"/>
+            <Button Content="Pretrazi" Click="SearchBtn_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,50">
+            <Button Content="Sortiraj po nazivu" Click="SortByNaziv_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+            <Button Content="Sortiraj po imenu" Click="SortByImeAutora_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+            <Button Content="Sortiraj po prezimenu" Click="SortByPrezimeAutora_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+        </StackPanel>
     </Grid>
 </Window>

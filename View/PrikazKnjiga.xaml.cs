@@ -23,6 +23,7 @@ namespace SIMS_Projekat.View
     public partial class PrikazKnjiga : Window
     {
         public ObservableCollection<Knjiga> Knjige { get; set; }
+        public string SearchParam { get; set; }
         private KnjigaRepository _knjigaRepository { get; set; }
         public PrikazKnjiga()
         {
@@ -34,6 +35,39 @@ namespace SIMS_Projekat.View
 
             Knjige = new ObservableCollection<Knjiga>(_knjigaRepository.GetAllKnjige());
 
+        }
+
+        public void Refresh(List<Knjiga> knjige)
+        {
+            Knjige.Clear();
+            foreach(Knjiga knjiga in knjige)
+            {
+                Knjige.Add(knjiga);
+            }
+        }
+
+        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            List<Knjiga> knjige = _knjigaRepository.GetSearchedKnjige(SearchParam);
+            Refresh(knjige);
+        }
+
+        private void SortByNaziv_Click(object sender, RoutedEventArgs e)
+        {
+            List<Knjiga> knjige = _knjigaRepository.GetSortedByNaziv();
+            Refresh(knjige);
+        }
+
+        private void SortByImeAutora_Click(object sender, RoutedEventArgs e)
+        {
+            List<Knjiga> knjige = _knjigaRepository.GetSortedByImeAutora();
+            Refresh(knjige);
+        }
+
+        private void SortByPrezimeAutora_Click(object sender, RoutedEventArgs e)
+        {
+            List<Knjiga> knjige = _knjigaRepository.GetSortedByPrezimeAutora();
+            Refresh(knjige);
         }
     }
 }
