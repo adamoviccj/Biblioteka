@@ -54,5 +54,19 @@ namespace SIMS_Projekat.View
             PrikazTrenutnihIznajmljivanjaClan prikaz = new PrikazTrenutnihIznajmljivanjaClan();
             prikaz.Show();
         }
+
+        private void OdjavaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            for (int i = Application.Current.Windows.Count - 1; i >= 0; i--)
+            {
+                if (Application.Current.Windows[i].GetType() != typeof(MainWindow))
+                {
+                    Application.Current.Windows[i].Close();
+                }
+            }
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
     }
 }
