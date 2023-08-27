@@ -27,6 +27,7 @@ namespace SIMS_Projekat
         public PrimerakRepository PrimerakRepository { get; set; }
         public IznajmljivanjeRepository IznajmljivanjeRepository { get; set; }
         public RezervacijaRepository _rezervacijaRepository { get; set; }
+        public ZahtevZaProduzavanjeRepository _zahtevZaProduzavanjeRepository { get; set; }
 
 
 
@@ -44,6 +45,7 @@ namespace SIMS_Projekat
             PrimerakRepository = new PrimerakRepository();
             IznajmljivanjeRepository = new IznajmljivanjeRepository();
             _rezervacijaRepository = new RezervacijaRepository();
+            _zahtevZaProduzavanjeRepository = new ZahtevZaProduzavanjeRepository();
 
 
 

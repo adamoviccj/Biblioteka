@@ -23,6 +23,7 @@ namespace SIMS_Projekat.View
     public partial class PrikazRezervacijaClan : Window
     {
         public static ObservableCollection<Rezervacija> Rezervacije { get; set; }
+        public Rezervacija SelectedRezervacija { get; set; }
         private RezervacijaRepository _rezervacijaRepository { get; set; }
         public PrikazRezervacijaClan()
         {
@@ -50,6 +51,18 @@ namespace SIMS_Projekat.View
             {
                 Rezervacije.Add(rezervacija);
             }
+        }
+
+        private void EditRezervacijaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedRezervacija == null)
+            {
+                return;
+            }
+            EditRezervacijaClan editRezervacijaClan = new EditRezervacijaClan(SelectedRezervacija);
+            editRezervacijaClan.ShowDialog();
+            RefreshView(_rezervacijaRepository.GetAllRezervacijeClana(LogIn.LoggedUser.jmbg));
+            
         }
     }
 }

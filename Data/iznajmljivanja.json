@@ -1,8 +1,9 @@
 [
   {
+    "id": 1,
     "datumIznajmljivanja": "2023-05-01T00:00:00",
     "datumVracanja": "2023-05-10T00:00:00",
-    "brojZahtevaZaProduzavanje": 0,
+    "brojZahtevaZaProduzavanje": 2,
     "clan": {
       "broj clanske karte": "20231",
       "email": "markom@gmail.com",
@@ -49,6 +50,7 @@
     }
   },
   {
+    "id": 2,
     "datumIznajmljivanja": "2023-08-26T00:04:04.195646+02:00",
     "datumVracanja": null,
     "brojZahtevaZaProduzavanje": 0,
@@ -98,6 +100,7 @@
     }
   },
   {
+    "id": 3,
     "datumIznajmljivanja": "2023-08-26T01:39:59.8839509+02:00",
     "datumVracanja": null,
     "brojZahtevaZaProduzavanje": 0,
@@ -147,6 +150,7 @@
     }
   },
   {
+    "id": 4,
     "datumIznajmljivanja": "2023-08-26T15:56:18.8532523+02:00",
     "datumVracanja": null,
     "brojZahtevaZaProduzavanje": 0,
@@ -196,6 +200,7 @@
     }
   },
   {
+    "id": 5,
     "datumIznajmljivanja": "2023-08-26T15:56:44.3292106+02:00",
     "datumVracanja": null,
     "brojZahtevaZaProduzavanje": 0,
@@ -213,6 +218,56 @@
     },
     "primerak": {
       "inventarniBroj": "3823",
+      "nabavnaCena": 2336.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-01-01T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-4746-5",
+        "udk": "53",
+        "jezik": "srpski",
+        "godinaIzdanja": "2013",
+        "format": "978-86-521-4746-5",
+        "vrstaKoricenja": 0,
+        "citanost": 90,
+        "knjiga": {
+          "nazivKnjige": "Alhemicar",
+          "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+          "autor": {
+            "ime": "Paulo",
+            "prezime": "Koeljo",
+            "drzava": "Brazil"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": 75
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "datumIznajmljivanja": "2023-08-27T02:05:40.6947988+02:00",
+    "datumVracanja": null,
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20233",
+      "email": "helenass@gmail.com",
+      "ime": "helena",
+      "prezime": "simonovic",
+      "jmbg": "3010998777119",
+      "telefon": "063844910",
+      "korisnicki nalog": {
+        "username": "2helenasim",
+        "password": "helena123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "154",
       "nabavnaCena": 2336.0,
       "dostupnost": 1,
       "datumRaspolaganja": "2023-01-01T00:00:00",

@@ -50,5 +50,63 @@ namespace SIMS_Projekat.Repository
             }
             return rezervacije;
         }
+
+        private int GenerateId()
+        {
+            int maxId = 0;
+            foreach(Rezervacija rezervacija in Rezervacije)
+            {
+                if (rezervacija.id > maxId)
+                {
+                    maxId = rezervacija.id;
+                }
+            }
+            return maxId += 1;
+        }
+
+        public Rezervacija Create(Rezervacija rezervacija)
+        {
+            rezervacija.id = GenerateId();
+            Rezervacije.Add(rezervacija);
+            Save();
+            return rezervacija;
+        }
+
+        public Rezervacija GetById(int id)
+        {
+            return Rezervacije.Find(rezervacija => rezervacija.id == id);
+        }
+
+        public bool Update(Rezervacija rezervacija)
+        {
+            Rezervacija forUpdate = GetById(rezervacija.id);
+            if (forUpdate == null)
+            {
+                return false;
+            } else
+            {
+                forUpdate.datumRezervacije = rezervacija.datumRezervacije;
+                forUpdate.knjiga = rezervacija.knjiga;
+                forUpdate.clan = rezervacija.clan;
+                Save();
+                return true;
+            }
+            
+        }
+
+        public bool IsAbleToUpdate(Rezervacija rezervacija)
+        {
+            return (GetById(rezervacija.id) == null);
+        }
+
+        public bool Edit(Rezervacija rezervacija)
+        {
+            if(!IsAbleToUpdate(rezervacija))
+            {
+                return false;
+            }
+            Update(rezervacija);
+            return true;
+        }
     }
 }

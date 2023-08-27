@@ -51,5 +51,31 @@ namespace SIMS_Projekat.Repository
             return iznajmljivanja;
         }
 
+        private int GenerateId()
+        {
+            int maxId = 0;
+            foreach(Iznajmljivanje iznajmljivanje in GetAllIznajmljivanja())
+            {
+                if (iznajmljivanje.id > maxId)
+                {
+                    maxId = iznajmljivanje.id;
+                } 
+            }
+            return maxId + 1;
+        }
+
+        public Iznajmljivanje Create(Iznajmljivanje iznajmljivanje)
+        {
+            iznajmljivanje.id = GenerateId();
+            Iznajmljivanja.Add(iznajmljivanje);
+            Save();
+            return iznajmljivanje;
+        }
+
+        public Iznajmljivanje GetById(int id)
+        {
+            return Iznajmljivanja.Find(iznajmljivanje => iznajmljivanje.id == id);
+        }
+
     }
 }

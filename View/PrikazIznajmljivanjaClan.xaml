@@ -22,7 +22,7 @@
         <Grid Grid.Row="1" Background="#FFECEFF6">
             <DataGrid x:Name="iznajmljivanjaDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
                       RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
-                      HeadersVisibility="Column" ItemsSource="{Binding Iznajmljivanja}">
+                      HeadersVisibility="Column" ItemsSource="{Binding Iznajmljivanja}" SelectionMode="Single" SelectedItem="{Binding SelectedIznajmljivanje}">
                 <DataGrid.Resources>
                     <SolidColorBrush x:Key="ColumnHeaderBackround" Color="#FFF1D9E6"/>
                 </DataGrid.Resources>
@@ -34,6 +34,10 @@
                     <DataGridTextColumn Header="Broj zahteva za produzavanje" Binding="{Binding brojZahtevaZaProduzavanje}"/>
                 </DataGrid.Columns>
             </DataGrid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10">
+                <Button Content="Podnesi zahtev za produzavanje" Click="PodnesiZahtevBtn_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" RenderTransformOrigin="-0.011,0.546" Margin="10,10,10,10"/>
+
+            </StackPanel>
             
         </Grid>
     </Grid>
