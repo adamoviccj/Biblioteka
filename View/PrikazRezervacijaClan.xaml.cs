@@ -39,7 +39,7 @@ namespace SIMS_Projekat.View
 
         private void dodajRezervacijuBtn_Click(object sender, RoutedEventArgs e)
         {
-            KreiranjeRezervacijeClan kreiranjeRezervacijeClan = new KreiranjeRezervacijeClan(null);
+            KreiranjeRezervacijeClan kreiranjeRezervacijeClan = new KreiranjeRezervacijeClan();
             kreiranjeRezervacijeClan.Show();
         }
 

@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="ClanProfil" Height="600" Width="450" Background="AntiqueWhite">
+        Title="ClanProfil" Height="600" Width="450" Background="#FFF1D9E6">
     <Grid>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button Margin="10,10,10,10" Height="25" Click="ShowIznajmljivanjaBtn_Click">Prikazi moja iznajmljivanja</Button>
             <Button Margin="10,10,10,10" Height="25" Click="KreirajRezervacijuBtn_Click">Rezervisi knjigu</Button>
             <Button Margin="10,10,10,10" Height="25" Click="ShowMojeRezervacijeBtn_Click">Prikazi moje rezervacije</Button>
             <Button Margin="10,10,10,10" Height="25" Click="ShowMojeZahteveBtn_Click">Prikazi moje zahteve</Button>
+            <Button Margin="10,10,10,10" Height="25" Click="ShowTrenutnaIznajmljivanjaBtn_Click">Prikazi trenutna iznajmljivanja</Button>
         </StackPanel>
     </Grid>
 </Window>

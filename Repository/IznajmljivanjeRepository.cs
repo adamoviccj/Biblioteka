@@ -23,7 +23,7 @@ namespace SIMS_Projekat.Repository
             {
                 IznajmljivanjaClana = GetAllIznajmljivanjaForClan(LogIn.LoggedUser.jmbg);
             }
-            
+
         }
 
         public List<Iznajmljivanje> GetAllIznajmljivanja()
@@ -40,7 +40,7 @@ namespace SIMS_Projekat.Repository
 
         public List<Iznajmljivanje> GetAllIznajmljivanjaForClan(string jmbg)
         {
-             List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
             foreach (Iznajmljivanje iznajmljivanje in GetAllIznajmljivanja())
             {
                 if (iznajmljivanje.clan.jmbg == jmbg)
@@ -54,12 +54,12 @@ namespace SIMS_Projekat.Repository
         private int GenerateId()
         {
             int maxId = 0;
-            foreach(Iznajmljivanje iznajmljivanje in GetAllIznajmljivanja())
+            foreach (Iznajmljivanje iznajmljivanje in GetAllIznajmljivanja())
             {
                 if (iznajmljivanje.id > maxId)
                 {
                     maxId = iznajmljivanje.id;
-                } 
+                }
             }
             return maxId + 1;
         }
@@ -75,6 +75,19 @@ namespace SIMS_Projekat.Repository
         public Iznajmljivanje GetById(int id)
         {
             return Iznajmljivanja.Find(iznajmljivanje => iznajmljivanje.id == id);
+        }
+
+        public List<Iznajmljivanje> GetAllTrenutnaIznajmljivanjaForClan(string jmbg)
+        {
+            List<Iznajmljivanje> trenutna = new List<Iznajmljivanje>();
+            foreach (Iznajmljivanje iznajmljivanje in GetAllIznajmljivanja())
+            {
+                if (iznajmljivanje.clan.jmbg == jmbg && iznajmljivanje.datumVracanja == null)
+                {
+                    trenutna.Add(iznajmljivanje);
+                }
+            }
+            return trenutna;
         }
 
     }

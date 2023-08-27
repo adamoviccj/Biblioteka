@@ -12,8 +12,9 @@ namespace SIMS_Projekat.Model
     {
         [JsonProperty("Id")]
         public int Id { get; set; }
-        [JsonProperty("inventarni broj")]
-        public string InventarniBroj { get; set; }
+
+        [JsonProperty("iznajmljivanje")]
+        public Iznajmljivanje Iznajmljivanje { get; set; }
         [JsonProperty("datum slanja")]
         public DateTime DatumSlanja { get; set; }
         [JsonProperty("stanje zahteva")]
@@ -25,13 +26,13 @@ namespace SIMS_Projekat.Model
         {
         }
 
-        public ZahtevZaProduzavanje(int id, string inventarniBroj, DateTime datumSlanja, StanjeZahteva stanjeZahteva, Clan clan)
+        public ZahtevZaProduzavanje(int id, Iznajmljivanje iznajmljivanje, DateTime datumSlanja, StanjeZahteva stanjeZahteva, Clan clan)
         {
-            this.Id = id;
-            this.InventarniBroj = inventarniBroj;
-            this.DatumSlanja = datumSlanja;
-            this.StanjeZahteva = stanjeZahteva;
-            this.Clan = clan;
+            Id = id;
+            Iznajmljivanje = iznajmljivanje;
+            DatumSlanja = datumSlanja;
+            StanjeZahteva = stanjeZahteva;
+            Clan = clan;
         }
     }
 }

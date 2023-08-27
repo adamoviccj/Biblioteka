@@ -62,6 +62,7 @@
     <Compile Include="Command\SubmitClanCommand.cs" />
     <Compile Include="enums\Dostupnost.cs" />
     <Compile Include="enums\StanjeZahteva.cs" />
+    <Compile Include="enums\StatusRezervacije.cs" />
     <Compile Include="enums\TipKoricenja.cs" />
     <Compile Include="enums\TipKorisnika.cs" />
     <Compile Include="Model\Autor.cs" />
@@ -135,6 +136,9 @@
     <Compile Include="View\PrikazRezervacijaClan.xaml.cs">
       <DependentUpon>PrikazRezervacijaClan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml.cs">
+      <DependentUpon>PrikazTrenutnihIznajmljivanjaClan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PrikazZahtevaClan.xaml.cs">
       <DependentUpon>PrikazZahtevaClan.xaml</DependentUpon>
     </Compile>
@@ -202,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PrikazRezervacijaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

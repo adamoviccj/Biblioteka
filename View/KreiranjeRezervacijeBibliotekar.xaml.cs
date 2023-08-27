@@ -55,9 +55,9 @@ namespace SIMS_Projekat.View
         private void SubmitRezervacija_Click(object sender, RoutedEventArgs e)
         {
             Rezervacija rezervacija = new Rezervacija();
-            rezervacija.datumRezervacije = DateTime.Now;
-            rezervacija.knjiga = SelectedKnjiga;
-            rezervacija.clan = SelectedClan;
+            rezervacija.DatumRezervacije = DateTime.Now;
+            //rezervacija.Izdanje = SelectedKnjiga;
+            rezervacija.Clan = SelectedClan;
             _rezervacijaRepository.Rezervacije.Add(rezervacija);
             _rezervacijaRepository.Save();
             if (rezervacija == null)

@@ -33,7 +33,7 @@ namespace SIMS_Projekat.View
 
         private void KreirajRezervacijuBtn_Click(object sender, RoutedEventArgs e)
         {
-            var kreirajRezervaciju = new KreiranjeRezervacijeClan(null);
+            var kreirajRezervaciju = new KreiranjeRezervacijeClan();
             kreirajRezervaciju.Show();
         }
 
@@ -47,6 +47,12 @@ namespace SIMS_Projekat.View
         {
             var mojiZahtevi = new PrikazZahtevaClan();
             mojiZahtevi.Show();
+        }
+
+        private void ShowTrenutnaIznajmljivanjaBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PrikazTrenutnihIznajmljivanjaClan prikaz = new PrikazTrenutnihIznajmljivanjaClan();
+            prikaz.Show();
         }
     }
 }

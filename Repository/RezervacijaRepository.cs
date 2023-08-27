@@ -41,9 +41,9 @@ namespace SIMS_Projekat.Repository
         public List<Rezervacija> GetAllRezervacijeClana(string jmbg)
         {
             List<Rezervacija> rezervacije = new List<Rezervacija>();
-            foreach(Rezervacija rezervacija in GetAllRezervacije())
+            foreach (Rezervacija rezervacija in GetAllRezervacije())
             {
-                if (rezervacija.clan.jmbg == jmbg)
+                if (rezervacija.Clan.jmbg == jmbg)
                 {
                     rezervacije.Add(rezervacija);
                 }
@@ -54,11 +54,11 @@ namespace SIMS_Projekat.Repository
         private int GenerateId()
         {
             int maxId = 0;
-            foreach(Rezervacija rezervacija in Rezervacije)
+            foreach (Rezervacija rezervacija in Rezervacije)
             {
-                if (rezervacija.id > maxId)
+                if (rezervacija.Id > maxId)
                 {
-                    maxId = rezervacija.id;
+                    maxId = rezervacija.Id;
                 }
             }
             return maxId += 1;
@@ -66,7 +66,7 @@ namespace SIMS_Projekat.Repository
 
         public Rezervacija Create(Rezervacija rezervacija)
         {
-            rezervacija.id = GenerateId();
+            rezervacija.Id = GenerateId();
             Rezervacije.Add(rezervacija);
             Save();
             return rezervacija;
@@ -74,34 +74,35 @@ namespace SIMS_Projekat.Repository
 
         public Rezervacija GetById(int id)
         {
-            return Rezervacije.Find(rezervacija => rezervacija.id == id);
+            return Rezervacije.Find(rezervacija => rezervacija.Id == id);
         }
 
         public bool Update(Rezervacija rezervacija)
         {
-            Rezervacija forUpdate = GetById(rezervacija.id);
+            Rezervacija forUpdate = GetById(rezervacija.Id);
             if (forUpdate == null)
             {
                 return false;
-            } else
+            }
+            else
             {
-                forUpdate.datumRezervacije = rezervacija.datumRezervacije;
-                forUpdate.knjiga = rezervacija.knjiga;
-                forUpdate.clan = rezervacija.clan;
+                forUpdate.DatumRezervacije = rezervacija.DatumRezervacije;
+                forUpdate.IzdanjeKnjige = rezervacija.IzdanjeKnjige;
+                forUpdate.Clan = rezervacija.Clan;
                 Save();
                 return true;
             }
-            
+
         }
 
         public bool IsAbleToUpdate(Rezervacija rezervacija)
         {
-            return (GetById(rezervacija.id) == null);
+            return (GetById(rezervacija.Id) == null);
         }
 
         public bool Edit(Rezervacija rezervacija)
         {
-            if(!IsAbleToUpdate(rezervacija))
+            if (!IsAbleToUpdate(rezervacija))
             {
                 return false;
             }
