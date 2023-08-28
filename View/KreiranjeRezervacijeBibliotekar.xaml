@@ -5,30 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="KreiranjeRezervacijeBibliotekar" Height="450" Width="398" Background="AntiqueWhite">
+        Title="KreiranjeRezervacijeBibliotekar" Height="450" Width="800" Background="AntiqueWhite">
     <Grid>
-        <Label Content="Clan: " HorizontalAlignment="Left" Height="38" Margin="10,123,0,0" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.54,0.56"/>
-        <Label Content="Knjiga: " HorizontalAlignment="Left" Height="42" Margin="10,44,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.5,-0.571"/>
-        <Label Content="&#x9;&#x9;      Rezervisanje knjige" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="426" Height="33" FontWeight="Bold" FontFamily="Segoe UI" FontSize="14" Background="#FFF4E9E9" Grid.RowSpan="2"/>
-        <Button Content="Submit" Click="SubmitRezervacija_Click" HorizontalAlignment="Center" Height="27" Margin="0,346,0,0" VerticalAlignment="Top" Width="166"/>
-        <ComboBox x:Name="comboBoxKnjige" HorizontalAlignment="Left" Height="28" Margin="159,45,0,0" VerticalAlignment="Top" Width="167" Grid.Row="1" ItemsSource="{Binding Knjige}" SelectedItem="{Binding SelectedKnjiga,UpdateSourceTrigger=PropertyChanged}">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding nazivKnjige}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Height="28" Margin="159,123,0,0" VerticalAlignment="Top" Width="167" ItemsSource="{Binding Clanovi}" SelectedItem="{Binding SelectedClan}" RenderTransformOrigin="0.583,-0.665">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding ime}" />
-                        <TextBlock Text="{Binding prezime}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="KREIRANJE REZERVACIJE" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFECEFF6">
+            <DataGrid x:Name="rezervacijeDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+                      RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
+                      HeadersVisibility="Column" ItemsSource="{Binding Izdanja}" SelectedItem ="{Binding SelectedIzdanje}" SelectionMode="Single">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="ColumnHeaderBackround" Color="#FFF1D9E6"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding knjiga.nazivKnjige}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Ime autora" Binding="{Binding knjiga.autor.ime}"/>
+                    <DataGridTextColumn Header="Prezime autora" Binding="{Binding knjiga.autor.prezime}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding godinaIzdanja}"/>
+                    <DataGridTextColumn Header="Izdavac" Binding="{Binding izdavac.naziv}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <ComboBox Height="30" Width="167" HorizontalAlignment="Left" Margin="227,258,0,0" VerticalAlignment="Top" Name="comboClanovi" ItemsSource="{Binding Clanovi}" SelectedItem="{Binding SelectedClan}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding ime}"/>
+                            <TextBlock Text="{Binding prezime}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="316,0,0,40">
+                <Button Content="Dodaj novu rezervaciju" Click="SubmitRezervacija_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" RenderTransformOrigin="-0.011,0.546"/>
+            </StackPanel>
+            <Label Content="Clan:" HorizontalAlignment="Left" Margin="78,262,0,0" VerticalAlignment="Top"/>
+        </Grid>
     </Grid>
 </Window>

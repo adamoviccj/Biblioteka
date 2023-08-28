@@ -165,7 +165,7 @@ namespace SIMS_Projekat.View
 
             private void RezervisiKnjigu_Click(object sender, RoutedEventArgs e)
             {
-                KreiranjeRezervacijeBibliotekar kreiranjeRezervacijeBibliotekar = new KreiranjeRezervacijeBibliotekar(null, null);
+                KreiranjeRezervacijeBibliotekar kreiranjeRezervacijeBibliotekar = new KreiranjeRezervacijeBibliotekar();
                 kreiranjeRezervacijeBibliotekar.Show();
             }
 

@@ -27,15 +27,17 @@
                     <SolidColorBrush x:Key="ColumnHeaderBackground" Color="#FFF1D9E6"/>
                 </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Knjiga" Binding="{Binding knjiga.nazivKnjige}"/>
-                    <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding datumRezervacije, StringFormat='{}{0:dd/MM/yyyy}'}"/>
-                    <DataGridTextColumn Header="Ime clana" Binding="{Binding clan.ime}"/>
-                    <DataGridTextColumn Header="Prezime clana" Binding="{Binding clan.prezime}"/>
-                    <DataGridTextColumn Header="Broj clanske karte" Binding="{Binding clan.brClanskeKarte}"/>
-                    <DataGridTextColumn Header="JMBG" Binding="{Binding clan.jmbg}"/>
-                    <DataGridTextColumn Header="Telefon" Binding="{Binding clan.telefon}"/>
-                    <DataGridTextColumn Header="Email" Binding="{Binding clan.email}"/>
-                    <DataGridTextColumn Header="Korisnicko ime" Binding="{Binding clan.nalog.username}"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Knjiga" Binding="{Binding IzdanjeKnjige.knjiga.nazivKnjige}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding IzdanjeKnjige.godinaIzdanja}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Izdavac" Binding="{Binding IzdanjeKnjige.izdavac.naziv}"/>
+                    <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding DatumRezervacije, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <DataGridTextColumn Header="Ime clana" Binding="{Binding Clan.ime}"/>
+                    <DataGridTextColumn Header="Prezime clana" Binding="{Binding Clan.prezime}"/>
+                    <DataGridTextColumn Header="Broj clanske karte" Binding="{Binding Clan.brClanskeKarte}"/>
+                    <DataGridTextColumn Header="Telefon" Binding="{Binding Clan.telefon}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Clan.email}"/>
+                    <DataGridTextColumn Header="Korisnicko ime" Binding="{Binding Clan.nalog.username}"/>
                 </DataGrid.Columns>
 
 

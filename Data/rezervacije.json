@@ -124,5 +124,131 @@
         "password": "marko123"
       }
     }
+  },
+  {
+    "id": 4,
+    "datumRezervacije": "2023-08-28T02:08:24.0095207+02:00",
+    "izdanje knjige": {
+      "isbn": "978-86-521-3239-3",
+      "udk": "12345",
+      "jezik": "srpski",
+      "godinaIzdanja": "2019",
+      "format": "13.5x20.5 cm",
+      "vrstaKoricenja": 0,
+      "citanost": 57,
+      "knjiga": {
+        "nazivKnjige": "Zlocin i kazna",
+        "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+        "autor": {
+          "ime": "Fjodor",
+          "prezime": "Dostojevski",
+          "drzava": "Rusija"
+        }
+      },
+      "biblioteka": {
+        "nazivBiblioteke": "biblioteka1",
+        "brojClanova": 75
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20233",
+      "email": "helenass@gmail.com",
+      "ime": "helena",
+      "prezime": "simonovic",
+      "jmbg": "3010998777119",
+      "telefon": "063844910",
+      "korisnicki nalog": {
+        "username": "2helenasim",
+        "password": "helena123"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "datumRezervacije": "2023-08-28T02:20:57.9382354+02:00",
+    "izdanje knjige": {
+      "isbn": "978-86-521-4746-5",
+      "udk": "53",
+      "jezik": "srpski",
+      "godinaIzdanja": "2013",
+      "format": "978-86-521-4746-5",
+      "vrstaKoricenja": 0,
+      "citanost": 90,
+      "knjiga": {
+        "nazivKnjige": "Alhemicar",
+        "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+        "autor": {
+          "ime": "Paulo",
+          "prezime": "Koeljo",
+          "drzava": "Brazil"
+        }
+      },
+      "biblioteka": {
+        "nazivBiblioteke": "biblioteka1",
+        "brojClanova": 75
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20232",
+      "email": "anamilos@gmail.com",
+      "ime": "ana",
+      "prezime": "milosevic",
+      "jmbg": "0710999777009",
+      "telefon": "064512907",
+      "korisnicki nalog": {
+        "username": "2anamil",
+        "password": "ana123"
+      }
+    }
+  },
+  {
+    "id": 6,
+    "datumRezervacije": "2023-08-28T02:26:21.9216054+02:00",
+    "izdanje knjige": {
+      "isbn": "978-86-521-3239-3",
+      "udk": "12345",
+      "jezik": "srpski",
+      "godinaIzdanja": "2019",
+      "format": "13.5x20.5 cm",
+      "vrstaKoricenja": 0,
+      "citanost": 57,
+      "knjiga": {
+        "nazivKnjige": "Zlocin i kazna",
+        "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+        "autor": {
+          "ime": "Fjodor",
+          "prezime": "Dostojevski",
+          "drzava": "Rusija"
+        }
+      },
+      "biblioteka": {
+        "nazivBiblioteke": "biblioteka1",
+        "brojClanova": 75
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20234",
+      "email": "vasilijeAtomic@gmail.com",
+      "ime": "vasilije",
+      "prezime": "tomic",
+      "jmbg": "1508002772334",
+      "telefon": "0697184465",
+      "korisnicki nalog": {
+        "username": "2vasilijetom",
+        "password": "vasilije123"
+      }
+    }
   }
 ]

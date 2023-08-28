@@ -23,32 +23,29 @@ namespace SIMS_Projekat.View
     /// </summary>
     public partial class KreiranjeRezervacijeBibliotekar : Window
     {
-        public ObservableCollection<Knjiga> Knjige { get; set; }
+        public ObservableCollection<IzdanjeKnjige> Izdanja { get; set; }
         
         public ObservableCollection<Clan> Clanovi { get; set; }
 
-        public Knjiga SelectedKnjiga { get; set; }
+        public IzdanjeKnjige SelectedIzdanje { get; set; }
 
         public Clan SelectedClan { get; set; }
         public ClanRepository _clanRepository;
-        public KnjigaRepository _knjigaRepository;
+        public IzdanjeKnjigeRepository _izdanjeRepository;
         public RezervacijaRepository _rezervacijaRepository;
 
-        public bool CanSelect { get; set; }
-        public KreiranjeRezervacijeBibliotekar(Knjiga selectedKnjiga, Clan selectedClan)
+        public KreiranjeRezervacijeBibliotekar()
         {
             InitializeComponent();
             this.DataContext = this;
 
             var app = Application.Current as App;
             _clanRepository = app._clanRepository;
-            _knjigaRepository = app.KnjigaRepository;
+            _izdanjeRepository = app.IzdanjeKnjigeRepository;
             _rezervacijaRepository = app._rezervacijaRepository;
 
-            SelectedKnjiga = selectedKnjiga;
-            SelectedClan = selectedClan;
 
-            Knjige = new ObservableCollection<Knjiga>(_knjigaRepository.GetAllKnjige());
+            Izdanja = new ObservableCollection<IzdanjeKnjige>(_izdanjeRepository.GetAll());
             Clanovi = new ObservableCollection<Clan>(_clanRepository.GetAllClanovi());
         }
 
@@ -56,10 +53,9 @@ namespace SIMS_Projekat.View
         {
             Rezervacija rezervacija = new Rezervacija();
             rezervacija.DatumRezervacije = DateTime.Now;
-            //rezervacija.Izdanje = SelectedKnjiga;
+            rezervacija.IzdanjeKnjige = SelectedIzdanje;
             rezervacija.Clan = SelectedClan;
-            _rezervacijaRepository.Rezervacije.Add(rezervacija);
-            _rezervacijaRepository.Save();
+            _rezervacijaRepository.Create(rezervacija);
             if (rezervacija == null)
             {
                 MessageBox.Show("Greska u rezervaciji knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
