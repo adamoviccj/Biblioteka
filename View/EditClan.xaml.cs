@@ -21,8 +21,11 @@ namespace SIMS_Projekat.View
     /// </summary>
     public partial class EditClan : Window
     {
+        
+
         public EditClan(Clan selectedClan)
         {
+            
             InitializeComponent();
             comboBoxClanstvo.Items.Add("DECA");
             comboBoxClanstvo.Items.Add("ODRASLI");
@@ -39,6 +42,7 @@ namespace SIMS_Projekat.View
             ClanskaKartaRepository clanskaKartaRepository = new ClanskaKartaRepository();
             ClanskaKarta clanskaKarta = clanskaKartaRepository.GetClanskaKartaByBr(selectedClan.brClanskeKarte);
             comboBoxClanstvo.Text = Enum.GetName(typeof(TipClanstva), clanskaKarta.clanstvo);
+            
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
@@ -52,6 +56,10 @@ namespace SIMS_Projekat.View
             clan.telefon = telefonText.Text;
             clan.nalog.password = passwordText.Text;
             clanRepository.Save();
+
+            MessageBox.Show("Član je uspešno izmenjen!");
+
+            Close();
         }
     }
 }

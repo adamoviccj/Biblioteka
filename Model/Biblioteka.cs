@@ -10,10 +10,10 @@ namespace SIMS_Projekat.Model
     public class Biblioteka
     {
         [JsonProperty("nazivBiblioteke")]
-        public string nazivBiblioteke;
+        public string nazivBiblioteke { get; set; }
 
         [JsonProperty("brojClanova")]
-        public int brojClanova;
+        public int brojClanova { get; set; }
 
         public Biblioteka()
         {

@@ -14,10 +14,14 @@ namespace SIMS_Projekat.Repository
     {
         public List<Primerak> Primerci { get; set; }
         public string FilePath = "../../Data/primerci.json";
+        public List<Primerak> SlobodniPrimerci { get; set; }
+        public Knjiga SelectedKnjiga { get; set; }
+
 
         public PrimerakRepository()
         {
-            GetAllPrimerci();
+            Primerci = GetAllPrimerci();
+
         }
 
         public List<Primerak> GetAllPrimerci()
@@ -43,18 +47,51 @@ namespace SIMS_Projekat.Repository
             }
             return null;
         }
+        public void Update(Primerak primerak)
+        {
+            Primerak forUpdate = FindPrimerakByInventarniBroj(primerak.inventarniBroj);
+            if (forUpdate == null)
+            {
+                return;
+            }
+            forUpdate.dostupnost = primerak.dostupnost;
+            Save();
+        }
+        public List<Primerak> FindPrimerkeZaKnjigu(string nazivKnjige)
+        {
+            List<Primerak> primerci = new List<Primerak>();
+            foreach (Primerak primerak in Primerci)
+            {
+                if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige)
+                {
+                    primerci.Add(primerak);
+                }
+            }
+            return primerci;
+        }
 
-        public List<Primerak> FindSlobodnePrimerke(string nazivKnjige)
+        public List<Primerak> FindSlobodneZaKnjigu(string nazivKnjige)
         {
             List<Primerak> slobodni = new List<Primerak>();
             foreach (Primerak primerak in Primerci)
             {
-                if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige && primerak.dostupnost == Dostupnost.SLOBODNA)
+                if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige && primerak.dostupnost == enums.Dostupnost.SLOBODNA)
                 {
                     slobodni.Add(primerak);
                 }
             }
             return slobodni;
+        }
+        public Primerak FindSlobodanPrimerakZaIzdanje(string isbn)
+        {
+            foreach (Primerak primerak in Primerci)
+            {
+                if (primerak.izdanjeKnjige.isbn == isbn && primerak.dostupnost == enums.Dostupnost.SLOBODNA)
+                {
+                    return primerak;
+                }
+            }
+            return null;
         }
     }
 }

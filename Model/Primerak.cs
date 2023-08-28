@@ -11,19 +11,19 @@ namespace SIMS_Projekat.Model
     public class Primerak
     {
         [JsonProperty("inventarniBroj")]
-        public string inventarniBroj;
+        public string inventarniBroj { get; set; }
 
         [JsonProperty("nabavnaCena")]
-        public double nabavnaCena;
+        public double nabavnaCena { get; set; }
 
         [JsonProperty("dostupnost")]
-        public Dostupnost dostupnost;
+        public Dostupnost dostupnost { get; set; }
 
         [JsonProperty("datumRaspolaganja")]
-        public DateTime datumRaspolaganja;
+        public DateTime datumRaspolaganja { get;set; }
 
         [JsonProperty("izdanjeKnjige")]
-        public IzdanjeKnjige izdanjeKnjige;
+        public IzdanjeKnjige izdanjeKnjige { get; set; }
 
         public Primerak()
         {

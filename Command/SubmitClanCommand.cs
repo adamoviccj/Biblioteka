@@ -3,6 +3,7 @@ using SIMS_Projekat.Repository;
 using SIMS_Projekat.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,12 +46,18 @@ namespace SIMS_Projekat.Command
                 clanskaKartaRepository.ClanskeKarte.Add(clanskaKarta);
                 clanskaKartaRepository.Save();
                 MessageBox.Show("Novi clan je kreiran!");
+                
+                //membersDataGrid.Items.Refresh();
+                
             }
             else
             {
                 MessageBox.Show("Nisu svi podaci popunjeni ili username nije jedinstven!");
             }
         }
+
+        
+
 
         public string GenerateUniqueBrClanskeKarte()
         {

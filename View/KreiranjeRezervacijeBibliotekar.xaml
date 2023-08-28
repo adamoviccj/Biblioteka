@@ -1,0 +1,54 @@
+﻿<Window x:Class="SIMS_Projekat.View.KreiranjeRezervacijeBibliotekar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="KreiranjeRezervacijeBibliotekar" Height="450" Width="800" Background="AntiqueWhite">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="KREIRANJE REZERVACIJE" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFECEFF6">
+            <DataGrid x:Name="rezervacijeDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+                      RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
+                      HeadersVisibility="Column" ItemsSource="{Binding Izdanja}" SelectedItem ="{Binding SelectedIzdanje}" SelectionMode="Single">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="ColumnHeaderBackround" Color="#FFF1D9E6"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding knjiga.nazivKnjige}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Ime autora" Binding="{Binding knjiga.autor.ime}"/>
+                    <DataGridTextColumn Header="Prezime autora" Binding="{Binding knjiga.autor.prezime}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding godinaIzdanja}"/>
+                    <DataGridTextColumn Header="Izdavac" Binding="{Binding izdavac.naziv}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <ComboBox Height="30" Width="167" HorizontalAlignment="Left" Margin="227,258,0,0" VerticalAlignment="Top" Name="comboClanovi" ItemsSource="{Binding Clanovi}" SelectedItem="{Binding SelectedClan}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding ime}"/>
+                            <TextBlock Text="{Binding prezime}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="316,0,0,40">
+                <Button Content="Dodaj novu rezervaciju" Click="SubmitRezervacija_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" RenderTransformOrigin="-0.011,0.546"/>
+            </StackPanel>
+            <Label Content="Clan:" HorizontalAlignment="Left" Margin="78,262,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</Window>

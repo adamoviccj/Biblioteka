@@ -61,7 +61,10 @@
     <Compile Include="Command\BaseCommand.cs" />
     <Compile Include="Command\SubmitClanCommand.cs" />
     <Compile Include="enums\Dostupnost.cs" />
+    <Compile Include="enums\StanjeZahteva.cs" />
+    <Compile Include="enums\StatusRezervacije.cs" />
     <Compile Include="enums\TipKoricenja.cs" />
+    <Compile Include="enums\TipKorisnika.cs" />
     <Compile Include="Model\Autor.cs" />
     <Compile Include="Model\Biblioteka.cs" />
     <Compile Include="Model\Clan.cs" />
@@ -76,7 +79,9 @@
     <Compile Include="Model\ObicanBibliotekar.cs" />
     <Compile Include="Model\Ogranak.cs" />
     <Compile Include="Model\Primerak.cs" />
+    <Compile Include="Model\Rezervacija.cs" />
     <Compile Include="Model\VisiBibliotekar.cs" />
+    <Compile Include="Model\ZahtevZaProduzavanje.cs" />
     <Compile Include="Repository\AutorRepository.cs" />
     <Compile Include="Repository\ClanRepository.cs" />
     <Compile Include="Repository\ClanskaKartaRepository.cs" />
@@ -87,20 +92,58 @@
     <Compile Include="Repository\KorisnikRepository.cs" />
     <Compile Include="Repository\ObicanBibliotekarRepository.cs" />
     <Compile Include="Repository\PrimerakRepository.cs" />
+    <Compile Include="Repository\RezervacijaRepository.cs" />
     <Compile Include="Repository\VisiBibliotekarRepository.cs" />
+    <Compile Include="Repository\ZahtevZaProduzavanjeRepository.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
     <Compile Include="View\BibliotekarProfil.xaml.cs">
       <DependentUpon>BibliotekarProfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ClanProfil.xaml.cs">
+      <DependentUpon>ClanProfil.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\EditClan.xaml.cs">
       <DependentUpon>EditClan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditRezervacijaClan.xaml.cs">
+      <DependentUpon>EditRezervacijaClan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\IstorijaIznajmljivanja.xaml.cs">
+      <DependentUpon>IstorijaIznajmljivanja.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\IznajmljivanjeBibliotekar.xaml.cs">
       <DependentUpon>IznajmljivanjeBibliotekar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KreiranjeRezervacijeBibliotekar.xaml.cs">
+      <DependentUpon>KreiranjeRezervacijeBibliotekar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KreiranjeRezervacijeClan.xaml.cs">
+      <DependentUpon>KreiranjeRezervacijeClan.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazIznajmljivanjaClan.xaml.cs">
+      <DependentUpon>PrikazIznajmljivanjaClan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazKnjiga.xaml.cs">
+      <DependentUpon>PrikazKnjiga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazRezervacijaBibliotekar.xaml.cs">
+      <DependentUpon>PrikazRezervacijaBibliotekar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazRezervacijaClan.xaml.cs">
+      <DependentUpon>PrikazRezervacijaClan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml.cs">
+      <DependentUpon>PrikazTrenutnihIznajmljivanjaClan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazZahtevaBibliotekar.xaml.cs">
+      <DependentUpon>PrikazZahtevaBibliotekar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrikazZahtevaClan.xaml.cs">
+      <DependentUpon>PrikazZahtevaClan.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\RegistracijaClana.xaml.cs">
       <DependentUpon>RegistracijaClana.xaml</DependentUpon>
@@ -121,7 +164,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ClanProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\EditClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditRezervacijaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IstorijaIznajmljivanja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,7 +184,43 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\KreiranjeRezervacijeBibliotekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KreiranjeRezervacijeClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazIznajmljivanjaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazKnjiga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazRezervacijaBibliotekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazRezervacijaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazZahtevaBibliotekar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazZahtevaClan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,7 +260,9 @@
     <None Include="Data\obicniBibliotekari.json" />
     <None Include="Data\ogranci.json" />
     <None Include="Data\primerci.json" />
+    <None Include="Data\rezervacije.json" />
     <None Include="Data\visiBibliotekari.json" />
+    <None Include="Data\zahtevi.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

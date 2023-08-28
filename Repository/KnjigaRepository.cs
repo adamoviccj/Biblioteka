@@ -43,5 +43,25 @@ namespace SIMS_Projekat.Repository
             return null;
         }
 
+        public List<Knjiga> GetSearchedKnjige(string searchParam)
+        {
+            return GetAllKnjige().Where(knjiga=>(knjiga.nazivKnjige==null)?false : knjiga.nazivKnjige.ToLower().Contains(searchParam.ToLower())).ToList();
+        }
+
+        public List<Knjiga> GetSortedByNaziv()
+        {
+            return GetAllKnjige().OrderBy(knjiga => knjiga.nazivKnjige).ToList();
+        }
+
+        public List<Knjiga> GetSortedByImeAutora()
+        {
+            return GetAllKnjige().OrderBy(knjiga => knjiga.autor.ime).ToList();
+        }
+
+        public List<Knjiga> GetSortedByPrezimeAutora()
+        {
+            return GetAllKnjige().OrderBy(knjiga => knjiga.autor.prezime).ToList();
+        }
+             
     }
 }

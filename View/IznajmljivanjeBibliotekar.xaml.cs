@@ -4,8 +4,10 @@ using SIMS_Projekat.Repository;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,8 +27,15 @@ namespace SIMS_Projekat.View
     public partial class IznajmljivanjeBibliotekar : Window
     {
         public ObservableCollection<Knjiga> Knjige { get; set; }
-        public ObservableCollection<Primerak> Primerci { get; set; }
+
+        public List<Primerak> primerci;
+
+        public ObservableCollection<Primerak> slobodniPrimerci;
+
+        public ObservableCollection<Primerak> Slobodni { get; set; }
         public ObservableCollection<Clan> Clanovi { get; set; }
+
+        private Knjiga _selectedKnjiga;
         public Knjiga SelectedKnjiga { get; set; }
         public Primerak SelectedPrimerak { get; set; }
         public Clan SelectedClan { get; set; }
@@ -35,9 +44,12 @@ namespace SIMS_Projekat.View
         public IzdanjeKnjigeRepository _izdanjeKnjigeRepository;
         public PrimerakRepository _primerakRepository;
         public IznajmljivanjeRepository _iznajmljivanjeRepository;
+
+
+
         public bool CanSelect { get; set; }
 
-        public IznajmljivanjeBibliotekar(Knjiga selectedKnjiga, Clan selectedClan, Primerak selectedPrimerak)
+        public IznajmljivanjeBibliotekar(Knjiga selectedKnjiga, Clan selectedClan)
         {
             InitializeComponent();
             this.DataContext = this;
@@ -48,91 +60,55 @@ namespace SIMS_Projekat.View
             _izdanjeKnjigeRepository = app.IzdanjeKnjigeRepository;
             _primerakRepository = app.PrimerakRepository;
             _iznajmljivanjeRepository = app.IznajmljivanjeRepository;
-
-            SelectedPrimerak = selectedPrimerak;
+            SelectedKnjiga = selectedKnjiga;
             SelectedClan = selectedClan;
+            
 
             if (SelectedKnjiga == null)
             {
                 CanSelect = true;
-            } else
+            }
+            else
             {
                 CanSelect = false;
             }
 
             Knjige = new ObservableCollection<Knjiga>(_knjigaRepository.GetAllKnjige());
-            if (selectedKnjiga == null)
-            {
-                Primerci = new ObservableCollection<Primerak>(_primerakRepository.GetAllPrimerci());
-            } else
-            {
-                Primerci = new ObservableCollection<Primerak>(_primerakRepository.FindSlobodnePrimerke(selectedKnjiga.nazivKnjige));
-            }
             Clanovi = new ObservableCollection<Clan>(_clanRepository.GetAllClanovi());
-            
+
         }
+
 
         private void SubmitIznajmljivanje_Click(object sender, RoutedEventArgs e)
         {
             Iznajmljivanje iznajmljivanje = new Iznajmljivanje();
             iznajmljivanje.datumIznajmljivanja = DateTime.Now;
             iznajmljivanje.datumVracanja = null;
-            iznajmljivanje.primerak = SelectedPrimerak;
+            primerci = _primerakRepository.FindSlobodneZaKnjigu(SelectedKnjiga.nazivKnjige);
+            if (primerci.Count == 0)
+            {
+                MessageBox.Show("Nema slobodnih primeraka odabrane knjige! Mozete izvrsiti rezervaciju!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            } else
+            {
+                iznajmljivanje.primerak = primerci.First();
+            }
+            
             iznajmljivanje.clan = SelectedClan;
-            Primerak primerak = _primerakRepository.FindPrimerakByInventarniBroj(iznajmljivanje.primerak.inventarniBroj);
-            primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
+            
+            
+            iznajmljivanje.primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
             _primerakRepository.Save();
-            _iznajmljivanjeRepository.Iznajmljivanja.Add(iznajmljivanje);
-            _iznajmljivanjeRepository.Save();
+            _iznajmljivanjeRepository.Create(iznajmljivanje);
             if (iznajmljivanje == null)
             {
                 MessageBox.Show("Nema slobodnih primeraka odabrane knjige!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
-            } else
+                return;
+            }
+            else
             {
                 MessageBox.Show("Iznajmljivanje uspesno obavljeno!", "Uspeh", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-
-        public class RootObject
-        {
-           public List<Clan> Clanovi { get; set; }
-        }
-
-        private void OnShown(object sender, EventArgs e)
-        {
-            string jsonStr = File.ReadAllText("../../Data/clanovi.json");
-            var parsed = JsonConvert.DeserializeObject<List<Clan>>(jsonStr);
-
-            List<string> clanNames = parsed.Select(clan => clan.ime + " " + clan.prezime).ToList();
-            comboBox1.ItemsSource = clanNames;
-        }
-
-        private void OnShownKnjige(object sender, EventArgs e)
-        {
-            string jsonstr = File.ReadAllText("../../Data/knjige.json");
-            var parsed = JsonConvert.DeserializeObject<List<Knjiga>>(jsonstr);
-
-            List<string> knjigeNames = parsed.Select(knjiga => knjiga.nazivKnjige).ToList();
-            comboBoxKnjige.ItemsSource = knjigeNames;
-        }
-
-        private void OnShownPrimerci(object sender, EventArgs e)
-        {
-            string jsonstr = File.ReadAllText("../../Data/primerci.json");
-            var parsed = JsonConvert.DeserializeObject<List<Primerak>>(jsonstr);
-
-            List<string> knjigeNames = parsed.Select(primerak => primerak.inventarniBroj).ToList();
-            primerakCombo.ItemsSource = knjigeNames;
-        }
-
-        private void Window_Loaded(object sender, EventArgs e)
-        {
-            OnShown(sender, e);
-            OnShownKnjige(sender, e);
-            OnShownPrimerci(sender, e);
-
-        }
-
-
     }
 }

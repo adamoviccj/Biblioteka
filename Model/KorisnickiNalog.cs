@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SIMS_Projekat.enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,6 @@ namespace SIMS_Projekat.Model
 
         [JsonProperty("password")]
         public string password { get; set; }
-
 
         public KorisnickiNalog() { }
 

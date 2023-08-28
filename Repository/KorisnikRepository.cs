@@ -12,22 +12,29 @@ namespace SIMS_Projekat.Repository
     public class KorisnikRepository
     {
         public List<Korisnik> Korisnici { get; set; }
-        private string FilePath = "../../Data/korisnici.json";
 
         public KorisnikRepository()
         {
-            GetAllKorisnici();
+            InitializeKorisnici();
         }
 
-        public void GetAllKorisnici()
+        private void InitializeKorisnici()
         {
-            Korisnici = JsonConvert.DeserializeObject<List<Korisnik>>(File.ReadAllText(FilePath));
+            ClanRepository clanRepository = new ClanRepository();
+            ObicanBibliotekarRepository obicanBibliotekarRepository = new ObicanBibliotekarRepository();
+            VisiBibliotekarRepository visiBibliotekarRepository = new VisiBibliotekarRepository();
+
+            Korisnici = new List<Korisnik>();
+
+            Korisnici.AddRange(clanRepository.Clanovi);
+            Korisnici.AddRange(obicanBibliotekarRepository.ObicniBibliotekari);
+            Korisnici.AddRange(visiBibliotekarRepository.VisiBibliotekari);
         }
 
-        public void Save()
+        public Korisnik GetKorisnikByUsernameAndPassword(string username, string password)
         {
-            File.WriteAllText(FilePath, JsonConvert.SerializeObject(Korisnici, Formatting.Indented));
+            return Korisnici.FirstOrDefault(korisnik => korisnik.nalog.username == username && korisnik.nalog.password == password);
         }
-
     }
+
 }
