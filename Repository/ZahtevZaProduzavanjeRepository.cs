@@ -37,6 +37,19 @@ namespace SIMS_Projekat.Repository
             return Zahtevi;
         }
 
+        public List<ZahtevZaProduzavanje> GetAllNaCekanju()
+        {
+            List<ZahtevZaProduzavanje> zahteviNaCekanju = new List<ZahtevZaProduzavanje>();
+            foreach (ZahtevZaProduzavanje zahtev in Zahtevi)
+            {
+                if (zahtev.StanjeZahteva == enums.StanjeZahteva.NA_CEKANJU)
+                {
+                    zahteviNaCekanju.Add(zahtev);
+                }
+            }
+            return zahteviNaCekanju;
+        }
+
         public void Save()
         {
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(Zahtevi, Formatting.Indented));

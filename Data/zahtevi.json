@@ -5,6 +5,7 @@
       "id": 5,
       "datumIznajmljivanja": "2023-08-26T15:56:44.3292106+02:00",
       "datumVracanja": null,
+      "rokVracanja": "0001-01-01T00:00:00",
       "brojZahtevaZaProduzavanje": 1,
       "clan": {
         "broj clanske karte": "195",
@@ -69,9 +70,78 @@
   {
     "Id": 2,
     "iznajmljivanje": {
+      "id": 1,
+      "datumIznajmljivanja": "2023-05-01T00:00:00",
+      "datumVracanja": "2023-05-10T00:00:00",
+      "rokVracanja": "0001-01-01T00:00:00",
+      "brojZahtevaZaProduzavanje": 1,
+      "clan": {
+        "broj clanske karte": "20231",
+        "email": "markom@gmail.com",
+        "ime": "marko",
+        "prezime": "markovic",
+        "jmbg": "0512001772014",
+        "telefon": "0656128215",
+        "korisnicki nalog": {
+          "username": "2markom",
+          "password": "marko123"
+        }
+      },
+      "primerak": {
+        "inventarniBroj": "1771",
+        "nabavnaCena": 713.0,
+        "dostupnost": 0,
+        "datumRaspolaganja": "2023-07-15T00:00:00",
+        "izdanjeKnjige": {
+          "isbn": "978-86-521-3239-3",
+          "udk": "12345",
+          "jezik": "srpski",
+          "godinaIzdanja": "2019",
+          "format": "13.5x20.5 cm",
+          "vrstaKoricenja": 0,
+          "citanost": 57,
+          "knjiga": {
+            "nazivKnjige": "Zlocin i kazna",
+            "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+            "autor": {
+              "ime": "Fjodor",
+              "prezime": "Dostojevski",
+              "drzava": "Rusija"
+            }
+          },
+          "biblioteka": {
+            "nazivBiblioteke": "biblioteka1",
+            "brojClanova": 75
+          },
+          "izdavac": {
+            "naziv": "Laguna",
+            "drzava": "Srbija"
+          }
+        }
+      }
+    },
+    "datum slanja": "2023-08-29T01:01:57.3653818+02:00",
+    "stanje zahteva": 2,
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    }
+  },
+  {
+    "Id": 3,
+    "iznajmljivanje": {
       "id": 2,
       "datumIznajmljivanja": "2023-08-26T00:04:04.195646+02:00",
       "datumVracanja": null,
+      "rokVracanja": "0001-01-01T00:00:00",
       "brojZahtevaZaProduzavanje": 1,
       "clan": {
         "broj clanske karte": "20232",
@@ -118,8 +188,76 @@
         }
       }
     },
-    "datum slanja": "2023-08-27T02:58:52.9964371+02:00",
-    "stanje zahteva": 2,
+    "datum slanja": "2023-08-29T01:12:41.0848255+02:00",
+    "stanje zahteva": 1,
+    "clan": {
+      "broj clanske karte": "20232",
+      "email": "anamilos@gmail.com",
+      "ime": "ana",
+      "prezime": "milosevic",
+      "jmbg": "0710999777009",
+      "telefon": "064512907",
+      "korisnicki nalog": {
+        "username": "2anamil",
+        "password": "ana123"
+      }
+    }
+  },
+  {
+    "Id": 4,
+    "iznajmljivanje": {
+      "id": 8,
+      "datumIznajmljivanja": "2023-08-29T02:35:40.4620468+02:00",
+      "datumVracanja": null,
+      "rokVracanja": "2023-09-12T02:35:40.4620468+02:00",
+      "brojZahtevaZaProduzavanje": 1,
+      "clan": {
+        "broj clanske karte": "20231",
+        "email": "markom@gmail.com",
+        "ime": "marko",
+        "prezime": "markovic",
+        "jmbg": "0512001772014",
+        "telefon": "0656128215",
+        "korisnicki nalog": {
+          "username": "markom",
+          "password": "marko123"
+        }
+      },
+      "primerak": {
+        "inventarniBroj": "1234",
+        "nabavnaCena": 1500.0,
+        "dostupnost": 1,
+        "datumRaspolaganja": "2023-08-15T00:00:00",
+        "izdanjeKnjige": {
+          "isbn": "978-86-521-3555-4",
+          "udk": "1234",
+          "jezik": "srpski",
+          "godinaIzdanja": "2022",
+          "format": "13x20cm",
+          "vrstaKoricenja": 0,
+          "citanost": 15,
+          "knjiga": {
+            "nazivKnjige": "Ana Karenjina",
+            "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+            "autor": {
+              "ime": "Lav",
+              "prezime": "Tolstoj",
+              "drzava": "Rusija"
+            }
+          },
+          "biblioteka": {
+            "nazivBiblioteke": "biblioteka1",
+            "brojClanova": 75
+          },
+          "izdavac": {
+            "naziv": "Laguna",
+            "drzava": "Srbija"
+          }
+        }
+      }
+    },
+    "datum slanja": "2023-08-29T02:56:27.6841924+02:00",
+    "stanje zahteva": 0,
     "clan": {
       "broj clanske karte": "20231",
       "email": "markom@gmail.com",

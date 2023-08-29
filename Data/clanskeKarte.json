@@ -1,37 +1,42 @@
-[
-  {
-    "broj clanske karte": "20232",
-    "clanstvo": 1,
-    "datum placanja": "2023-07-25T00:00:00"
-  },
-  {
-    "broj clanske karte": "20233",
-    "clanstvo": 1,
-    "datum placanja": "2023-08-20T00:00:00"
-  },
-  {
-    "broj clanske karte": "20234",
-    "clanstvo": 1,
-    "datum placanja": "2023-08-23T00:00:00"
-  },
-  {
-    "broj clanske karte": "195",
-    "clanstvo": 3,
-    "datum placanja": "2023-08-23T13:37:45.2252452+02:00"
-  },
-  {
-    "broj clanske karte": "879",
-    "clanstvo": 0,
-    "datum placanja": "2023-08-26T13:00:39.7022503+02:00"
-  },
-  {
-    "broj clanske karte": "472",
-    "clanstvo": 0,
-    "datum placanja": "2023-08-26T13:12:30.6959348+02:00"
-  },
-  {
-    "broj clanske karte": "798",
-    "clanstvo": 0,
-    "datum placanja": "2023-08-26T13:18:58.8211632+02:00"
-  }
+ [
+    {
+      "broj clanske karte": "20232",
+      "clanstvo": 1,
+      "datum placanja": "2023-07-25T00:00:00"
+    },
+    {
+      "broj clanske karte": "20233",
+      "clanstvo": 1,
+      "datum placanja": "2023-08-20T00:00:00"
+    },
+    {
+      "broj clanske karte": "20234",
+      "clanstvo": 1,
+      "datum placanja": "2023-08-23T00:00:00"
+    },
+    {
+      "broj clanske karte": "195",
+      "clanstvo": 3,
+      "datum placanja": "2023-08-23T13:37:45.2252452+02:00"
+    },
+    {
+      "broj clanske karte": "879",
+      "clanstvo": 0,
+      "datum placanja": "2023-08-26T13:00:39.7022503+02:00"
+    },
+    {
+      "broj clanske karte": "472",
+      "clanstvo": 0,
+      "datum placanja": "2023-08-26T13:12:30.6959348+02:00"
+    },
+    {
+      "broj clanske karte": "798",
+      "clanstvo": 0,
+      "datum placanja": "2023-08-26T13:18:58.8211632+02:00"
+    },
+    {
+      "broj clanske karte": "20231",
+      "clanstvo": 1,
+      "datum placanja": "2023-08-26T13:18:58.8211632+02:00"
+    }
 ]

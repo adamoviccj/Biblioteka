@@ -73,7 +73,7 @@ namespace SIMS_Projekat.Repository
         public List<Primerak> FindSlobodneZaKnjigu(string nazivKnjige)
         {
             List<Primerak> slobodni = new List<Primerak>();
-            foreach (Primerak primerak in Primerci)
+            foreach (Primerak primerak in GetAllPrimerci())
             {
                 if (primerak.izdanjeKnjige.knjiga.nazivKnjige == nazivKnjige && primerak.dostupnost == enums.Dostupnost.SLOBODNA)
                 {

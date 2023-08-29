@@ -3,7 +3,8 @@
     "id": 1,
     "datumIznajmljivanja": "2023-05-01T00:00:00",
     "datumVracanja": "2023-05-10T00:00:00",
-    "brojZahtevaZaProduzavanje": 2,
+    "rokVracanja": "2023-05-15T00:00:00",
+    "brojZahtevaZaProduzavanje": 1,
     "clan": {
       "broj clanske karte": "20231",
       "email": "markom@gmail.com",
@@ -53,7 +54,8 @@
     "id": 2,
     "datumIznajmljivanja": "2023-08-26T00:04:04.195646+02:00",
     "datumVracanja": null,
-    "brojZahtevaZaProduzavanje": 0,
+    "rokVracanja": "2023-08-30T00:00:00",
+    "brojZahtevaZaProduzavanje": 1,
     "clan": {
       "broj clanske karte": "20232",
       "email": "anamilos@gmail.com",
@@ -103,6 +105,7 @@
     "id": 3,
     "datumIznajmljivanja": "2023-08-26T01:39:59.8839509+02:00",
     "datumVracanja": null,
+    "rokVracanja": "2023-09-01T00:00:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {
       "broj clanske karte": "20233",
@@ -153,6 +156,7 @@
     "id": 4,
     "datumIznajmljivanja": "2023-08-26T15:56:18.8532523+02:00",
     "datumVracanja": null,
+    "rokVracanja": "2023-09-02T00:00:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {
       "broj clanske karte": "20233",
@@ -203,6 +207,7 @@
     "id": 5,
     "datumIznajmljivanja": "2023-08-26T15:56:44.3292106+02:00",
     "datumVracanja": null,
+    "rokVracanja": "2023-09-03T00:00:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {
       "broj clanske karte": "195",
@@ -253,6 +258,7 @@
     "id": 6,
     "datumIznajmljivanja": "2023-08-27T02:05:40.6947988+02:00",
     "datumVracanja": null,
+    "rokVracanja": "2023-09-05T00:00:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {
       "broj clanske karte": "20233",
@@ -286,6 +292,159 @@
             "ime": "Paulo",
             "prezime": "Koeljo",
             "drzava": "Brazil"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": 75
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "datumIznajmljivanja": "2023-08-29T02:22:03.2484708+02:00",
+    "datumVracanja": null,
+    "rokVracanja": "2023-09-12T02:22:03.2484708+02:00",
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "1234",
+      "nabavnaCena": 1500.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-08-15T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-3555-4",
+        "udk": "1234",
+        "jezik": "srpski",
+        "godinaIzdanja": "2022",
+        "format": "13x20cm",
+        "vrstaKoricenja": 0,
+        "citanost": 15,
+        "knjiga": {
+          "nazivKnjige": "Ana Karenjina",
+          "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+          "autor": {
+            "ime": "Lav",
+            "prezime": "Tolstoj",
+            "drzava": "Rusija"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": 75
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "datumIznajmljivanja": "2023-08-29T02:35:40.4620468+02:00",
+    "datumVracanja": null,
+    "rokVracanja": "2023-09-26T02:35:40.4620468+02:00",
+    "brojZahtevaZaProduzavanje": 1,
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "1234",
+      "nabavnaCena": 1500.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-08-15T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-3555-4",
+        "udk": "1234",
+        "jezik": "srpski",
+        "godinaIzdanja": "2022",
+        "format": "13x20cm",
+        "vrstaKoricenja": 0,
+        "citanost": 15,
+        "knjiga": {
+          "nazivKnjige": "Ana Karenjina",
+          "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+          "autor": {
+            "ime": "Lav",
+            "prezime": "Tolstoj",
+            "drzava": "Rusija"
+          }
+        },
+        "biblioteka": {
+          "nazivBiblioteke": "biblioteka1",
+          "brojClanova": 75
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "datumIznajmljivanja": "2023-08-29T10:36:51.671268+02:00",
+    "datumVracanja": null,
+    "rokVracanja": "2023-09-12T10:36:51.671268+02:00",
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20232",
+      "email": "anamilos@gmail.com",
+      "ime": "ana",
+      "prezime": "milosevic",
+      "jmbg": "0710999777009",
+      "telefon": "064512907",
+      "korisnicki nalog": {
+        "username": "2anamil",
+        "password": "ana123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "1234",
+      "nabavnaCena": 1500.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-08-15T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-3555-4",
+        "udk": "1234",
+        "jezik": "srpski",
+        "godinaIzdanja": "2022",
+        "format": "13x20cm",
+        "vrstaKoricenja": 0,
+        "citanost": 15,
+        "knjiga": {
+          "nazivKnjige": "Ana Karenjina",
+          "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+          "autor": {
+            "ime": "Lav",
+            "prezime": "Tolstoj",
+            "drzava": "Rusija"
           }
         },
         "biblioteka": {
