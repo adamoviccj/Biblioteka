@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SIMS_Projekat.enums;
 using SIMS_Projekat.Model;
 using SIMS_Projekat.View;
 using System;
@@ -90,5 +91,21 @@ namespace SIMS_Projekat.Repository
             return trenutna;
         }
 
+        public List<Iznajmljivanje> GetAllTrenutnaIznajmljivanja()
+        {
+            return Iznajmljivanja.Where(x => x.datumVracanja == null).ToList();
+        }
+
+        public bool VracanjeKnjige(int iznajmljivanjeID)
+        {
+            Iznajmljivanje iznajmljivanje = Iznajmljivanja.Where(x => x.id == iznajmljivanjeID).FirstOrDefault();
+            if(iznajmljivanje == null)
+            {
+                return false;
+            }
+            iznajmljivanje.datumVracanja = DateTime.Now;
+            Save();
+            return true;
+        }
     }
 }

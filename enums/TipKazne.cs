@@ -8,7 +8,7 @@ namespace SIMS_Projekat.enums
 {
     public enum TipKazne
     {
-        NIJE_VRATIO,
+        KNJIGA_OSTECENA,
         KNJIGA_IZGUBLJENA
     }
 }

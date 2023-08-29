@@ -154,6 +154,9 @@
     <Compile Include="View\RegistracijaClana.xaml.cs">
       <DependentUpon>RegistracijaClana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\VracanjeKnjige.xaml.cs">
+      <DependentUpon>VracanjeKnjige.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -235,6 +238,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RegistracijaClana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VracanjeKnjige.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

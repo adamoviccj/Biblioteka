@@ -10,6 +10,7 @@ namespace SIMS_Projekat.enums
     {
         SLOBODNA,
         IZNAJMLJENA,
-        NA_CEKANJU
+        NA_CEKANJU,
+        IZGUBLJENA
     }
 }

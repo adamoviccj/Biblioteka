@@ -14,7 +14,7 @@
         "password": "marko123"
       }
     },
-    "datumUplate": "2023-08-29T08:49:05.8534619+02:00",
+    "datumUplate": null,
     "tipKazne": 1
   },
   {
@@ -32,7 +32,7 @@
         "password": "marko123"
       }
     },
-    "datumUplate": "2023-08-29T08:49:52.6903898+02:00",
+    "datumUplate": null,
     "tipKazne": 0
   },
   {
@@ -50,7 +50,25 @@
         "password": "marko123"
       }
     },
-    "datumUplate": "2023-08-29T08:49:08.8228716+02:00",
+    "datumUplate": null,
+    "tipKazne": 1
+  },
+  {
+    "id": "ca847ac0-c7b3-4b9e-af25-cd8d3025d9ad",
+    "iznos": 713.0,
+    "clan": {
+      "broj clanske karte": "20232",
+      "email": "anamilos@gmail.com",
+      "ime": "ana",
+      "prezime": "milosevic",
+      "jmbg": "0710999777009",
+      "telefon": "064512907",
+      "korisnicki nalog": {
+        "username": "2anamil",
+        "password": "ana123"
+      }
+    },
+    "datumUplate": "2023-08-29T14:45:29.1681263+02:00",
     "tipKazne": 1
   }
 ]

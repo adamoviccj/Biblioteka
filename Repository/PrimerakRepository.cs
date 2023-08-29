@@ -93,5 +93,17 @@ namespace SIMS_Projekat.Repository
             }
             return null;
         }
+
+        public bool PromeniStanje(string inventarniBroj, Dostupnost dostupnost)
+        {
+            Primerak primerak = FindPrimerakByInventarniBroj(inventarniBroj);
+            if (primerak == null)
+            {
+                return false;
+            }
+            primerak.dostupnost = dostupnost;
+            Save();
+            return true;
+        }
     }
 }

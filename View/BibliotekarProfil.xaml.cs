@@ -180,5 +180,11 @@ namespace SIMS_Projekat.View
                 PrikazZahtevaBibliotekar prikaz = new PrikazZahtevaBibliotekar();
                 prikaz.Show();
             }
-        }
+
+            private void Button_Click(object sender, RoutedEventArgs e)
+            {
+                VracanjeKnjige vracanjeKnjige = new VracanjeKnjige();
+                vracanjeKnjige.Show();
+            }
+    }
     }
