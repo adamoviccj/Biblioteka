@@ -8,12 +8,13 @@
         Title="ClanProfil" Height="600" Width="450" Background="#FFF1D9E6">
     <Grid>
         <TextBlock Text="CLAN" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" Grid.Column="1" Margin="10,10,10,10"/>
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="411">
             <Button Margin="10,10,10,10" Height="25" Click="ShowIznajmljivanjaBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Prikazi moja iznajmljivanja</Button>
             <Button Margin="10,10,10,10" Height="25" Click="KreirajRezervacijuBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Rezervisi knjigu</Button>
             <Button Margin="10,10,10,10" Height="25" Click="ShowMojeRezervacijeBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Prikazi moje rezervacije</Button>
             <Button Margin="10,10,10,10" Height="25" Click="ShowMojeZahteveBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Prikazi moje zahteve</Button>
             <Button Margin="10,10,10,10" Height="25" Click="ShowTrenutnaIznajmljivanjaBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Prikazi trenutna iznajmljivanja</Button>
+            <Button Margin="10,10,10,10" Height="25" Click="ShowKazneBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Prikazi kazne</Button>
             <Button Margin="10,10,10,10" Height="25" Click="OdjavaBtn_Click" Background="AntiqueWhite" FontSize="14" FontWeight="Bold">Odjava</Button>
         </StackPanel>
     </Grid>
