@@ -49,5 +49,18 @@ namespace SIMS_Projekat.Repository
             }
             return null;
         }
+
+        public Clan FindClanByJmbg(string jmbg)
+        {
+            foreach(Clan clan in Clanovi)
+            {
+                if (clan.jmbg == jmbg)
+                {
+                    return clan;
+                }
+            }
+            return null;
+        }
+
     }
 }

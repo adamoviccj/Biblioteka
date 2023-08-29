@@ -5,7 +5,7 @@
     "jezik": "srpski",
     "godinaIzdanja": "2019",
     "format": "13.5x20.5 cm",
-    "vrstaKoricenja": "TVRDO",
+    "vrstaKoricenja": 0,
     "citanost": "57",
     "knjiga": {
       "nazivKnjige": "Zlocin i kazna",
@@ -31,7 +31,7 @@
     "jezik": "srpski",
     "godinaIzdanja": "2013",
     "format": "978-86-521-4746-5",
-    "vrstaKoricenja": "TVRDO",
+    "vrstaKoricenja": 0,
     "citanost": "90",
     "knjiga": {
       "nazivKnjige": "Alhemicar",
@@ -45,6 +45,32 @@
     "biblioteka": {
       "nazivBiblioteke": "biblioteka1",
       "brojClanova": "75"
+    },
+    "izdavac": {
+      "naziv": "Laguna",
+      "drzava": "Srbija"
+    }
+  },
+  {
+    "isbn": "978-86-521-3555-4",
+    "udk": "1234",
+    "jezik": "srpski",
+    "godinaIzdanja": "2022",
+    "format": "13x20cm",
+    "vrstaKoricenja": 0,
+    "citanost": 15,
+    "knjiga": {
+      "nazivKnjige": "Ana Karenjina",
+      "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+      "autor": {
+        "ime": "Lav",
+        "prezime": "Tolstoj",
+        "drzava": "Rusija"
+      }
+    },
+    "biblioteka": {
+      "nazivBiblioteke": "biblioteka1",
+      "brojClanova": 75
     },
     "izdavac": {
       "naziv": "Laguna",

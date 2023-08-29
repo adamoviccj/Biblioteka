@@ -34,6 +34,12 @@ namespace SIMS_Projekat.Repository
             return iznajmljivanja;
         }
 
+        public List<Iznajmljivanje> GetAll()
+        {
+            return Iznajmljivanja;
+        }
+
+
         public void Save()
         {
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(Iznajmljivanja, Formatting.Indented));
@@ -75,7 +81,14 @@ namespace SIMS_Projekat.Repository
 
         public Iznajmljivanje GetById(int id)
         {
-            return Iznajmljivanja.Find(iznajmljivanje => iznajmljivanje.id == id);
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if (iznajmljivanje.id == id)
+                {
+                    return iznajmljivanje;
+                }
+            }
+            return null;
         }
 
         public List<Iznajmljivanje> GetAllTrenutnaIznajmljivanjaForClan(string jmbg)
@@ -107,5 +120,25 @@ namespace SIMS_Projekat.Repository
             Save();
             return true;
         }
+        public void Update(Iznajmljivanje iznajmljivanje)
+        {
+            Iznajmljivanje forUpdate = GetById(iznajmljivanje.id);
+            if (forUpdate == null)
+            {
+                return;
+            }
+            forUpdate.datumIznajmljivanja = iznajmljivanje.datumIznajmljivanja;
+            forUpdate.datumVracanja = iznajmljivanje.datumVracanja;
+            forUpdate.rokVracanja = iznajmljivanje.rokVracanja;
+            forUpdate.brojZahtevaZaProduzavanje = iznajmljivanje.brojZahtevaZaProduzavanje;
+            forUpdate.clan = iznajmljivanje.clan;
+            forUpdate.primerak = iznajmljivanje.primerak;
+            Save();
+        }
+
+        public List<Iznajmljivanje> GetProslaIznajmljivanjaClana(string jmbg)
+        {
+            return GetAllIznajmljivanjaForClan(jmbg).Where(iznajmljivanje => iznajmljivanje.datumVracanja != null).ToList();
+        } 
     }
 }

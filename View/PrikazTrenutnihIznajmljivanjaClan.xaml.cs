@@ -39,20 +39,42 @@ namespace SIMS_Projekat.View
             Iznajmljivanja = new ObservableCollection<Iznajmljivanje>(_iznajmljivanjeRepository.GetAllTrenutnaIznajmljivanjaForClan(LogIn.LoggedUser.jmbg));
         }
 
+        public void Refresh(List<Iznajmljivanje> iznajmljivanja)
+        {
+            Iznajmljivanja.Clear();
+            foreach(Iznajmljivanje iznajmljivanje in iznajmljivanja)
+            {
+                Iznajmljivanja.Add(iznajmljivanje);
+            }
+        }
+
         private void PodnesiZahtevBtn_Click(object sender, RoutedEventArgs e)
         {
             ZahtevZaProduzavanje zahtevZaProduzavanje = new ZahtevZaProduzavanje();
-            zahtevZaProduzavanje.Iznajmljivanje = SelectedIznajmljivanje;
-            Iznajmljivanje iznajmljivanje = _iznajmljivanjeRepository.GetById(SelectedIznajmljivanje.id);
-            iznajmljivanje.brojZahtevaZaProduzavanje += 1;
-            _iznajmljivanjeRepository.Save();
             zahtevZaProduzavanje.DatumSlanja = DateTime.Now;
-            zahtevZaProduzavanje.StanjeZahteva = StanjeZahteva.NA_CEKANJU;
             zahtevZaProduzavanje.Clan = (Clan)LogIn.LoggedUser;
+            if (SelectedIznajmljivanje == null)
+            {
+                MessageBox.Show("Morate odabrati red u tabeli!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            zahtevZaProduzavanje.Iznajmljivanje = SelectedIznajmljivanje;
+            SelectedIznajmljivanje.brojZahtevaZaProduzavanje += 1;
+            _iznajmljivanjeRepository.Update(SelectedIznajmljivanje);
+
+            zahtevZaProduzavanje.StanjeZahteva = enums.StanjeZahteva.NA_CEKANJU;
             _zahtevZaProduzavanjeRepository.Create(zahtevZaProduzavanje);
-            MessageBox.Show("Zahtev za produzavanje uspesno kreiran!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (SelectedIznajmljivanje != null)
+            {
+                MessageBox.Show("Zahtev za produzavanje uspesno podnet!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+
+            }
+            Refresh(_iznajmljivanjeRepository.GetAllIznajmljivanjaForClan(LogIn.LoggedUser.jmbg));
         }
-        
+
 
     }
 }

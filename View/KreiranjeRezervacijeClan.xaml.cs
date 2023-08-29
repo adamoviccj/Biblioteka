@@ -61,6 +61,7 @@ namespace SIMS_Projekat.View
                 _primerakRepository.Update(primerak);
             }
 
+            rezervacija.StatusRezervacije = enums.StatusRezervacije.KREIRANA;
             _rezervacijaRepository.Create(rezervacija);
 
 

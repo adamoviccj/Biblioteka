@@ -13,18 +13,21 @@ namespace SIMS_Projekat.Repository
     {
         public List<ClanskaKarta> ClanskeKarte { get; set; }
         private string FilePath = "../../Data/clanskeKarte.json";
+        public ClanRepository _clanRepository { get; set; }
 
         public ClanskaKartaRepository()
         {
-            GetAllClanskeKarte();
+            ClanskeKarte = GetAllClanskeKarte();
         }
         public List<ClanskaKarta> GetClanskeKarte()
         {
             return ClanskeKarte;
         }
-        public void GetAllClanskeKarte()
+        public List<ClanskaKarta> GetAllClanskeKarte()
         {
-            ClanskeKarte = JsonConvert.DeserializeObject<List<ClanskaKarta>>(File.ReadAllText(FilePath));
+            string json = File.ReadAllText(FilePath);
+            ClanskeKarte = JsonConvert.DeserializeObject<List<ClanskaKarta>>(json);
+            return ClanskeKarte;
         }
         public ClanskaKarta GetClanskaKartaByBr(string brKarte)   //ovde ?
         {
@@ -38,6 +41,42 @@ namespace SIMS_Projekat.Repository
         public void Save()
         {
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(ClanskeKarte, Formatting.Indented));
+        }
+
+        public double GetMaxDanaByTipClanstva(string brClanskeKarte)
+        {
+            ClanskaKarta clanskaKarta = GetClanskaKartaByBr(brClanskeKarte);
+            if (clanskaKarta.clanstvo == TipClanstva.DECA)
+            {
+                return 4;
+            } 
+            else if (clanskaKarta.clanstvo == TipClanstva.ODRASLI)
+            {
+                return 5;
+            }
+            else if (clanskaKarta.clanstvo == TipClanstva.PENZIONERI)
+            {
+                return 7;
+            }
+            return 14;
+        }
+
+        public int GetMaxBrojKnjiga(string brClanskeKarte)
+        {
+            ClanskaKarta clanskaKarta = GetClanskaKartaByBr(brClanskeKarte);
+            if (clanskaKarta.clanstvo == TipClanstva.DECA)
+            {
+                return 2;
+            }
+            else if (clanskaKarta.clanstvo == TipClanstva.ODRASLI)
+            {
+                return 5;
+            }
+            else if (clanskaKarta.clanstvo == TipClanstva.PENZIONERI)
+            {
+                return 7;
+            }
+            return 8;
         }
     }
 }

@@ -35,7 +35,7 @@ namespace SIMS_Projekat.View
             _iznajmljivanjeRepository = app.IznajmljivanjeRepository;
             _zahtevZaProduzavanjeRepository = app._zahtevZaProduzavanjeRepository;
 
-            Iznajmljivanja = new ObservableCollection<Iznajmljivanje>(_iznajmljivanjeRepository.GetAllIznajmljivanjaForClan(LogIn.LoggedUser.jmbg));
+            Iznajmljivanja = new ObservableCollection<Iznajmljivanje>(_iznajmljivanjeRepository.GetProslaIznajmljivanjaClana(LogIn.LoggedUser.jmbg));
 
         }
 
@@ -48,36 +48,6 @@ namespace SIMS_Projekat.View
             }
         }
 
-        private void PodnesiZahtevBtn_Click(object sender, RoutedEventArgs e)
-        {
-            ZahtevZaProduzavanje zahtevZaProduzavanje = new ZahtevZaProduzavanje();
-            zahtevZaProduzavanje.DatumSlanja = DateTime.Now;
-            zahtevZaProduzavanje.Clan = (Clan)LogIn.LoggedUser;
-            Iznajmljivanje iznajmljivanje = _iznajmljivanjeRepository.GetById(SelectedIznajmljivanje.id);
-            if (iznajmljivanje == null)
-            {
-                MessageBox.Show("Morate odabrati red u tabeli!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            else
-            {
-                iznajmljivanje.brojZahtevaZaProduzavanje += 1;
-                _iznajmljivanjeRepository.Save();
-            }
-            zahtevZaProduzavanje.Iznajmljivanje = SelectedIznajmljivanje;
-            
-
-            zahtevZaProduzavanje.StanjeZahteva = enums.StanjeZahteva.NA_CEKANJU;
-            _zahtevZaProduzavanjeRepository.Create(zahtevZaProduzavanje);
-            if (zahtevZaProduzavanje != null)
-            {
-                MessageBox.Show("Zahtev za produzavanje uspesno podnet!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
-            } else
-            {
-                MessageBox.Show("Greska u kreiranju zahteva za produzavanje!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-            Refresh(_iznajmljivanjeRepository.GetAllIznajmljivanjaForClan(LogIn.LoggedUser.jmbg));
-        }
+        
     }
 }
