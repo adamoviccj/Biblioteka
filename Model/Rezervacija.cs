@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SIMS_Projekat.enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,17 +21,20 @@ namespace SIMS_Projekat.Model
 
         [JsonProperty("clan")]
         public Clan Clan { get; set; }
+        [JsonProperty("statusRezervacije")]
+        public StatusRezervacije StatusRezervacije { get; set; }
 
         public Rezervacija()
         {
         }
 
-        public Rezervacija(int id, DateTime datumRezervacije, IzdanjeKnjige izdanjeKnjige, Clan clan)
+        public Rezervacija(int id, DateTime datumRezervacije, IzdanjeKnjige izdanjeKnjige, Clan clan, StatusRezervacije statusRezervacije)
         {
             Id = id;
             DatumRezervacije = datumRezervacije;
             IzdanjeKnjige = izdanjeKnjige;
             Clan = clan;
+            StatusRezervacije = statusRezervacije;
         }
     }
 }
