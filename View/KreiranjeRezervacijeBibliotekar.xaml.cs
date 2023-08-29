@@ -55,6 +55,7 @@ namespace SIMS_Projekat.View
             rezervacija.DatumRezervacije = DateTime.Now;
             rezervacija.IzdanjeKnjige = SelectedIzdanje;
             rezervacija.Clan = SelectedClan;
+            rezervacija.StatusRezervacije = enums.StatusRezervacije.KREIRANA;
             _rezervacijaRepository.Create(rezervacija);
             if (rezervacija == null)
             {
