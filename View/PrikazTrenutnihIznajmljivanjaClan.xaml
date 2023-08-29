@@ -31,6 +31,7 @@
                     <DataGridTextColumn Header="Primerak" Binding="{Binding primerak.inventarniBroj}"/>
                     <DataGridTextColumn Header="Datum iznajmljivanja" Binding="{Binding datumIznajmljivanja,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
                     <DataGridTextColumn Header="Datum vracanja" Binding="{Binding datumVracanja,StringFormat='{}{0:dd/MM/yyyy}', TargetNullValue='nije vracena'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Rok vracanja" Binding="{Binding rokVracanja,StringFormat='{}{0:dd/MM/yyyy}', TargetNullValue='nije vracena'}" Foreground="Black"/>
                     <DataGridTextColumn Header="Broj zahteva za produzavanje" Binding="{Binding brojZahtevaZaProduzavanje}"/>
                 </DataGrid.Columns>
             </DataGrid>

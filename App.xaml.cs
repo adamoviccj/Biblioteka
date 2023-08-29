@@ -20,6 +20,7 @@ namespace SIMS_Projekat
 
         public KorisnikRepository _korisnikRepository { get; set; }
         public ClanRepository _clanRepository { get; set; }
+        public ClanskaKartaRepository _clanskaKartaRepository { get; set; }
         public ObicanBibliotekarRepository ObicanBibliotekarRepository { get; set; }
         public VisiBibliotekarRepository VisiBibliotekarRepository { get; set; }
         public KnjigaRepository KnjigaRepository { get; set; }
@@ -40,6 +41,7 @@ namespace SIMS_Projekat
 
             ClanRepository clanRepository = new ClanRepository();
             _clanRepository = clanRepository;
+            _clanskaKartaRepository = new ClanskaKartaRepository();
             ObicanBibliotekarRepository = new ObicanBibliotekarRepository();
             VisiBibliotekarRepository = new VisiBibliotekarRepository();
             KnjigaRepository = new KnjigaRepository();
