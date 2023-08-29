@@ -68,5 +68,11 @@ namespace SIMS_Projekat.View
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
         }
+
+        private void ShowKazneBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClanKazne clanKazne = new ClanKazne();
+            clanKazne.Show();
+        }
     }
 }

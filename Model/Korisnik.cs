@@ -12,8 +12,10 @@ namespace SIMS_Projekat.Model
         [JsonProperty("email")]
         public string email { get; set;}
 
+
         [JsonProperty("ime")]
         public string ime { get; set; }
+
 
         [JsonProperty("prezime")]
         public string prezime { get; set; }

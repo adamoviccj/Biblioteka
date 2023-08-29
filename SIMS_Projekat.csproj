@@ -63,6 +63,7 @@
     <Compile Include="enums\Dostupnost.cs" />
     <Compile Include="enums\StanjeZahteva.cs" />
     <Compile Include="enums\StatusRezervacije.cs" />
+    <Compile Include="enums\TipKazne.cs" />
     <Compile Include="enums\TipKoricenja.cs" />
     <Compile Include="enums\TipKorisnika.cs" />
     <Compile Include="Model\Autor.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Model\IzdanjeKnjige.cs" />
     <Compile Include="Model\Izdavac.cs" />
     <Compile Include="Model\Iznajmljivanje.cs" />
+    <Compile Include="Model\Kazna.cs" />
     <Compile Include="Model\Knjiga.cs" />
     <Compile Include="Model\KorisnickiNalog.cs" />
     <Compile Include="Model\Korisnik.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Repository\IzdanjeKnjigeRepository.cs" />
     <Compile Include="Repository\IzdavacRepository.cs" />
     <Compile Include="Repository\IznajmljivanjeRepository.cs" />
+    <Compile Include="Repository\KaznaRepository.cs" />
     <Compile Include="Repository\KnjigaRepository.cs" />
     <Compile Include="Repository\KorisnikRepository.cs" />
     <Compile Include="Repository\ObicanBibliotekarRepository.cs" />
@@ -99,6 +102,9 @@
     <Compile Include="ViewModel\RegistracijaViewModel.cs" />
     <Compile Include="View\BibliotekarProfil.xaml.cs">
       <DependentUpon>BibliotekarProfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ClanKazne.xaml.cs">
+      <DependentUpon>ClanKazne.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ClanProfil.xaml.cs">
       <DependentUpon>ClanProfil.xaml</DependentUpon>
@@ -161,6 +167,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\BibliotekarProfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ClanKazne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,6 +265,7 @@
     <None Include="Data\izdanjaKnjige.json" />
     <None Include="Data\izdavaci.json" />
     <None Include="Data\iznajmljivanja.json" />
+    <None Include="Data\kazne.json" />
     <None Include="Data\knjige.json" />
     <None Include="Data\korisnici.json" />
     <None Include="Data\obicniBibliotekari.json" />
