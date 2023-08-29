@@ -29,6 +29,8 @@ namespace SIMS_Projekat
         public RezervacijaRepository _rezervacijaRepository { get; set; }
         public ZahtevZaProduzavanjeRepository _zahtevZaProduzavanjeRepository { get; set; }
 
+        public KaznaRepository _kaznaRepository { get; set; }
+
 
 
         public App()
@@ -46,6 +48,7 @@ namespace SIMS_Projekat
             IznajmljivanjeRepository = new IznajmljivanjeRepository();
             _rezervacijaRepository = new RezervacijaRepository();
             _zahtevZaProduzavanjeRepository = new ZahtevZaProduzavanjeRepository();
+            _kaznaRepository = new KaznaRepository();
 
 
 
