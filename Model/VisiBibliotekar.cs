@@ -7,22 +7,20 @@ using System.Threading.Tasks;
 
 namespace SIMS_Projekat.Model
 {
-    public class VisiBibliotekar : Korisnik
+    public class VisiBibliotekar : ObicanBibliotekar
     {
-        [JsonProperty("naziv ogranka")]
-        private string nazivOgranka;
         public VisiBibliotekar()
         {
         }
 
         public VisiBibliotekar(string email, string ime, string prezime, string jmbg, string telefon, KorisnickiNalog nalog, string nazivOgranka)
-            : base(email, ime, prezime, jmbg, telefon, nalog)
+            : base(email, ime, prezime, jmbg, telefon, nalog, nazivOgranka)
         {
             this.nazivOgranka = nazivOgranka;
         }
 
         public VisiBibliotekar(string email, string ime, string prezime, string jmbg, string telefon, string nazivOgranka)
-            : base(email, ime, prezime, jmbg, telefon)
+            : base(email, ime, prezime, jmbg, telefon, nazivOgranka)
         {
             this.nazivOgranka = nazivOgranka;
         }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="LogIn" Height="450" Width="800" Background="#FFF1D9E6">
+        Title="LogIn" Height="450" Width="800" Background="#FFF1D9E6" Closing="LogIn_Closing">
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

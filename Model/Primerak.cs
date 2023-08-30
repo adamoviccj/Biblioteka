@@ -20,10 +20,13 @@ namespace SIMS_Projekat.Model
         public Dostupnost dostupnost { get; set; }
 
         [JsonProperty("datumRaspolaganja")]
-        public DateTime datumRaspolaganja { get;set; }
+        public DateTime? datumRaspolaganja { get;set; }
 
         [JsonProperty("izdanjeKnjige")]
         public IzdanjeKnjige izdanjeKnjige { get; set; }
+
+        [JsonProperty("ogranak")]
+        public Ogranak ogranak { get; set; }
 
         public Primerak()
         {
@@ -31,13 +34,14 @@ namespace SIMS_Projekat.Model
 
 
         public Primerak(string inventarniBroj, double nabavnaCena, Dostupnost dostupnost, 
-            DateTime datumRaspolaganja, IzdanjeKnjige izdanjeKnjige)
+            DateTime? datumRaspolaganja, IzdanjeKnjige izdanjeKnjige, Ogranak ogranak)
         {
             this.inventarniBroj = inventarniBroj;
             this.nabavnaCena = nabavnaCena;
             this.dostupnost = dostupnost;
             this.datumRaspolaganja = datumRaspolaganja;
             this.izdanjeKnjige = izdanjeKnjige;
+            this.ogranak = ogranak;
         }
     }
 }

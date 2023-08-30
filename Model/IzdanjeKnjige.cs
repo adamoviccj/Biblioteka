@@ -34,9 +34,6 @@ namespace SIMS_Projekat.Model
         [JsonProperty("knjiga")]
         public Knjiga knjiga { get; set; }
 
-        [JsonProperty("biblioteka")]
-        public Biblioteka biblioteka { get; set; }
-
         [JsonProperty("izdavac")]
         public Izdavac izdavac { get; set; }
 
@@ -45,8 +42,7 @@ namespace SIMS_Projekat.Model
         }
 
         public IzdanjeKnjige(string isbn, string udk, string jezik, string godinaIzdanja, 
-            string format, TipKoricenja vrstaKoricenja, int citanost, Knjiga knjiga, 
-            Biblioteka biblioteka, Izdavac izdavac)
+            string format, TipKoricenja vrstaKoricenja, int citanost, Knjiga knjiga, Izdavac izdavac)
         {
             this.isbn = isbn;
             this.udk = udk;
@@ -56,8 +52,19 @@ namespace SIMS_Projekat.Model
             this.vrstaKoricenja = vrstaKoricenja;
             this.citanost = citanost;
             this.knjiga = knjiga;
-            this.biblioteka = biblioteka;
             this.izdavac = izdavac;
         }
+
+        public bool PripadaKnjizi(Knjiga k)
+        {
+            if (knjiga.nazivKnjige == k.nazivKnjige) return true;
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return "ISBN: " + isbn + " | " + izdavac;
+        }
+
     }
 }

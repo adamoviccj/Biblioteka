@@ -37,6 +37,7 @@ namespace SIMS_Projekat
         {
             LogIn logIn = new LogIn();
             logIn.Show();
+            Close();
         }
     }
 }

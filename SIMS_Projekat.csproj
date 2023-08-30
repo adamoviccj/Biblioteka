@@ -94,6 +94,7 @@
     <Compile Include="Repository\KnjigaRepository.cs" />
     <Compile Include="Repository\KorisnikRepository.cs" />
     <Compile Include="Repository\ObicanBibliotekarRepository.cs" />
+    <Compile Include="Repository\OgranakRepository.cs" />
     <Compile Include="Repository\PrimerakRepository.cs" />
     <Compile Include="Repository\RezervacijaRepository.cs" />
     <Compile Include="Repository\VisiBibliotekarRepository.cs" />
@@ -115,6 +116,9 @@
     <Compile Include="View\EditRezervacijaClan.xaml.cs">
       <DependentUpon>EditRezervacijaClan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\EvidentirajIzdanjaWindow.xaml.cs">
+      <DependentUpon>EvidentirajIzdanjaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\IstorijaIznajmljivanja.xaml.cs">
       <DependentUpon>IstorijaIznajmljivanja.xaml</DependentUpon>
     </Compile>
@@ -129,6 +133,9 @@
     </Compile>
     <Compile Include="View\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NabaviPrimerkeWindow.xaml.cs">
+      <DependentUpon>NabaviPrimerkeWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PrikazIznajmljivanjaClan.xaml.cs">
       <DependentUpon>PrikazIznajmljivanjaClan.xaml</DependentUpon>
@@ -153,6 +160,9 @@
     </Compile>
     <Compile Include="View\RegistracijaClana.xaml.cs">
       <DependentUpon>RegistracijaClana.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VisiBibliotekarWindow.xaml.cs">
+      <DependentUpon>VisiBibliotekarWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\VracanjeKnjige.xaml.cs">
       <DependentUpon>VracanjeKnjige.xaml</DependentUpon>
@@ -189,6 +199,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\EvidentirajIzdanjaWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\IstorijaIznajmljivanja.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,6 +220,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NabaviPrimerkeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -238,6 +256,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RegistracijaClana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VisiBibliotekarWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -290,6 +312,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Data\lib.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,11 +2,13 @@
   {
     "id": "1",
     "naziv": "ogranakA",
+    "lokacija": "Adresa 1",
     "brTelefona": "1234567890"
   },
-  {
+{
     "id": "2",
     "naziv": "ogranakB",
+    "lokacija": "Adresa 2",
     "brTelefona": "12345"
-  }
+}
 ]

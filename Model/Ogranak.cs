@@ -12,6 +12,9 @@ namespace SIMS_Projekat.Model
         [JsonProperty("id")]
         public int id { get; set; }
 
+        [JsonProperty("naziv")]
+        public string naziv { get; set; }
+
         [JsonProperty("lokacija")]
         public string lokacija { get; set; }
 
@@ -28,5 +31,11 @@ namespace SIMS_Projekat.Model
             this.lokacija = lokacija;
             this.brTelefona = brTelefona;
         }
+
+        public override string ToString()
+        {
+            return naziv + " - " + lokacija;
+        }
+
     }
 }

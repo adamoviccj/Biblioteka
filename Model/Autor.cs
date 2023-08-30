@@ -28,5 +28,11 @@ namespace SIMS_Projekat.Model
             this.prezime = prezime;
             this.drzava = drzava;
         }
+
+        public override string ToString()
+        {
+            return ime + " " + prezime;
+        }
+
     }
 }

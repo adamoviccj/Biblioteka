@@ -2,6 +2,7 @@
 using SIMS_Projekat.Repository;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace SIMS_Projekat.View
     /// </summary>
     public partial class LogIn : Window
     {
+        private bool successfulLogIn = false;
         private KorisnikRepository korisnikRepository;
         private ClanRepository clanRepository;
         private ObicanBibliotekarRepository obicanBibliotekarRepository { get; set; }
@@ -80,10 +82,8 @@ namespace SIMS_Projekat.View
 
             else if (CheckVisiBibliotekarLogin() != null)
             {
-                
-                MessageBox.Show("Uspesno ulogovan visi bibliotekar.");
-                //VisiBibliotekarWindow visiBibliotekarWindow = new VisiBibliotekarWindow();
-                //visiBibliotekarWindow.Show();
+                VisiBibliotekarWindow visiBibliotekarWindow = new VisiBibliotekarWindow();
+                visiBibliotekarWindow.Show();
             }
 
             else if (CheckClanLogin() != null)
@@ -95,10 +95,17 @@ namespace SIMS_Projekat.View
             }
             //}
 
-
+            successfulLogIn = true;
             Close();
         }
 
+        void LogIn_Closing(object sender, CancelEventArgs e)
+        {
+            if (successfulLogIn == false) {
+                MainWindow window = new MainWindow();
+                window.Show();
+            }
+        }
 
     }
 

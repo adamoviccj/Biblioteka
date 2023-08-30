@@ -10,7 +10,7 @@ namespace SIMS_Projekat.Model
     public class ObicanBibliotekar : Korisnik
     {
         [JsonProperty("naziv ogranka")]
-        private string nazivOgranka;
+        protected string nazivOgranka;
 
         public ObicanBibliotekar()
         {

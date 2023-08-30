@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "isbn": "978-86-521-3239-3",
     "udk": "12345",
@@ -6,7 +6,7 @@
     "godinaIzdanja": "2019",
     "format": "13.5x20.5 cm",
     "vrstaKoricenja": 0,
-    "citanost": "57",
+    "citanost": 57,
     "knjiga": {
       "nazivKnjige": "Zlocin i kazna",
       "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
@@ -15,10 +15,6 @@
         "prezime": "Dostojevski",
         "drzava": "Rusija"
       }
-    },
-    "biblioteka": {
-      "nazivBiblioteke": "biblioteka1",
-      "brojClanova": "75"
     },
     "izdavac": {
       "naziv": "Laguna",
@@ -32,7 +28,7 @@
     "godinaIzdanja": "2013",
     "format": "978-86-521-4746-5",
     "vrstaKoricenja": 0,
-    "citanost": "90",
+    "citanost": 90,
     "knjiga": {
       "nazivKnjige": "Alhemicar",
       "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
@@ -41,10 +37,6 @@
         "prezime": "Koeljo",
         "drzava": "Brazil"
       }
-    },
-    "biblioteka": {
-      "nazivBiblioteke": "biblioteka1",
-      "brojClanova": "75"
     },
     "izdavac": {
       "naziv": "Laguna",
@@ -68,12 +60,30 @@
         "drzava": "Rusija"
       }
     },
-    "biblioteka": {
-      "nazivBiblioteke": "biblioteka1",
-      "brojClanova": 75
-    },
     "izdavac": {
       "naziv": "Laguna",
+      "drzava": "Srbija"
+    }
+  },
+  {
+    "isbn": "978-83-413-2287-6",
+    "udk": "76501",
+    "jezik": "srpski",
+    "godinaIzdanja": "2017",
+    "format": "20x40cm",
+    "vrstaKoricenja": 0,
+    "citanost": 0,
+    "knjiga": {
+      "nazivKnjige": "Na Drini cuprija",
+      "opis": "Najpoznatiji roman Ive Andrica.",
+      "autor": {
+        "ime": "Ivo",
+        "prezime": "Andric",
+        "drzava": "Srbija"
+      }
+    },
+    "izdavac": {
+      "naziv": "Vulkan",
       "drzava": "Srbija"
     }
   }

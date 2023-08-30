@@ -24,6 +24,12 @@ namespace SIMS_Projekat.Model
             this.naziv = naziv;
             this.drzava = drzava;
         }
+
+        public override string ToString()
+        {
+            return naziv;
+        }
+
     }
 
 

@@ -1,0 +1,62 @@
+﻿<Window x:Class="SIMS_Projekat.View.EvidentirajIzdanjaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="Evidentiraj nova izdanja" Height="510" Width="800" Icon="/SIMS_Projekat;component/Data/lib.png" ResizeMode="NoResize" Background="#FFF1D9E6" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Style="{StaticResource btnLightRed}" -->
+
+        <Label Content="Knjiga:" FontSize="24" Margin="10,10,0,0"/>
+        <RadioButton x:Name="knjigaUSistemuRadioButton" IsChecked="True" Content="vec u sistemu" Grid.Column="1" VerticalAlignment="Center" FontSize="24" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="10,10,0,0" Click="knjigaUSistemuRadioButton_Click"/>
+        <RadioButton x:Name="knjigaNovaRadioButton" Content="nova" Grid.Column="2" VerticalAlignment="Center" FontSize="24" HorizontalAlignment="Center" VerticalContentAlignment="Center" Margin="10,10,0,0" Click="knjigaNovaRadioButton_Click"/>
+        <ComboBox x:Name="knjigaComboBox" Grid.Column="1" Grid.Row="1" Margin="10,10,0,0" VerticalContentAlignment="Center" FontSize="20"/>
+
+        <TextBox IsEnabled="False" x:Name="nazivKnjigeTextBox" Grid.Row="1" Grid.Column="2" Padding="4" FontSize="20" Margin="10,10,10,0" Text="naziv knjige" VerticalContentAlignment="Center"/>
+        <TextBox IsEnabled="False" x:Name="opisKnjigeTextBox" Grid.Row="2" Grid.Column="2" Padding="4" FontSize="20" Margin="10,10,10,0" Text="opis knjige" VerticalContentAlignment="Center"/>
+        <TextBox IsEnabled="False" x:Name="autorTextBox" Grid.Row="3" Grid.Column="2" Padding="4" FontSize="20" Margin="10,10,10,0" Text="ime prezime drzava autora" VerticalContentAlignment="Center"/>
+
+        <Label Content="ISBN i UDK:" FontSize="24" Grid.Row="4" Margin="10,10,0,0"/>
+        <TextBox x:Name="isbnTextBox" Grid.Row="4" Grid.Column="1" Padding="4" FontSize="20" Text="isbn" Margin="10,10,0,0" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="udkTextBox" Grid.Row="4" Grid.Column="2" Padding="4" FontSize="20" Text="udk" Margin="10,10,10,0" VerticalContentAlignment="Center"/>
+
+        <Label Content="Jezik i format:" FontSize="24" Grid.Row="5" Margin="10,10,0,0"/>
+        <TextBox x:Name="jezikTextBox" Grid.Row="5" Grid.Column="1" Padding="4" FontSize="20" Text="jezik" Margin="10,10,0,0" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="formatTextBox" Grid.Row="5" Grid.Column="2" Padding="4" FontSize="20" Text="format" Margin="10,10,10,0" VerticalContentAlignment="Center"/>
+
+        <Label Content="Izdavac:" FontSize="24" Grid.Row="6" Margin="10,10,0,0"/>
+        <TextBox x:Name="izdavacNazivTextBox" Grid.Row="6" Grid.Column="1" Padding="4" FontSize="20" Text="naziv izdavaca" Margin="10,10,0,0" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="izdavacDrzavaTextBox" Grid.Row="6" Grid.Column="2" Padding="4" FontSize="20" Text="drzava izdavaca" Margin="10,10,10,0" VerticalContentAlignment="Center"/>
+
+        <Label Content="God. izdanja:" FontSize="24" Grid.Row="7" Margin="10,10,0,0"/>
+        <TextBox x:Name="godIzdanjaTextBox" Grid.Row="7" Grid.Column="1" Padding="4" FontSize="20" Text="godina izdanja" Margin="10,10,0,0" VerticalContentAlignment="Center"/>
+
+        <Label Content="Koricenje:" FontSize="24" Grid.Row="7" Grid.Column="2" Margin="10,10,10,0" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="koricenjeComboBox" Grid.Column="2" Grid.Row="8" Margin="10" VerticalContentAlignment="Center" FontSize="20"/>
+
+        <Button Content="Evidentiraj novo izdanje" Style="{StaticResource btnLightRed}" Grid.Row="8" Grid.ColumnSpan="2" FontSize="24" Margin="10,10,0,10" Click="Button_Click"/>
+
+    </Grid>
+
+</Window>

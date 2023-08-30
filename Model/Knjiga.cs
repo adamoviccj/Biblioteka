@@ -28,5 +28,11 @@ namespace SIMS_Projekat.Model
             this.opis = opis;
             this.autor = autor;
         }
+
+        public override string ToString()
+        {
+            return nazivKnjige + " - " + autor;
+        }
+
     }
 }

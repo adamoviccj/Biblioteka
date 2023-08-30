@@ -16,7 +16,7 @@ namespace SIMS_Projekat.Repository
 
         public KnjigaRepository()
         {
-            GetAllKnjige();
+            Knjige = GetAllKnjige();
         }
 
         public List<Knjiga> GetAllKnjige()
