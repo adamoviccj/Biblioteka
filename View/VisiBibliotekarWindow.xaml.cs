@@ -28,7 +28,8 @@ namespace SIMS_Projekat.View
 
         private void ObrisiIzdanja(object sender, RoutedEventArgs e)
         {
-
+            ObrisiIzdanjaWindow window = new ObrisiIzdanjaWindow();
+            window.Show();
         }
 
         private void FunkcijeObicnog(object sender, RoutedEventArgs e)

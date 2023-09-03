@@ -137,6 +137,9 @@
     <Compile Include="View\NabaviPrimerkeWindow.xaml.cs">
       <DependentUpon>NabaviPrimerkeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ObrisiIzdanjaWindow.xaml.cs">
+      <DependentUpon>ObrisiIzdanjaWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PrikazIznajmljivanjaClan.xaml.cs">
       <DependentUpon>PrikazIznajmljivanjaClan.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\NabaviPrimerkeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ObrisiIzdanjaWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
