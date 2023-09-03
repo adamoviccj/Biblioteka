@@ -98,9 +98,12 @@ namespace SIMS_Projekat.View
                 return;
             }
 
-            KnjigaRepository knjigaRepo = new KnjigaRepository();
-            knjigaRepo.Knjige.Add(knjiga);
-            knjigaRepo.Save();
+            if (knjigaNovaRadioButton.IsChecked == true)
+            {
+                KnjigaRepository knjigaRepo = new KnjigaRepository();
+                knjigaRepo.Knjige.Add(knjiga);
+                knjigaRepo.Save();
+            }
 
             Izdavac izdavac = new Izdavac(izdavacNazivTextBox.Text, izdavacDrzavaTextBox.Text);
 

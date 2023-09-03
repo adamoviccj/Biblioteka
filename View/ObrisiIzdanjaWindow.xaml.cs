@@ -64,17 +64,17 @@ namespace SIMS_Projekat.View
             PrimerakRepository primerciRepo = new PrimerakRepository();
             foreach (IzdanjeKnjige izdanje in allIzdanja)
             {
-                if (izdanje.knjiga != knjigeComboBox.SelectedItem) continue;
+                if (!izdanje.knjiga.Equals(knjigeComboBox.SelectedItem)) continue;
 
                 List<Primerak> sviPrimerci = primerciRepo.GetAllPrimerci();
 
                 List<Primerak> ostaliPrimerci = primerciRepo.GetAllPrimerci();
                 foreach (Primerak primerak in sviPrimerci)
                 {
-                    if (primerak.izdanjeKnjige != izdanje) continue;
-                    if (primerak.dostupnost != Dostupnost.SLOBODNA || primerak.dostupnost != Dostupnost.IZGUBLJENA)
+                    if (!primerak.izdanjeKnjige.Equals(izdanje)) continue;
+                    if (!(primerak.dostupnost == Dostupnost.SLOBODNA || primerak.dostupnost == Dostupnost.IZGUBLJENA))
                     {
-                        MessageBox.Show("Ne mozete obrisati izdanje jer su primerci tog izdanja trenutno iznajmljeni!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Ne mozete obrisati knjigu jer su primerci te knjige trenutno iznajmljeni!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                     ostaliPrimerci.Remove(primerak);
@@ -94,13 +94,15 @@ namespace SIMS_Projekat.View
 
             foreach (Knjiga knjiga in sveKnjige)
             {
-                if (knjiga != knjigeComboBox.SelectedItem) continue;
+                if (!knjiga.Equals(knjigeComboBox.SelectedItem)) continue;
                 knjigaRepo.Knjige.Remove(knjiga);
                 knjigaRepo.Save();
                 break;
             }
 
             fillBooks();
+
+            MessageBox.Show("Uspesno obrisana knjiga sa svim njenim izdanjima!", "Uspesno", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void ObrisiIzdanje(object sender, RoutedEventArgs e)
@@ -117,8 +119,8 @@ namespace SIMS_Projekat.View
             List<Primerak> ostaliPrimerci = primerciRepo.GetAllPrimerci();
             foreach (Primerak primerak in sviPrimerci)
             {
-                if (primerak.izdanjeKnjige != izdanjaComboBox.SelectedItem) continue;
-                if (primerak.dostupnost != Dostupnost.SLOBODNA || primerak.dostupnost != Dostupnost.IZGUBLJENA)
+                if (!primerak.izdanjeKnjige.Equals(izdanjaComboBox.SelectedItem)) continue;
+                if (!(primerak.dostupnost == Dostupnost.SLOBODNA || primerak.dostupnost == Dostupnost.IZGUBLJENA))
                 {
                     MessageBox.Show("Ne mozete obrisati izdanje jer su primerci tog izdanja trenutno iznajmljeni!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
@@ -135,7 +137,7 @@ namespace SIMS_Projekat.View
             List<IzdanjeKnjige> ostalaIzdanja = izdanjaRepo.GetAllIzdanjaKnjige();
             foreach (IzdanjeKnjige izdanje in allIzdanja)
             {
-                if (izdanje != izdanjaComboBox.SelectedItem) continue;
+                if (!izdanje.Equals(izdanjaComboBox.SelectedItem)) continue;
                 ostalaIzdanja.Remove(izdanje);
             }
 
@@ -143,6 +145,8 @@ namespace SIMS_Projekat.View
             izdanjaRepo.Save();
 
             updateIzdanja();
+
+            MessageBox.Show("Uspesno obrisano izdanje!", "Uspesno", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
     }

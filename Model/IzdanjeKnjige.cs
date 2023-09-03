@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SIMS_Projekat.enums;
+using SIMS_Projekat.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,16 @@ namespace SIMS_Projekat.Model
         public override string ToString()
         {
             return "ISBN: " + isbn + " | " + izdavac;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            IzdanjeKnjige other = (IzdanjeKnjige)obj;
+            if (isbn == other.isbn && godinaIzdanja == other.godinaIzdanja && udk == other.udk) return true;
+            return false;
         }
 
     }

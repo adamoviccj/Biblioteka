@@ -34,5 +34,15 @@ namespace SIMS_Projekat.Model
             return nazivKnjige + " - " + autor;
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+                return false;
+
+            Knjiga other = (Knjiga)obj;
+            if (nazivKnjige == other.nazivKnjige && opis == other.opis) return true;
+            return false;
+        }
+
     }
 }
