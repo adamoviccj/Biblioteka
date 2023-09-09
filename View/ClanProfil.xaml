@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="ClanProfil" Height="600" Width="450" Background="#FFF1D9E6">
+        Title="Clan Meni" Height="600" Width="450" Background="#FFF1D9E6" Icon="/SIMS_Projekat;component/Data/lib.png">
     <Grid>
         <TextBlock Text="CLAN" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Foreground="Black" Grid.Column="1" Margin="10,10,10,10"/>
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" Height="411">

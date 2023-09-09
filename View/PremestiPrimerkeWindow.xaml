@@ -1,0 +1,34 @@
+﻿<Window x:Class="SIMS_Projekat.View.PremestiPrimerkeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="Premesti primerke iz ogranaka" Height="200" Width="400" Icon="/SIMS_Projekat;component/Data/lib.png" ResizeMode="NoResize" Background="#FFF1D9E6" WindowStartupLocation="CenterScreen">
+    
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Style="{StaticResource btnLightRed}" -->
+
+        <Label Content="Primerak:" FontSize="20" Margin="10,10,0,10"/>
+        <ComboBox x:Name="primerciComboBox" Grid.Column="1" Grid.Row="0" Margin="10" VerticalContentAlignment="Center" FontSize="18"/>
+
+        <Label Content="Ogranak:" FontSize="20" Margin="10,0,0,10" Grid.Column="0" Grid.Row="1"/>
+        <ComboBox x:Name="ogranciComboBox" Grid.Column="1" Grid.Row="1" Margin="10,0,10,10" VerticalContentAlignment="Center" FontSize="18"/>
+
+        <Button Content="Premesti primerak" Style="{StaticResource btnLightRed}" Grid.Row="2" Grid.ColumnSpan="2" FontSize="20" Margin="10,0,10,10" Click="Button_Click"/>
+
+    </Grid>
+    
+</Window>

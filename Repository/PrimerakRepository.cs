@@ -33,7 +33,7 @@ namespace SIMS_Projekat.Repository
 
         public void Save()
         {
-            File.WriteAllText(FilePath, JsonConvert.SerializeObject(Primerci));
+            File.WriteAllText(FilePath, JsonConvert.SerializeObject(Primerci, Formatting.Indented));
         }
 
         public Primerak FindPrimerakByInventarniBroj(string inventarniBroj)

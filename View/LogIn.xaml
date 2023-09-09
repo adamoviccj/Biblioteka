@@ -5,25 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="LogIn" Height="450" Width="800" Background="#FFF1D9E6" Closing="LogIn_Closing">
-    <Grid Margin="20">
+        Title="Log In" Height="300" Width="500" Background="#FFF1D9E6" Icon="/SIMS_Projekat;component/Data/lib.png" Closing="LogIn_Closing" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Log In" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <TextBlock Text="Log In" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        <StackPanel Grid.Row="1" Background="#FFF1D9E6" Orientation="Horizontal" Margin="0,0,0,10">
-            <Label Content="Username:   "/>
-            <TextBox x:Name="usernameTextBox" Width="196" Height="39" />
+        <StackPanel Grid.Row="1" Background="#FFF1D9E6" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Username:" HorizontalAlignment="Center" FontSize="18"/>
+            <TextBox x:Name="usernameTextBox" Width="196" FontSize="18" Padding="4" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Background="#FFF1D9E6" Orientation="Horizontal" Height="40" VerticalAlignment="Top">
-            <Label Content="Password: " HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"/>
-            <PasswordBox x:Name="passwordBox" Width="196" />
+        <StackPanel Grid.Row="2" Background="#FFF1D9E6" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Password:" HorizontalAlignment="Center" FontSize="18"/>
+            <PasswordBox x:Name="passwordBox" Width="196" FontSize="18" Padding="4" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <Button  BorderBrush="White" BorderThickness="3" Click="LoginButton_Click" Grid.Row="2" Content="Log In" Width="100" HorizontalAlignment="Center" Margin="0,96,0,-93" Background="#FFF1D9E6"/>
+        <Button Click="LoginButton_Click" Grid.Row="3" Content="Log In" FontSize="18" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource btnLightRed}"/>
     </Grid>
 </Window>

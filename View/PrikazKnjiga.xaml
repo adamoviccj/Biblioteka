@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="PrikazKnjiga" Height="450" Width="800">
+        Title="Pregled knjiga" Height="450" Width="800" Icon="/SIMS_Projekat;component/Data/lib.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

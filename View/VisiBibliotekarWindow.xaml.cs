@@ -17,7 +17,8 @@ namespace SIMS_Projekat.View
 
         private void PremestiPrimerke(object sender, RoutedEventArgs e)
         {
-
+            PremestiPrimerkeWindow window = new PremestiPrimerkeWindow();
+            window.Show();
         }
 
         private void EvidentirajIzdanja(object sender, RoutedEventArgs e)

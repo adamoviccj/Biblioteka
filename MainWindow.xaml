@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FFE6C6C6">
+        Title="Biblioteka" Height="350" Width="600" Background="#FFF1D9E6" Icon="/SIMS_Projekat;component/Data/lib.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -13,7 +13,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Margin="10" FontSize="24" FontWeight="Bold"
+        <TextBlock Grid.Row="0" Margin="10" FontSize="28" FontWeight="Bold"
                    HorizontalAlignment="Center" VerticalAlignment="Center"
                    Text="Dobro došli u sistem biblioteke!" />
 

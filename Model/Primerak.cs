@@ -43,5 +43,11 @@ namespace SIMS_Projekat.Model
             this.izdanjeKnjige = izdanjeKnjige;
             this.ogranak = ogranak;
         }
+
+        public override string ToString()
+        {
+            return inventarniBroj + " - " + izdanjeKnjige.knjiga.nazivKnjige;
+        }
+
     }
 }
