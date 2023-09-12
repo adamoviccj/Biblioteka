@@ -204,6 +204,20 @@ namespace SIMS_Projekat.Repository
             }
         }
 
+        public List<Rezervacija> GetProsleRezervacije()
+        {
+            List<Rezervacija> rezervacije = new List<Rezervacija>();
+            foreach(Rezervacija rezervacija in GetAllRezervacije())
+            {
+                if(rezervacija.DatumPrihvatanja != null)
+                {
+                    rezervacije.Add(rezervacija);
+                }
+            }
+
+            return rezervacije;
+        }
+
 
     }
 }

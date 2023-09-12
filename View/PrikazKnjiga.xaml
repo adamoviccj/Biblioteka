@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Text="SVE KNJIGE" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
         </Grid>
-        <Grid Grid.Row="1" Background="#FFECEFF6">
+        <Grid Grid.Row="1" Background="#FFF1D9E6">
             <DataGrid x:Name="iznajmljivanjaDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
                       RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
                       HeadersVisibility="Column" ItemsSource="{Binding Knjige}">
@@ -34,18 +34,19 @@
 
                 </DataGrid.Columns>
             </DataGrid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,50" Background="#FFF1D9E6">
+                <Label Content="Pretraga:" Height="30" Width="100"/>
+                <ComboBox x:Name="kriterijumCombo" SelectedItem="{Binding kriterijum}" Height="30" Width="120"/>
+                <TextBox Height="30" Width="120" Text="{Binding SearchParam}"/>
+                <Button Content="Pretrazi" Click="SearchBtn_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+            </StackPanel>
 
+            <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,20" Background="#FFF1D9E6">
+                <Button Content="Sortiraj po nazivu" Click="SortByNaziv_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+                <Button Content="Sortiraj po imenu" Click="SortByImeAutora_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+                <Button Content="Sortiraj po prezimenu" Click="SortByPrezimeAutora_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
+            </StackPanel>
         </Grid>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,50">
-            <Label Content="Pretraga:" Height="30" Width="100"/>
-            <TextBox Height="30" Width="120" Text="{Binding SearchParam}"/>
-            <Button Content="Pretrazi" Click="SearchBtn_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
-        </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,50">
-            <Button Content="Sortiraj po nazivu" Click="SortByNaziv_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
-            <Button Content="Sortiraj po imenu" Click="SortByImeAutora_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
-            <Button Content="Sortiraj po prezimenu" Click="SortByPrezimeAutora_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
-        </StackPanel>
     </Grid>
 </Window>
