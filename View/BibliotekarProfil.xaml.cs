@@ -186,5 +186,11 @@ namespace SIMS_Projekat.View
                 VracanjeKnjige vracanjeKnjige = new VracanjeKnjige();
                 vracanjeKnjige.Show();
             }
+
+            private void ShowRezervacijeNaCekanjuBtn_Click(object sender, RoutedEventArgs e)
+            {
+                PrikazRezervacijaNaCekanjuBibliotekar prikaz = new PrikazRezervacijaNaCekanjuBibliotekar();
+                prikaz.Show();
+            }
     }
     }

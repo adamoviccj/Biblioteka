@@ -1,0 +1,53 @@
+﻿<Window x:Class="SIMS_Projekat.View.PrikazRezervacijaNaCekanjuBibliotekar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="PrikazRezervacijaNaCekanjuBibliotekar" Height="460" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="REZERVACIJE NA CEKANJU" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFECEFF6">
+            <DataGrid x:Name="rezervacijeBibliotekarDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+                      RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
+                      HeadersVisibility="Column" ItemsSource="{Binding Rezervacije}" SelectionMode="Single" SelectedItem="{Binding SelectedRezervacija}">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="ColumnHeaderBackground" Color="#FFF1D9E6"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Knjiga" Binding="{Binding IzdanjeKnjige.knjiga.nazivKnjige}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding IzdanjeKnjige.godinaIzdanja}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Izdavac" Binding="{Binding IzdanjeKnjige.izdavac.naziv}"/>
+                    <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding DatumRezervacije, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <DataGridTextColumn Header="Datum promene statusa" Binding="{Binding DatumPrihvatanja,StringFormat='{}{0:dd/MM/yyyy}', TargetNullValue='N/A'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding StatusRezervacije}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Ime clana" Binding="{Binding Clan.ime}"/>
+                    <DataGridTextColumn Header="Prezime clana" Binding="{Binding Clan.prezime}"/>
+                    <DataGridTextColumn Header="Broj clanske karte" Binding="{Binding Clan.brClanskeKarte}"/>
+                    <DataGridTextColumn Header="Telefon" Binding="{Binding Clan.telefon}"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Clan.email}"/>
+                    <DataGridTextColumn Header="Korisnicko ime" Binding="{Binding Clan.nalog.username}"/>
+                </DataGrid.Columns>
+                
+            </DataGrid>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10,10,10,10">
+            <Button Content="Razresi rezervaciju" Click="RazresiRezervacijuBtn_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" RenderTransformOrigin="-0.011,0.546" />
+
+
+        </StackPanel>
+    </Grid>
+</Window>

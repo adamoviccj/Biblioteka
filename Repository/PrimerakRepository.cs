@@ -85,7 +85,7 @@ namespace SIMS_Projekat.Repository
         }
         public Primerak FindSlobodanPrimerakZaIzdanje(string isbn)
         {
-            foreach (Primerak primerak in Primerci)
+            foreach (Primerak primerak in GetAllPrimerci())
             {
                 if (primerak.izdanjeKnjige.isbn == isbn && primerak.dostupnost == enums.Dostupnost.SLOBODNA)
                 {

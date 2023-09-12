@@ -155,6 +155,9 @@
     <Compile Include="View\PrikazRezervacijaClan.xaml.cs">
       <DependentUpon>PrikazRezervacijaClan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PrikazRezervacijaNaCekanjuBibliotekar.xaml.cs">
+      <DependentUpon>PrikazRezervacijaNaCekanjuBibliotekar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PrikazTrenutnihIznajmljivanjaClan.xaml.cs">
       <DependentUpon>PrikazTrenutnihIznajmljivanjaClan.xaml</DependentUpon>
     </Compile>
@@ -254,6 +257,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\PrikazRezervacijaClan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrikazRezervacijaNaCekanjuBibliotekar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
