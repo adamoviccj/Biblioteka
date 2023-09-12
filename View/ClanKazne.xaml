@@ -15,7 +15,7 @@
         <Label Grid.Row="0" Content="Kazne" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0,0,0,10"/>
         <DataGrid Grid.Row="1" ItemsSource="{Binding Kazne}" SelectedItem="{Binding selectedKazna, Mode=TwoWay}" AutoGenerateColumns="False" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Iznos" Binding="{Binding iznos}"/>
+                <DataGridTextColumn Header="Iznos" Binding="{Binding iznos, StringFormat=N2}"/>
                 <DataGridTextColumn Header="Tip kazne" Binding="{Binding tipKazne}"/>
             </DataGrid.Columns>
         </DataGrid>
