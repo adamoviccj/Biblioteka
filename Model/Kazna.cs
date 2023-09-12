@@ -9,10 +9,10 @@ namespace SIMS_Projekat.Model
 {
     public class Kazna
     {
-        public string id;
-        public float iznos;
-        public Clan clan;
-        public DateTime? datumUplate;
+        public string id { get; set; }
+        public float iznos { get; set; }
+        public Clan clan { get; set; }
+        public DateTime? datumUplate { get; set; }
         public TipKazne tipKazne { get; set; }
 
         public Kazna() { }

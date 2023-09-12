@@ -39,15 +39,12 @@
             "drzava": "Rusija"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -90,15 +87,12 @@
             "drzava": "Rusija"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -141,15 +135,12 @@
             "drzava": "Brazil"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -192,15 +183,12 @@
             "drzava": "Brazil"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -243,15 +231,12 @@
             "drzava": "Brazil"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -294,15 +279,12 @@
             "drzava": "Brazil"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -345,15 +327,12 @@
             "drzava": "Rusija"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -396,15 +375,12 @@
             "drzava": "Rusija"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
-        },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
-      }
+      },
+      "ogranak": null
     }
   },
   {
@@ -447,14 +423,64 @@
             "drzava": "Rusija"
           }
         },
-        "biblioteka": {
-          "nazivBiblioteke": "biblioteka1",
-          "brojClanova": 75
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      },
+      "ogranak": null
+    }
+  },
+  {
+    "id": 10,
+    "datumIznajmljivanja": "2023-09-12T13:57:06.2888773+02:00",
+    "datumVracanja": null,
+    "rokVracanja": "2023-09-26T13:57:06.2888773+02:00",
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "1547",
+      "nabavnaCena": 1500.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": null,
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-3239-3",
+        "udk": "12345",
+        "jezik": "srpski",
+        "godinaIzdanja": "2019",
+        "format": "13.5x20.5 cm",
+        "vrstaKoricenja": 0,
+        "citanost": 57,
+        "knjiga": {
+          "nazivKnjige": "Zlocin i kazna",
+          "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+          "autor": {
+            "ime": "Fjodor",
+            "prezime": "Dostojevski",
+            "drzava": "Rusija"
+          }
         },
         "izdavac": {
           "naziv": "Laguna",
           "drzava": "Srbija"
         }
+      },
+      "ogranak": {
+        "id": 2,
+        "naziv": "ogranakB",
+        "lokacija": "Adresa 2",
+        "brTelefona": "12345"
       }
     }
   }

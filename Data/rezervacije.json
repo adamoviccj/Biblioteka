@@ -19,10 +19,6 @@
           "drzava": "Rusija"
         }
       },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
-      },
       "izdavac": {
         "naziv": "Laguna",
         "drzava": "Srbija"
@@ -61,10 +57,6 @@
           "prezime": "Dostojevski",
           "drzava": "Rusija"
         }
-      },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
       },
       "izdavac": {
         "naziv": "Laguna",
@@ -105,10 +97,6 @@
           "drzava": "Brazil"
         }
       },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
-      },
       "izdavac": {
         "naziv": "Laguna",
         "drzava": "Srbija"
@@ -147,10 +135,6 @@
           "prezime": "Dostojevski",
           "drzava": "Rusija"
         }
-      },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
       },
       "izdavac": {
         "naziv": "Laguna",
@@ -191,10 +175,6 @@
           "drzava": "Brazil"
         }
       },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
-      },
       "izdavac": {
         "naziv": "Laguna",
         "drzava": "Srbija"
@@ -233,10 +213,6 @@
           "prezime": "Dostojevski",
           "drzava": "Rusija"
         }
-      },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
       },
       "izdavac": {
         "naziv": "Laguna",
@@ -277,12 +253,47 @@
           "drzava": "Rusija"
         }
       },
-      "biblioteka": {
-        "nazivBiblioteke": "biblioteka1",
-        "brojClanova": 75
-      },
       "izdavac": {
         "naziv": "Laguna",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20233",
+      "email": "helenass@gmail.com",
+      "ime": "helena",
+      "prezime": "simonovic",
+      "jmbg": "3010998777119",
+      "telefon": "063844910",
+      "korisnicki nalog": {
+        "username": "2helenasim",
+        "password": "helena123"
+      }
+    },
+    "statusRezervacije": 0
+  },
+  {
+    "id": 8,
+    "datumRezervacije": "2023-09-12T13:57:22.4467649+02:00",
+    "izdanje knjige": {
+      "isbn": "978-83-413-2287-6",
+      "udk": "76501",
+      "jezik": "srpski",
+      "godinaIzdanja": "2017",
+      "format": "20x40cm",
+      "vrstaKoricenja": 0,
+      "citanost": 0,
+      "knjiga": {
+        "nazivKnjige": "Na Drini cuprija",
+        "opis": "Najpoznatiji roman Ive Andrica.",
+        "autor": {
+          "ime": "Ivo",
+          "prezime": "Andric",
+          "drzava": "Srbija"
+        }
+      },
+      "izdavac": {
+        "naziv": "Vulkan",
         "drzava": "Srbija"
       }
     },
