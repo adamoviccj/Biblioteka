@@ -57,16 +57,16 @@ namespace SIMS_Projekat.View
 
         private void OdjavaBtn_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+
             for (int i = Application.Current.Windows.Count - 1; i >= 0; i--)
             {
-                if (Application.Current.Windows[i].GetType() != typeof(MainWindow))
+                if (Application.Current.Windows[i] != mainWindow)
                 {
                     Application.Current.Windows[i].Close();
                 }
             }
-
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
         }
 
         private void ShowKazneBtn_Click(object sender, RoutedEventArgs e)
