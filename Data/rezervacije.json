@@ -2,6 +2,7 @@
   {
     "id": 1,
     "datumRezervacije": "2023-05-01T00:00:00",
+    "datumPrihvatanja": "2023-05-05T00:00:00",
     "izdanje knjige": {
       "isbn": "978-86-521-3239-3",
       "udk": "12345",
@@ -36,11 +37,12 @@
         "password": "ana123"
       }
     },
-    "statusRezervacije": 0
+    "statusRezervacije": 2
   },
   {
     "id": 2,
     "datumRezervacije": "2023-08-27T14:21:31.2028803+02:00",
+    "datumPrihvatanja": "2023-08-28T00:00:00",
     "izdanje knjige": {
       "isbn": "978-86-521-3239-3",
       "udk": "12345",
@@ -75,11 +77,12 @@
         "password": "marko123"
       }
     },
-    "statusRezervacije": 0
+    "statusRezervacije": 2
   },
   {
     "id": 3,
     "datumRezervacije": "2023-08-27T14:28:34.6561298+02:00",
+    "datumPrihvatanja": null,
     "izdanje knjige": {
       "isbn": "978-86-521-4746-5",
       "udk": "53",
@@ -119,6 +122,7 @@
   {
     "id": 4,
     "datumRezervacije": "2023-08-28T02:08:24.0095207+02:00",
+    "datumPrihvatanja": "2023-09-13T00:09:20.0209118+02:00",
     "izdanje knjige": {
       "isbn": "978-86-521-3239-3",
       "udk": "12345",
@@ -153,11 +157,12 @@
         "password": "helena123"
       }
     },
-    "statusRezervacije": 0
+    "statusRezervacije": 1
   },
   {
     "id": 5,
     "datumRezervacije": "2023-08-28T02:20:57.9382354+02:00",
+    "datumPrihvatanja": null,
     "izdanje knjige": {
       "isbn": "978-86-521-4746-5",
       "udk": "53",
@@ -197,6 +202,7 @@
   {
     "id": 6,
     "datumRezervacije": "2023-08-28T02:26:21.9216054+02:00",
+    "datumPrihvatanja": "2023-09-13T00:09:20.0249084+02:00",
     "izdanje knjige": {
       "isbn": "978-86-521-3239-3",
       "udk": "12345",
@@ -231,11 +237,12 @@
         "password": "vasilije123"
       }
     },
-    "statusRezervacije": 0
+    "statusRezervacije": 1
   },
   {
     "id": 7,
     "datumRezervacije": "2023-08-29T12:27:44.5639309+02:00",
+    "datumPrihvatanja": "2023-08-29T00:00:00",
     "izdanje knjige": {
       "isbn": "978-86-521-3555-4",
       "udk": "1234",
@@ -275,6 +282,7 @@
   {
     "id": 8,
     "datumRezervacije": "2023-09-12T13:57:22.4467649+02:00",
+    "datumPrihvatanja": null,
     "izdanje knjige": {
       "isbn": "978-83-413-2287-6",
       "udk": "76501",
@@ -307,6 +315,86 @@
       "korisnicki nalog": {
         "username": "2helenasim",
         "password": "helena123"
+      }
+    },
+    "statusRezervacije": 0
+  },
+  {
+    "id": 9,
+    "datumRezervacije": "2023-09-12T22:44:30.00616+02:00",
+    "datumPrihvatanja": null,
+    "izdanje knjige": {
+      "isbn": "978-83-413-2287-6",
+      "udk": "76501",
+      "jezik": "srpski",
+      "godinaIzdanja": "2017",
+      "format": "20x40cm",
+      "vrstaKoricenja": 0,
+      "citanost": 0,
+      "knjiga": {
+        "nazivKnjige": "Na Drini cuprija",
+        "opis": "Najpoznatiji roman Ive Andrica.",
+        "autor": {
+          "ime": "Ivo",
+          "prezime": "Andric",
+          "drzava": "Srbija"
+        }
+      },
+      "izdavac": {
+        "naziv": "Vulkan",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
+      }
+    },
+    "statusRezervacije": 0
+  },
+  {
+    "id": 10,
+    "datumRezervacije": "2023-09-12T22:44:52.0368141+02:00",
+    "datumPrihvatanja": "2023-09-12T22:44:54.9129912+02:00",
+    "izdanje knjige": {
+      "isbn": "978-86-521-3555-4",
+      "udk": "1234",
+      "jezik": "srpski",
+      "godinaIzdanja": "2022",
+      "format": "13x20cm",
+      "vrstaKoricenja": 0,
+      "citanost": 15,
+      "knjiga": {
+        "nazivKnjige": "Ana Karenjina",
+        "opis": "Sve srecne porodice lice jedna na drugu, svaka nesrecna porodica nesrecna je na svoj nacin.",
+        "autor": {
+          "ime": "Lav",
+          "prezime": "Tolstoj",
+          "drzava": "Rusija"
+        }
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
+      }
+    },
+    "clan": {
+      "broj clanske karte": "20231",
+      "email": "markom@gmail.com",
+      "ime": "marko",
+      "prezime": "markovic",
+      "jmbg": "0512001772014",
+      "telefon": "0656128215",
+      "korisnicki nalog": {
+        "username": "markom",
+        "password": "marko123"
       }
     },
     "statusRezervacije": 0

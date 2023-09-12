@@ -35,5 +35,7 @@ namespace SIMS_Projekat.View
 
             Rezervacije = new ObservableCollection<Rezervacija>(_rezervacijaRepository.GetAllRezervacije());
         }
+
+        
     }
 }

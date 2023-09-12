@@ -32,6 +32,7 @@
                     <DataGridTextColumn Header="Godina izdanja" Binding="{Binding IzdanjeKnjige.godinaIzdanja}" Foreground="Black"/>
                     <DataGridTextColumn Header="Izdavac" Binding="{Binding IzdanjeKnjige.izdavac.naziv}"/>
                     <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding DatumRezervacije, StringFormat='{}{0:dd/MM/yyyy}'}"/>
+                    <DataGridTextColumn Header="Datum promene statusa" Binding="{Binding DatumPrihvatanja,StringFormat='{}{0:dd/MM/yyyy}', TargetNullValue='N/A'}" Foreground="Black"/>
                     <DataGridTextColumn Header="Status" Binding="{Binding StatusRezervacije}" Foreground="Black"/>
                     <DataGridTextColumn Header="Ime clana" Binding="{Binding Clan.ime}"/>
                     <DataGridTextColumn Header="Prezime clana" Binding="{Binding Clan.prezime}"/>
@@ -40,7 +41,6 @@
                     <DataGridTextColumn Header="Email" Binding="{Binding Clan.email}"/>
                     <DataGridTextColumn Header="Korisnicko ime" Binding="{Binding Clan.nalog.username}"/>
                 </DataGrid.Columns>
-
 
             </DataGrid>
         </Grid>

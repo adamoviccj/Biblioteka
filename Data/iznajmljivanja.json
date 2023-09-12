@@ -290,7 +290,7 @@
   {
     "id": 7,
     "datumIznajmljivanja": "2023-08-29T02:22:03.2484708+02:00",
-    "datumVracanja": null,
+    "datumVracanja": "2023-09-12T18:02:04.1086896+02:00",
     "rokVracanja": "2023-09-12T02:22:03.2484708+02:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {
@@ -338,7 +338,7 @@
   {
     "id": 8,
     "datumIznajmljivanja": "2023-08-29T02:35:40.4620468+02:00",
-    "datumVracanja": null,
+    "datumVracanja": "2023-09-12T17:35:02.9108537+02:00",
     "rokVracanja": "2023-09-26T02:35:40.4620468+02:00",
     "brojZahtevaZaProduzavanje": 1,
     "clan": {
@@ -386,7 +386,7 @@
   {
     "id": 9,
     "datumIznajmljivanja": "2023-08-29T10:36:51.671268+02:00",
-    "datumVracanja": null,
+    "datumVracanja": "2023-09-12T17:37:28.3349866+02:00",
     "rokVracanja": "2023-09-12T10:36:51.671268+02:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {
@@ -434,7 +434,7 @@
   {
     "id": 10,
     "datumIznajmljivanja": "2023-09-12T13:57:06.2888773+02:00",
-    "datumVracanja": null,
+    "datumVracanja": "2023-09-12T17:29:46.3516176+02:00",
     "rokVracanja": "2023-09-26T13:57:06.2888773+02:00",
     "brojZahtevaZaProduzavanje": 0,
     "clan": {

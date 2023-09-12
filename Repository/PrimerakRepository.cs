@@ -55,6 +55,7 @@ namespace SIMS_Projekat.Repository
                 return;
             }
             forUpdate.dostupnost = primerak.dostupnost;
+            forUpdate.datumRaspolaganja = primerak.datumRaspolaganja;
             Save();
         }
         public List<Primerak> FindPrimerkeZaKnjigu(string nazivKnjige)
@@ -105,5 +106,19 @@ namespace SIMS_Projekat.Repository
             Save();
             return true;
         }
+
+        public List<Primerak> GetPrimerkeNaCekanjuZaIzdanje(string isbn)
+        {
+            List<Primerak> primerci = new List<Primerak>();
+            foreach(Primerak primerak in Primerci)
+            {
+                if (primerak.izdanjeKnjige.isbn == isbn && primerak.dostupnost == enums.Dostupnost.NA_CEKANJU)
+                {
+                    primerci.Add(primerak);
+                }
+            }
+            return primerci;
+        }
+            
     }
 }

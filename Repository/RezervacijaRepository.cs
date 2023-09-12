@@ -16,6 +16,7 @@ namespace SIMS_Projekat.Repository
         public string FilePath = "../../Data/rezervacije.json";
 
         public List<Rezervacija> RezervacijeClana { get; set; }
+        private PrimerakRepository _primerakRepository { get; set; }
 
         public RezervacijaRepository()
         {
@@ -24,6 +25,9 @@ namespace SIMS_Projekat.Repository
             {
                 RezervacijeClana = GetAllRezervacijeClana(LogIn.LoggedUser.jmbg);
             }
+
+            ProveriIstekaoRok();
+
         }
 
         public List<Rezervacija> GetAllRezervacije()
@@ -87,8 +91,10 @@ namespace SIMS_Projekat.Repository
             else
             {
                 forUpdate.DatumRezervacije = rezervacija.DatumRezervacije;
+                forUpdate.StatusRezervacije = rezervacija.StatusRezervacije;
                 forUpdate.IzdanjeKnjige = rezervacija.IzdanjeKnjige;
                 forUpdate.Clan = rezervacija.Clan;
+                forUpdate.DatumPrihvatanja = rezervacija.DatumPrihvatanja;
                 Save();
                 return true;
             }
@@ -109,5 +115,95 @@ namespace SIMS_Projekat.Repository
             Update(rezervacija);
             return true;
         }
+
+        public List<Rezervacija> GetAllKreiraneRezervacijeZaIzdanje(string isbn)
+        {
+            List<Rezervacija> result = new List<Rezervacija>();
+            foreach(Rezervacija rezervacija in GetAllRezervacije())
+            {
+                if(rezervacija.IzdanjeKnjige.isbn == isbn && rezervacija.StatusRezervacije == enums.StatusRezervacije.KREIRANA)
+                {
+                    result.Add(rezervacija);
+                }
+            }
+            return result;
+        }
+
+        public List<Rezervacija> GetAllRezervacijeNaCekanjuZaClana(string jmbg)
+        {
+            List<Rezervacija> NaCekanju = new List<Rezervacija>();
+            foreach(Rezervacija rezervacija in GetAllRezervacije())
+            {
+                if(rezervacija.Clan.jmbg == jmbg && rezervacija.StatusRezervacije == enums.StatusRezervacije.NA_CEKANJU)
+                {
+                    NaCekanju.Add(rezervacija);
+                }
+            }
+            return NaCekanju;
+
+        }
+
+        public List<Rezervacija> GetAllRezervacijeNaCekanjuZaIzdanje(string isbn)
+        {
+            List<Rezervacija> rezervacije = new List<Rezervacija>();
+            foreach(Rezervacija rezervacija in GetAllRezervacijeNaCekanju())
+            {
+                if(rezervacija.IzdanjeKnjige.isbn == isbn)
+                {
+                    rezervacije.Add(rezervacija);
+                }
+            }
+            return rezervacije;
+        }
+
+        public List<Rezervacija> GetKreiraneRezervacijeZaIzdanje(string isbn)
+        {
+            List<Rezervacija> rezervacije = new List<Rezervacija>();
+            foreach(Rezervacija rezervacija in GetAllRezervacije())
+            {
+                if (rezervacija.IzdanjeKnjige.isbn == isbn && rezervacija.StatusRezervacije == enums.StatusRezervacije.KREIRANA)
+                {
+                    rezervacije.Add(rezervacija);
+                }
+            }
+            return rezervacije;
+        }
+
+        public List<Rezervacija> GetAllRezervacijeNaCekanju()
+        {
+            List<Rezervacija> rezervacije = new List<Rezervacija>();
+            foreach(Rezervacija rezervacija in GetAllRezervacije())
+            {
+                if (rezervacija.StatusRezervacije == enums.StatusRezervacije.NA_CEKANJU)
+                {
+                    rezervacije.Add(rezervacija);
+                }
+            } 
+            return rezervacije;
+        }
+
+        public void ProveriIstekaoRok()
+        {
+            
+            
+            foreach(Rezervacija rezervacija in GetAllRezervacijeNaCekanju())
+            {
+                if(rezervacija.DatumPrihvatanja.HasValue)
+                {
+                    if (rezervacija.DatumPrihvatanja.Value.AddDays(2) <= DateTime.Now)
+                    {
+                        rezervacija.StatusRezervacije = enums.StatusRezervacije.ISTEKAO_ROK;
+                        Update(rezervacija);
+                        Rezervacija sledeca = GetKreiraneRezervacijeZaIzdanje(rezervacija.IzdanjeKnjige.isbn).First();
+                        sledeca.DatumPrihvatanja = DateTime.Now;
+                        sledeca.StatusRezervacije = enums.StatusRezervacije.NA_CEKANJU;
+                        Update(sledeca);
+                    }
+                }
+                
+            }
+        }
+
+
     }
 }

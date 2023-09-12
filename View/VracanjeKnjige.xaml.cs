@@ -29,6 +29,8 @@ namespace SIMS_Projekat.View
         private IznajmljivanjeRepository _iznajmljivanjeRepository { get; set; }
 
         private KaznaRepository _kaznaRepository { get; set; }
+        private RezervacijaRepository _rezervacijaRepository { get; set; }
+        private PrimerakRepository _primerakRepository { get; set; }
 
         public Iznajmljivanje selectedIznajmljivanje { get; set; }
         public VracanjeKnjige()
@@ -43,6 +45,8 @@ namespace SIMS_Projekat.View
             var app = Application.Current as App;
             _iznajmljivanjeRepository = app.IznajmljivanjeRepository;
             _kaznaRepository = app._kaznaRepository;
+            _rezervacijaRepository = app._rezervacijaRepository;
+            _primerakRepository = app.PrimerakRepository;
             iznajmljivanja = new ObservableCollection<Iznajmljivanje>(_iznajmljivanjeRepository.GetAllTrenutnaIznajmljivanja());
 
         }
@@ -66,6 +70,18 @@ namespace SIMS_Projekat.View
             {
                 MessageBox.Show("Uspesno vracanje knjige");
                 OnPropertyChanged(nameof(iznajmljivanja));
+                Primerak primerak = _primerakRepository.FindPrimerakByInventarniBroj(selectedIznajmljivanje.primerak.inventarniBroj);
+                primerak.dostupnost = Dostupnost.SLOBODNA;
+                primerak.datumRaspolaganja = DateTime.Now;
+                _primerakRepository.Update(primerak);
+                List<Rezervacija> rezervacije = _rezervacijaRepository.GetAllKreiraneRezervacijeZaIzdanje(selectedIznajmljivanje.primerak.izdanjeKnjige.isbn);
+                if (rezervacije.Count > 0)
+                {
+                    Rezervacija rezervacija = rezervacije.First();
+                    rezervacija.StatusRezervacije = StatusRezervacije.NA_CEKANJU;
+                    _rezervacijaRepository.Update(rezervacija);
+                }
+                
             }
             else
             {

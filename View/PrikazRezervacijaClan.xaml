@@ -28,6 +28,8 @@
                 </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding DatumRezervacije,StringFormat='{}{0:dd/MM/yyyy}'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Datum promene statusa" Binding="{Binding DatumPrihvatanja,StringFormat='{}{0:dd/MM/yyyy}', TargetNullValue='N/A'}" Foreground="Black"/>
+                    <DataGridTextColumn Header="Datum rezervacije" Binding="{Binding StatusRezervacije}" Foreground="Black"/>
                     <DataGridTextColumn Header="Naziv knjige" Binding="{Binding IzdanjeKnjige.knjiga.nazivKnjige}"/>
                     <DataGridTextColumn Header="Ime autora" Binding="{Binding IzdanjeKnjige.knjiga.autor.ime}" Foreground="Black"/>
                     <DataGridTextColumn Header="Prezime autora" Binding="{Binding IzdanjeKnjige.knjiga.autor.prezime}" Foreground="Black"/>

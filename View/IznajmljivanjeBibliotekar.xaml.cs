@@ -93,6 +93,8 @@ namespace SIMS_Projekat.View
             if (primerci.Count == 0)
             {
                 MessageBox.Show("Nema slobodnih primeraka odabrane knjige! Mozete izvrsiti rezervaciju!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                KreiranjeRezervacijeBibliotekar kreiranjeRezervacijeBibliotekar = new KreiranjeRezervacijeBibliotekar();
+                kreiranjeRezervacijeBibliotekar.Show();
                 return;
             } else
             {

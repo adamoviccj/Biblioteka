@@ -172,8 +172,8 @@
   {
     "inventarniBroj": "1234",
     "nabavnaCena": 1500.0,
-    "dostupnost": 0,
-    "datumRaspolaganja": "2023-08-15T00:00:00",
+    "dostupnost": 2,
+    "datumRaspolaganja": "2023-09-12T18:02:05.3212183+02:00",
     "izdanjeKnjige": {
       "isbn": "978-86-521-3555-4",
       "udk": "1234",

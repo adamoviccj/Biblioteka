@@ -44,6 +44,7 @@ namespace SIMS_Projekat.View
         {
             Rezervacija rezervacija = new Rezervacija();
             rezervacija.DatumRezervacije = DateTime.Now;
+            rezervacija.DatumPrihvatanja = null;
             rezervacija.Clan = (Clan)LogIn.LoggedUser;
             rezervacija.IzdanjeKnjige = SelectedIzdanje;
 
@@ -52,17 +53,21 @@ namespace SIMS_Projekat.View
             Primerak primerak = _primerakRepository.FindSlobodanPrimerakZaIzdanje(isbn);
             if (primerak == null)
             {
-                MessageBox.Show("Trenutno nema slobodnih primeraka!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Trenutno nema slobodnih primeraka! Rezervacija je uspesno obavljena i obavesticemo Vas kada primerak knjige postane dostupan!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
+                rezervacija.StatusRezervacije = enums.StatusRezervacije.KREIRANA;
+                _rezervacijaRepository.Create(rezervacija);
             }
             else
             {
                 MessageBox.Show("Rezervacija uspesno obavljena, preuzmite knjigu u roku od dva dana!", "Uspeh!", MessageBoxButton.OK, MessageBoxImage.Information);
                 primerak.dostupnost = enums.Dostupnost.NA_CEKANJU;
+                rezervacija.StatusRezervacije = enums.StatusRezervacije.NA_CEKANJU;
+                rezervacija.DatumPrihvatanja = DateTime.Now;
                 _primerakRepository.Update(primerak);
+                _rezervacijaRepository.Create(rezervacija);
             }
 
-            rezervacija.StatusRezervacije = enums.StatusRezervacije.KREIRANA;
-            _rezervacijaRepository.Create(rezervacija);
+
 
 
         }

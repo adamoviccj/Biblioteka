@@ -15,6 +15,9 @@ namespace SIMS_Projekat.Model
 
         [JsonProperty("datumRezervacije")]
         public DateTime DatumRezervacije { get; set; }
+        [JsonProperty("datumPrihvatanja")]
+        public DateTime? DatumPrihvatanja { get; set; }
+
 
         [JsonProperty("izdanje knjige")]
         public IzdanjeKnjige IzdanjeKnjige { get; set; }
@@ -28,10 +31,11 @@ namespace SIMS_Projekat.Model
         {
         }
 
-        public Rezervacija(int id, DateTime datumRezervacije, IzdanjeKnjige izdanjeKnjige, Clan clan, StatusRezervacije statusRezervacije)
+        public Rezervacija(int id, DateTime datumRezervacije, DateTime? datumPrihvatanja, IzdanjeKnjige izdanjeKnjige, Clan clan, StatusRezervacije statusRezervacije)
         {
             Id = id;
             DatumRezervacije = datumRezervacije;
+            DatumPrihvatanja = datumPrihvatanja;
             IzdanjeKnjige = izdanjeKnjige;
             Clan = clan;
             StatusRezervacije = statusRezervacije;
