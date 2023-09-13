@@ -1,0 +1,47 @@
+﻿<Window x:Class="SIMS_Projekat.View.IzvestajCitanost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="IzvestajCitanost" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="IZVESTAJ O CITANOSTI" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFECEFF6">
+            <DataGrid x:Name="istorijaIznajmljivanjaDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+                      RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
+                      HeadersVisibility="Column" ItemsSource="{Binding Izdanja}" SelectionMode="Single" SelectedItem="{Binding SelectedIzdanje}">
+                <DataGrid.Resources>
+                    <SolidColorBrush x:Key="ColumnHeaderBackground" Color="#FFF1D9E6"/>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ISBN" Binding="{Binding isbn}"/>
+                    <DataGridTextColumn Header="UDK" Binding="{Binding udk}"/>
+                    <DataGridTextColumn Header="Citanost" Binding="{Binding citanost}"/>
+                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding knjiga.nazivKnjige}"/>
+                    <DataGridTextColumn Header="Ime autora" Binding="{Binding knjiga.autor.ime}"/>
+                    <DataGridTextColumn Header="Prezime autora" Binding="{Binding knjiga.autor.prezime}"/>
+                    <DataGridTextColumn Header="Izdavac" Binding="{Binding izdavac}"/>
+                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding godinaIzdanja}"/>
+                    <DataGridTextColumn Header="Jezik" Binding="{Binding jezik}"/>
+                    <DataGridTextColumn Header="Format" Binding="{Binding format}"/>
+                    <DataGridTextColumn Header="Vrsta koricenja" Binding="{Binding vrstaKoricenja}"/>
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

@@ -47,5 +47,30 @@ namespace SIMS_Projekat.Repository
             }
             return null;
         }
+
+        public IzdanjeKnjige GetByIsbn(string isbn)
+        {
+            return Izdanja.Find(izdanje => izdanje.isbn == isbn);
+        }
+
+        public bool Update(IzdanjeKnjige izdanje)
+        {
+            IzdanjeKnjige forUpdate = GetByIsbn(izdanje.isbn);
+            if (forUpdate == null)
+            {
+                return false;
+            }
+            else
+            {
+                forUpdate.citanost = izdanje.citanost;
+                Save();
+                return true;
+            }
+        }
+
+        public List<IzdanjeKnjige> SortirajPoCitanosti()
+        {
+            return GetAll().OrderBy(izdanje => izdanje.citanost).ToList();
+        }
     }
 }

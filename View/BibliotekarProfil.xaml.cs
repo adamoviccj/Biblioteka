@@ -192,5 +192,11 @@ namespace SIMS_Projekat.View
                 PrikazRezervacijaNaCekanjuBibliotekar prikaz = new PrikazRezervacijaNaCekanjuBibliotekar();
                 prikaz.Show();
             }
+
+            private void ShowIzvestajCitanostBtn_Click(object sender, RoutedEventArgs e)
+            {
+                IzvestajCitanost izvestaj = new IzvestajCitanost();
+                izvestaj.Show();
+            }
     }
     }

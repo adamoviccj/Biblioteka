@@ -100,6 +100,8 @@ namespace SIMS_Projekat.View
             {
                 iznajmljivanje.primerak = primerci.First();
                 iznajmljivanje.primerak.dostupnost = enums.Dostupnost.IZNAJMLJENA;
+                iznajmljivanje.primerak.izdanjeKnjige.citanost += 1;
+                _izdanjeKnjigeRepository.Update(iznajmljivanje.primerak.izdanjeKnjige);
                 _primerakRepository.Update(iznajmljivanje.primerak);
             }
             
