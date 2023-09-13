@@ -236,5 +236,39 @@
       "lokacija": "Adresa 2",
       "brTelefona": "12345"
     }
+  },
+  {
+    "inventarniBroj": "4999",
+    "nabavnaCena": 1500.0,
+    "dostupnost": 0,
+    "datumRaspolaganja": null,
+    "izdanjeKnjige": {
+      "isbn": "978-86-521-3239-3",
+      "udk": "12345",
+      "jezik": "srpski",
+      "godinaIzdanja": "2019",
+      "format": "13.5x20.5 cm",
+      "vrstaKoricenja": 0,
+      "citanost": 57,
+      "knjiga": {
+        "nazivKnjige": "Zlocin i kazna",
+        "opis": "Jedan od najznacajnijih romana svetske knjizevnosti.",
+        "autor": {
+          "ime": "Fjodor",
+          "prezime": "Dostojevski",
+          "drzava": "Rusija"
+        }
+      },
+      "izdavac": {
+        "naziv": "Laguna",
+        "drzava": "Srbija"
+      }
+    },
+    "ogranak": {
+      "id": 1,
+      "naziv": "ogranakA",
+      "lokacija": "Adresa 1",
+      "brTelefona": "1234567890"
+    }
   }
 ]
