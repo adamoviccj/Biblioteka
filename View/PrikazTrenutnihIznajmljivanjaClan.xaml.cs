@@ -72,7 +72,7 @@ namespace SIMS_Projekat.View
             {
 
             }
-            Refresh(_iznajmljivanjeRepository.GetAllIznajmljivanjaForClan(LogIn.LoggedUser.jmbg));
+            Refresh(_iznajmljivanjeRepository.GetAllTrenutnaIznajmljivanjaForClan(LogIn.LoggedUser.jmbg));
         }
 
 

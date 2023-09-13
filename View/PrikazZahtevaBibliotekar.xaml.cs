@@ -57,7 +57,15 @@ namespace SIMS_Projekat.View
                 MessageBox.Show("Morate odabrati red u tabeli!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            
             Iznajmljivanje iznajmljivanje = _iznajmljivanjeRepository.GetById(SelectedZahtev.Iznajmljivanje.id);
+            if (iznajmljivanje.brojZahtevaZaProduzavanje > 1)
+            {
+                MessageBox.Show("Ne mozete produziti rok za vracanje vise puta!", "Greska!", MessageBoxButton.OK, MessageBoxImage.Error);
+                SelectedZahtev.StanjeZahteva = enums.StanjeZahteva.ODBIJEN;
+                _zahtevZaProduzavanjeRepository.Update(SelectedZahtev);
+                return;
+            }
 
             iznajmljivanje.rokVracanja = iznajmljivanje.rokVracanja.AddDays(_clanskaKartaRepository.GetMaxDanaByTipClanstva(SelectedZahtev.Clan.brClanskeKarte));
             _iznajmljivanjeRepository.Update(iznajmljivanje);
