@@ -139,6 +139,19 @@ namespace SIMS_Projekat.Repository
         public List<Iznajmljivanje> GetProslaIznajmljivanjaClana(string jmbg)
         {
             return GetAllIznajmljivanjaForClan(jmbg).Where(iznajmljivanje => iznajmljivanje.datumVracanja != null).ToList();
-        } 
+        }
+        
+        public List<Iznajmljivanje> GetIznajmljivanjaIstekaoRokForClan(string jmbg)
+        {
+            List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAllIznajmljivanjaForClan(jmbg))
+            {
+                if (iznajmljivanje.datumVracanja == null && iznajmljivanje.rokVracanja < DateTime.Now)
+                {
+                    iznajmljivanja.Add(iznajmljivanje);
+                }
+            }
+            return iznajmljivanja;
+        }
     }
 }

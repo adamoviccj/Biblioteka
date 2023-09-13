@@ -22,14 +22,16 @@ namespace SIMS_Projekat.View
     public partial class ClanProfil : Window
     {
         private RezervacijaRepository _rezervacijaRepository { get; set; }
+        private IznajmljivanjeRepository _iznajmljivanjeRepository { get; set; }
         public ClanProfil()
         {
             InitializeComponent();
             this.DataContext = this;
             var app = Application.Current as App;
             _rezervacijaRepository = app._rezervacijaRepository;
+            _iznajmljivanjeRepository = app.IznajmljivanjeRepository;
             ProveriRezervacije();
-            
+            ProveriIstekaoRokVracanja();
         }
 
         public void ProveriRezervacije()
@@ -40,6 +42,18 @@ namespace SIMS_Projekat.View
                 foreach (Rezervacija rezervacija in rezervacije)
                 {
                     MessageBox.Show("Primerak knjige " + rezervacija.IzdanjeKnjige.knjiga.nazivKnjige + " je slobodan i mozete ga preuzeti u naredna dva dana.", "Obavestenje", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+        }
+
+        public void ProveriIstekaoRokVracanja()
+        {
+            List<Iznajmljivanje> iznajmljivanja = _iznajmljivanjeRepository.GetIznajmljivanjaIstekaoRokForClan(LogIn.LoggedUser.jmbg);
+            if (iznajmljivanja.Count > 0)
+            {
+                foreach(Iznajmljivanje iznajmljivanje in iznajmljivanja)
+                {
+                    MessageBox.Show("Rok za vracanje knjige " + iznajmljivanje.primerak.izdanjeKnjige.knjiga.nazivKnjige + " je istekao " + iznajmljivanje.rokVracanja + "! Molimo Vas da vratite knjigu!", "Upozorenje!", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
         }
