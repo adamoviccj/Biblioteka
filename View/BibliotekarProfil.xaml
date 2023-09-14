@@ -75,6 +75,7 @@
             <Button Content="Prikaz zahteva za produzavanje" Click="ShowZahteve_Click" Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0"/>
             <Button Content="Vracanje knjige"  Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0" Click="Button_Click"/>
             <Button Content="Izvestaj o citanosti"  Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0" Click="ShowIzvestajCitanostBtn_Click"/>
+            <Button Content="Najaktivniji clanovi"  Background="AntiqueWhite" FontWeight="Bold" FontSize="14" Margin="10,0" Click="ShowNajaktivnijeBtn_Click"/>
         </StackPanel>
     </Grid>
 

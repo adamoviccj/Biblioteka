@@ -204,5 +204,11 @@ namespace SIMS_Projekat.View
                 IzvestajSmene izvestajSmene = new IzvestajSmene();
                 izvestajSmene.Show();
             }
+
+            private void ShowNajaktivnijeBtn_Click(object sender, RoutedEventArgs e)
+            {
+                NajaktivnijiClanovi najaktivnijiClanovi = new NajaktivnijiClanovi();
+                najaktivnijiClanovi.Show();
+            }
     }
     }

@@ -107,5 +107,18 @@ namespace SIMS_Projekat.Repository
             }
             return iznos;
         }
+
+        public List<ClanskaKarta> GetListaDanasnjeClanarine()
+        {
+            List<ClanskaKarta> danasnje = new List<ClanskaKarta>();
+            foreach (ClanskaKarta clanskaKarta in GetAllClanskeKarte())
+            {
+                if (clanskaKarta.datumPlacanja == DateTime.Today)
+                {
+                    danasnje.Add(clanskaKarta);
+                }
+            }
+            return danasnje;
+        }
     }
 }

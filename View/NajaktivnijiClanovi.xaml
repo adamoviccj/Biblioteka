@@ -1,0 +1,33 @@
+﻿<Window x:Class="SIMS_Projekat.View.NajaktivnijiClanovi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="NajaktivnijiClanovi" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="NAJAKTIVNIJI CLANOVI" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Grid Grid.Row="1" Background="#FFECEFF6">
+            <DataGrid x:Name="izvestajCitanostDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+                      RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
+                      HeadersVisibility="Column" SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Clan" Binding="{Binding Key}" />
+                    <DataGridTextColumn Header="Aktivnost" Binding="{Binding Value}" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>
