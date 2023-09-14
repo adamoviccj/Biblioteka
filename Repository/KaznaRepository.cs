@@ -51,5 +51,18 @@ namespace SIMS_Projekat.Repository
         {
             File.WriteAllText(FilePath, JsonConvert.SerializeObject(Kazne, Formatting.Indented));
         }
+
+        public double GetDanasnjeKazne()
+        {
+            double danasnjeKazne = 0;
+            foreach(Kazna kazna in Kazne)
+            {
+                if (kazna.datumUplate == DateTime.Today)
+                {
+                    danasnjeKazne += kazna.iznos;
+                }
+            }
+            return danasnjeKazne;
+        }
     }
 }

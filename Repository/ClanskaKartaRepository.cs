@@ -78,5 +78,34 @@ namespace SIMS_Projekat.Repository
             }
             return 8;
         }
+
+        public double GetIznosClanarine(string brClanskeKarte)
+        {
+            ClanskaKarta clanskaKarta = GetClanskaKartaByBr(brClanskeKarte);
+            if (clanskaKarta.clanstvo == TipClanstva.DECA)
+            {
+                return 300;
+            } else if(clanskaKarta.clanstvo == TipClanstva.ODRASLI)
+            {
+                return 1000;
+            } else if (clanskaKarta.clanstvo == TipClanstva.PENZIONERI)
+            {
+                return 500;
+            }
+            return 600;
+        }
+
+        public double GetDanasnjeClanarine()
+        {
+            double iznos = 0;
+            foreach(ClanskaKarta clanskaKarta in GetAllClanskeKarte())
+            {
+                if(clanskaKarta.datumPlacanja == DateTime.Today)
+                {
+                    iznos += GetIznosClanarine(clanskaKarta.brClanskeKarte);
+                }
+            }
+            return iznos;
+        }
     }
 }

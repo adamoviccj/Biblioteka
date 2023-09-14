@@ -128,6 +128,9 @@
     <Compile Include="View\IzvestajCitanost.xaml.cs">
       <DependentUpon>IzvestajCitanost.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\IzvestajSmene.xaml.cs">
+      <DependentUpon>IzvestajSmene.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\KreiranjeRezervacijeBibliotekar.xaml.cs">
       <DependentUpon>KreiranjeRezervacijeBibliotekar.xaml</DependentUpon>
     </Compile>
@@ -224,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\IzvestajCitanost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\IzvestajSmene.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

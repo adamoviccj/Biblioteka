@@ -205,5 +205,31 @@ namespace SIMS_Projekat.Repository
             }
             return iznajmljivanja;
         }
+
+        public List<Iznajmljivanje> GetDanasnjaIznajmljivanja()
+        {
+            List<Iznajmljivanje> danasnja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if(iznajmljivanje.datumIznajmljivanja == DateTime.Today)
+                {
+                    danasnja.Add(iznajmljivanje);
+                }
+            }
+            return danasnja;
+        }
+
+        public List<Iznajmljivanje> GetDanasnjaVracanja()
+        {
+            List<Iznajmljivanje> danasnja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if(iznajmljivanje.datumVracanja == DateTime.Today)
+                {
+                    danasnja.Add(iznajmljivanje);
+                }
+            }
+            return danasnja;
+        }
     }
 }

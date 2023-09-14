@@ -20,7 +20,7 @@ namespace SIMS_Projekat.Model
         public TipClanstva clanstvo { get; set; }
 
         [JsonProperty("datum placanja")]
-        private DateTime datumPlacanja { get; set; }
+        public DateTime datumPlacanja { get; set; }
 
         public ClanskaKarta() { }
 

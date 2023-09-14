@@ -1,0 +1,33 @@
+﻿<Window x:Class="SIMS_Projekat.View.IzvestajSmene"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SIMS_Projekat.View"
+        mc:Ignorable="d"
+        Title="IzvestajSmene" Height="450" Width="800">
+    <Grid Background="#FFF1D9E6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="619*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="IZVESTAJ SMENE" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
+        </Grid>
+        <Label Content="Naplacene clanarine:" HorizontalAlignment="Left" Margin="66,26,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="233,31,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding IznosClanarine}" VerticalAlignment="Top" IsEnabled="False"/>
+        <Label Content="Naplacene kazne:" HorizontalAlignment="Left" Margin="66,80,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="233,85,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding IznosKazne}" VerticalAlignment="Top" IsEnabled="False" />
+        <Label Content="Iznajmljivanja:" HorizontalAlignment="Left" Margin="66,120,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="233,130,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding DanasnjaIznajmljivanja}" VerticalAlignment="Top" IsEnabled="False" />
+        <Label Content="Vracanja:" HorizontalAlignment="Left" Margin="66,200,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="233,205,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding DanasnjaVracanja}" VerticalAlignment="Top" IsEnabled="False" />
+
+
+    </Grid>
+</Window>

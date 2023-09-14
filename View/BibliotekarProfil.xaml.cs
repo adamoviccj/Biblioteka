@@ -198,5 +198,11 @@ namespace SIMS_Projekat.View
                 IzvestajCitanost izvestaj = new IzvestajCitanost();
                 izvestaj.Show();
             }
+
+            private void ShowIzvestajSmeneBtn_Click(object sender, RoutedEventArgs e)
+            {
+                IzvestajSmene izvestajSmene = new IzvestajSmene();
+                izvestajSmene.Show();
+            }
     }
     }
