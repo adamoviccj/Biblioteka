@@ -20,28 +20,18 @@
             <TextBlock Text="IZVESTAJ O CITANOSTI" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Foreground="Black" Grid.Column="1" Margin="120,0,0,0"/>
         </Grid>
         <Grid Grid.Row="1" Background="#FFECEFF6">
-            <DataGrid x:Name="istorijaIznajmljivanjaDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
+            <DataGrid x:Name="izvestajCitanostDataGrid" Grid.Column="0" Grid.ColumnSpan="7" AutoGenerateColumns="False" Background="#FFF1D9E6"
                       RowBackground="White" Foreground="Black" AlternatingRowBackground="Silver" BorderBrush="Transparent"
-                      HeadersVisibility="Column" ItemsSource="{Binding Izdanja}" SelectionMode="Single" SelectedItem="{Binding SelectedIzdanje}">
-                <DataGrid.Resources>
-                    <SolidColorBrush x:Key="ColumnHeaderBackground" Color="#FFF1D9E6"/>
-                </DataGrid.Resources>
+                      HeadersVisibility="Column" SelectionMode="Single" SelectedItem="{Binding SelectedIzdanje}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ISBN" Binding="{Binding isbn}"/>
-                    <DataGridTextColumn Header="UDK" Binding="{Binding udk}"/>
-                    <DataGridTextColumn Header="Citanost" Binding="{Binding citanost}"/>
-                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding knjiga.nazivKnjige}"/>
-                    <DataGridTextColumn Header="Ime autora" Binding="{Binding knjiga.autor.ime}"/>
-                    <DataGridTextColumn Header="Prezime autora" Binding="{Binding knjiga.autor.prezime}"/>
-                    <DataGridTextColumn Header="Izdavac" Binding="{Binding izdavac}"/>
-                    <DataGridTextColumn Header="Godina izdanja" Binding="{Binding godinaIzdanja}"/>
-                    <DataGridTextColumn Header="Jezik" Binding="{Binding jezik}"/>
-                    <DataGridTextColumn Header="Format" Binding="{Binding format}"/>
-                    <DataGridTextColumn Header="Vrsta koricenja" Binding="{Binding vrstaKoricenja}"/>
+                    <DataGridTextColumn Header="Naziv knjige" Binding="{Binding Key}" />
+                    <DataGridTextColumn Header="Citanost" Binding="{Binding Value}" />
                 </DataGrid.Columns>
-
-
             </DataGrid>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,50" Background="#FFF1D9E6">
+                <Label Content="Period:" Height="30" Width="100"/>
+                <ComboBox x:Name="periodCombo" SelectedItem="{Binding period}" Height="30" Width="120" Margin="0,0,50,0"/>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

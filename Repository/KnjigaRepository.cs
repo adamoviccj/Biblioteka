@@ -72,6 +72,8 @@ namespace SIMS_Projekat.Repository
         {
             return GetAllKnjige().OrderBy(knjiga => knjiga.autor.prezime).ToList();
         }
+
+        
              
     }
 }

@@ -153,5 +153,57 @@ namespace SIMS_Projekat.Repository
             }
             return iznajmljivanja;
         }
+
+        public List<Iznajmljivanje> GetAllIznajmljivanjaNedelja(string naziv)
+        {
+            List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if(iznajmljivanje.primerak.izdanjeKnjige.knjiga.nazivKnjige == naziv && iznajmljivanje.datumIznajmljivanja >= DateTime.Now.AddDays(-7))
+                {
+                    iznajmljivanja.Add(iznajmljivanje);
+                }
+            }
+            return iznajmljivanja;
+        }
+
+        public List<Iznajmljivanje> GetAllIznajmljivanjaDan(string naziv)
+        {
+            List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if(iznajmljivanje.primerak.izdanjeKnjige.knjiga.nazivKnjige == naziv && iznajmljivanje.datumIznajmljivanja == DateTime.Now.AddDays(-1))
+                {
+                    iznajmljivanja.Add(iznajmljivanje);
+                }
+            }
+            return iznajmljivanja;
+        }
+
+        public List<Iznajmljivanje> GetAllIznajmljivanjaMesec(string naziv)
+        {
+            List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if(iznajmljivanje.primerak.izdanjeKnjige.knjiga.nazivKnjige == naziv && iznajmljivanje.datumIznajmljivanja >= DateTime.Now.AddDays(-30))
+                {
+                    iznajmljivanja.Add(iznajmljivanje);
+                }
+            }
+            return iznajmljivanja;
+        }
+
+        public List<Iznajmljivanje> GetAllIznajmljivanjaGodina(string naziv)
+        {
+            List<Iznajmljivanje> iznajmljivanja = new List<Iznajmljivanje>();
+            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            {
+                if(iznajmljivanje.primerak.izdanjeKnjige.knjiga.nazivKnjige == naziv && iznajmljivanje.datumIznajmljivanja >= DateTime.Now.AddDays(-365))
+                {
+                    iznajmljivanja.Add(iznajmljivanje);
+                }
+            }
+            return iznajmljivanja;
+        }
     }
 }
