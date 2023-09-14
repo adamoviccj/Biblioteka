@@ -27,5 +27,35 @@
     "ime": "Lav",
     "prezime": "Tolstoj",
     "drzava": "Rusija"
+  },
+  {
+    "ime": "Miguel de",
+    "prezime": "Servantes",
+    "drzava": "Španija"
+  },
+  {
+    "ime": "Harper",
+    "prezime": "Li",
+    "drzava": "SAD"
+  },
+  {
+    "ime": "Džordž",
+    "prezime": "Orvel",
+    "drzava": "UK"
+  },
+  {
+    "ime": "Čarls",
+    "prezime": "Dikens",
+    "drzava": "UK"
+  },
+  {
+    "ime": "H.G.",
+    "prezime": "Vels",
+    "drzava": "UK"
+  },
+  {
+    "ime": "Antoan de",
+    "prezime": "Sent Egziperi",
+    "drzava": "Francuska"
   }
 ]

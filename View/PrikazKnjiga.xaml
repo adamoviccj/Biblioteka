@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SIMS_Projekat.View"
         mc:Ignorable="d"
-        Title="Pregled knjiga" Height="450" Width="800" Icon="/SIMS_Projekat;component/Data/lib.png">
+        Title="Pregled knjiga" Height="650" Width="800" Icon="/SIMS_Projekat;component/Data/lib.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid Background="#FFF1D9E6" VerticalAlignment="Center" Margin="0,20,0,0">

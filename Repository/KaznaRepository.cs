@@ -55,9 +55,10 @@ namespace SIMS_Projekat.Repository
         public double GetDanasnjeKazne()
         {
             double danasnjeKazne = 0;
-            foreach(Kazna kazna in Kazne)
+            DateTime today = DateTime.Today.Date;
+            foreach (Kazna kazna in Kazne)
             {
-                if (kazna.datumUplate == DateTime.Today)
+                if (kazna.datumUplate.HasValue && kazna.datumUplate.Value.Date == today)
                 {
                     danasnjeKazne += kazna.iznos;
                 }

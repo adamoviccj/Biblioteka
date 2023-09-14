@@ -50,7 +50,7 @@
   {
     "id": 2,
     "datumIznajmljivanja": "2023-08-26T00:04:04.195646+02:00",
-    "datumVracanja": null,
+    "datumVracanja": "2023-09-14T12:21:23.8465482+02:00",
     "rokVracanja": "2023-08-30T00:00:00",
     "brojZahtevaZaProduzavanje": 2,
     "clan": {
@@ -642,5 +642,112 @@
         "brTelefona": "12345"
       }
     }
+  },
+  {
+    "id": 14,
+    "datumIznajmljivanja": "2023-09-14T11:53:58.1983601+02:00",
+    "datumVracanja": null,
+    "rokVracanja": "2023-09-28T11:53:58.1983601+02:00",
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20234",
+      "email": "vasilijeAtomic@gmail.com",
+      "ime": "vasilije",
+      "prezime": "tomic",
+      "jmbg": "1508002772334",
+      "telefon": "0697184465",
+      "korisnicki nalog": {
+        "username": "2vasilijetom",
+        "password": "vasilije123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "85",
+      "nabavnaCena": 756.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-07-25T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-86-521-4746-5",
+        "udk": "53",
+        "jezik": "srpski",
+        "godinaIzdanja": "2013",
+        "format": "13x20cm",
+        "vrstaKoricenja": 0,
+        "citanost": 91,
+        "knjiga": {
+          "nazivKnjige": "Alhemicar",
+          "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
+          "autor": {
+            "ime": "Paulo",
+            "prezime": "Koeljo",
+            "drzava": "Brazil"
+          }
+        },
+        "izdavac": {
+          "naziv": "Laguna",
+          "drzava": "Srbija"
+        }
+      },
+      "ogranak": {
+        "id": 2,
+        "naziv": "ogranakB",
+        "lokacija": "Adresa 2",
+        "brTelefona": "12345"
+      }
+    }
+  },
+  {
+    "id": 15,
+    "datumIznajmljivanja": "2023-04-15T09:18:30.4525365+02:00",
+    "datumVracanja": "2023-04-20",
+    "rokVracanja": "2023-04-22T09:18:30.4525365+02:00",
+    "brojZahtevaZaProduzavanje": 0,
+    "clan": {
+      "broj clanske karte": "20235",
+      "email": "marina.k@gmail.com",
+      "ime": "marija",
+      "prezime": "markovic",
+      "jmbg": "0806999123456",
+      "telefon": "0657890123",
+      "korisnicki nalog": {
+        "username": "marijam",
+        "password": "marija123"
+      }
+    },
+    "primerak": {
+      "inventarniBroj": "87",
+      "nabavnaCena": 890.0,
+      "dostupnost": 1,
+      "datumRaspolaganja": "2023-09-05T00:00:00",
+      "izdanjeKnjige": {
+        "isbn": "978-1-234-56789-0",
+        "udk": "98765",
+        "jezik": "engleski",
+        "godinaIzdanja": "2018",
+        "format": "14.5x22 cm",
+        "vrstaKoricenja": 0,
+        "citanost": 80,
+        "knjiga": {
+          "nazivKnjige": "Ubiti pticu rugalicu",
+          "opis": "Klasik američke književnosti o rasizmu i pravdi.",
+          "autor": {
+            "ime": "Harper",
+            "prezime": "Li",
+            "drzava": "SAD"
+          }
+        },
+        "izdavac": {
+          "naziv": "HarperCollins",
+          "drzava": "SAD"
+        }
+      },
+      "ogranak": {
+        "id": 2,
+        "naziv": "ogranakB",
+        "lokacija": "Adresa 2",
+        "brTelefona": "56789"
+      }
+    }
   }
+
 ]

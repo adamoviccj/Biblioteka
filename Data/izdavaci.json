@@ -17,6 +17,30 @@
   },
   {
     "naziv": "Hachette",
-    "drzava":  "SAD"
+    "drzava": "SAD"
+  },
+  {
+    "naziv": "Penguin Books",
+    "drzava": "UK"
+  },
+  {
+    "naziv": "Sudamericana",
+    "drzava": "Kolumbija"
+  },
+  {
+    "naziv": "HarperCollins",
+    "drzava": "SAD"
+  },
+  {
+    "naziv": "Editorial Planeta",
+    "drzava": "Španija"
+  },
+  {
+    "naziv": "Bloomsbury",
+    "drzava": "UK"
+  },
+  {
+    "naziv": "Gallimard",
+    "drzava": "Francuska"
   }
 ]

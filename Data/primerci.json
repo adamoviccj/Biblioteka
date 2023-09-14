@@ -9,7 +9,7 @@
       "udk": "53",
       "jezik": "srpski",
       "godinaIzdanja": "2013",
-      "format": "978-86-521-4746-5",
+      "format": "13x20cm",
       "vrstaKoricenja": 0,
       "citanost": 90,
       "knjiga": {
@@ -36,8 +36,8 @@
   {
     "inventarniBroj": "1771",
     "nabavnaCena": 713.0,
-    "dostupnost": 1,
-    "datumRaspolaganja": "2023-07-15T00:00:00",
+    "dostupnost": 0,
+    "datumRaspolaganja": "2023-09-14T12:21:25.085609+02:00",
     "izdanjeKnjige": {
       "isbn": "978-86-521-3239-3",
       "udk": "12345",
@@ -70,14 +70,14 @@
   {
     "inventarniBroj": "1535",
     "nabavnaCena": 2336.0,
-    "dostupnost": 1,
+    "dostupnost": 0,
     "datumRaspolaganja": "2023-01-01T00:00:00",
     "izdanjeKnjige": {
       "isbn": "978-86-521-4746-5",
       "udk": "53",
       "jezik": "srpski",
       "godinaIzdanja": "2013",
-      "format": "978-86-521-4746-5",
+      "format": "13x20cm",
       "vrstaKoricenja": 0,
       "citanost": 90,
       "knjiga": {
@@ -111,7 +111,7 @@
       "udk": "53",
       "jezik": "srpski",
       "godinaIzdanja": "2013",
-      "format": "978-86-521-4746-5",
+      "format": "13x20cm",
       "vrstaKoricenja": 0,
       "citanost": 90,
       "knjiga": {
@@ -138,14 +138,14 @@
   {
     "inventarniBroj": "154",
     "nabavnaCena": 2336.0,
-    "dostupnost": 1,
+    "dostupnost": 0,
     "datumRaspolaganja": "2023-01-01T00:00:00",
     "izdanjeKnjige": {
       "isbn": "978-86-521-4746-5",
       "udk": "53",
       "jezik": "srpski",
       "godinaIzdanja": "2013",
-      "format": "978-86-521-4746-5",
+      "format": "13x20cm",
       "vrstaKoricenja": 0,
       "citanost": 90,
       "knjiga": {
@@ -172,7 +172,7 @@
   {
     "inventarniBroj": "1234",
     "nabavnaCena": 1500.0,
-    "dostupnost": 2,
+    "dostupnost": 0,
     "datumRaspolaganja": "2023-09-12T18:02:05.3212183+02:00",
     "izdanjeKnjige": {
       "isbn": "978-86-521-3555-4",
@@ -240,7 +240,7 @@
   {
     "inventarniBroj": "4999",
     "nabavnaCena": 1500.0,
-    "dostupnost": 0,
+    "dostupnost": 1,
     "datumRaspolaganja": null,
     "izdanjeKnjige": {
       "isbn": "978-86-521-3239-3",
@@ -269,6 +269,142 @@
       "naziv": "ogranakA",
       "lokacija": "Adresa 1",
       "brTelefona": "1234567890"
+    }
+  },
+  {
+    "inventarniBroj": "86",
+    "nabavnaCena": 680.0,
+    "dostupnost": 0,
+    "datumRaspolaganja": "2023-08-15T00:00:00",
+    "izdanjeKnjige": {
+      "isbn": "978-83-413-2287-6",
+      "udk": "76501",
+      "jezik": "srpski",
+      "godinaIzdanja": "2017",
+      "format": "20x40cm",
+      "vrstaKoricenja": 0,
+      "citanost": 10,
+      "knjiga": {
+        "nazivKnjige": "Na Drini cuprija",
+        "opis": "Najpoznatiji roman Ive Andrica.",
+        "autor": {
+          "ime": "Ivo",
+          "prezime": "Andric",
+          "drzava": "Srbija"
+        }
+      },
+      "izdavac": {
+        "naziv": "Vulkan",
+        "drzava": "Srbija"
+      }
+    },
+    "ogranak": {
+      "id": 1,
+      "naziv": "ogranakA",
+      "lokacija": "Adresa 1",
+      "brTelefona": "67890"
+    }
+  },
+  {
+    "inventarniBroj": "87",
+    "nabavnaCena": 890.0,
+    "dostupnost": 1,
+    "datumRaspolaganja": "2023-09-05T00:00:00",
+    "izdanjeKnjige": {
+      "isbn": "978-1-234-56789-0",
+      "udk": "98765",
+      "jezik": "engleski",
+      "godinaIzdanja": "2018",
+      "format": "14.5x22 cm",
+      "vrstaKoricenja": 0,
+      "citanost": 80,
+      "knjiga": {
+        "nazivKnjige": "Ubiti pticu rugalicu",
+        "opis": "Klasik američke književnosti o rasizmu i pravdi.",
+        "autor": {
+          "ime": "Harper",
+          "prezime": "Li",
+          "drzava": "SAD"
+        }
+      },
+      "izdavac": {
+        "naziv": "HarperCollins",
+        "drzava": "SAD"
+      }
+    },
+    "ogranak": {
+      "id": 2,
+      "naziv": "ogranakB",
+      "lokacija": "Adresa 2",
+      "brTelefona": "56789"
+    }
+  },
+  {
+    "inventarniBroj": "88",
+    "nabavnaCena": 450.0,
+    "dostupnost": 0,
+    "datumRaspolaganja": "2023-09-10T00:00:00",
+    "izdanjeKnjige": {
+      "isbn": "978-84-123-4567-0",
+      "udk": "87654",
+      "jezik": "španski",
+      "godinaIzdanja": "2019",
+      "format": "14x21 cm",
+      "vrstaKoricenja": 1,
+      "citanost": 70,
+      "knjiga": {
+        "nazivKnjige": "Sto godina samoce",
+        "opis": "Jedna od najzanimljivijih knjizevnih avantura naseg veka.",
+        "autor": {
+          "ime": "Gabrijel",
+          "prezime": "Garsija Markez",
+          "drzava": "Kolumbija"
+        }
+      },
+      "izdavac": {
+        "naziv": "Sudamericana",
+        "drzava": "Kolumbija"
+      }
+    },
+    "ogranak": {
+      "id": 3,
+      "naziv": "ogranakC",
+      "lokacija": "Adresa 3",
+      "brTelefona": "23456"
+    }
+  },
+  {
+    "inventarniBroj": "89",
+    "nabavnaCena": 720.0,
+    "dostupnost": 1,
+    "datumRaspolaganja": "2023-09-10T00:00:00",
+    "izdanjeKnjige": {
+      "isbn": "978-1-234-56789-1",
+      "udk": "45678",
+      "jezik": "engleski",
+      "godinaIzdanja": "2023",
+      "format": "16x24 cm",
+      "vrstaKoricenja": 1,
+      "citanost": 45,
+      "knjiga": {
+        "nazivKnjige": "1984",
+        "opis": "Distopijski roman o totalitarnom društvu.",
+        "autor": {
+          "ime": "Džordž",
+          "prezime": "Orvel",
+          "drzava": "UK"
+        }
+      },
+      "izdavac": {
+        "naziv": "Penguin Books",
+        "drzava": "UK"
+      }
+    },
+    "ogranak": {
+      "id": 1,
+      "naziv": "ogranakA",
+      "lokacija": "Adresa 1",
+      "brTelefona": "34567"
     }
   }
 ]

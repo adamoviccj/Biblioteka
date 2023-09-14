@@ -1,4 +1,4 @@
-[ 
+[
   {
     "broj clanske karte": "20231",
     "clanstvo": 1,
@@ -43,5 +43,31 @@
     "broj clanske karte": "610",
     "clanstvo": 3,
     "datum placanja": "2023-08-26T16:54:23.0638329+02:00"
+  },
+  {
+    "broj clanske karte": "20235",
+    "clanstvo": 1,
+    "datum placanja": "2023-09-10T00:00:00"
+  },
+  {
+    "broj clanske karte": "20236",
+    "clanstvo": 1,
+    "datum placanja": "2023-09-12T00:00:00"
+  },
+  {
+    "broj clanske karte": "20237",
+    "clanstvo": 1,
+    "datum placanja": "2023-09-14T00:00:00"
+  },
+  {
+    "broj clanske karte": "20238",
+    "clanstvo": 1,
+    "datum placanja": "2023-09-14T00:00:00"
+  },
+  {
+    "broj clanske karte": "20239",
+    "clanstvo": 3,
+    "datum placanja": "2023-09-14T13:37:45.2252452+02:00"
   }
+
 ]

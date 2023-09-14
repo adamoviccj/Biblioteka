@@ -209,9 +209,10 @@ namespace SIMS_Projekat.Repository
         public List<Iznajmljivanje> GetDanasnjaIznajmljivanja()
         {
             List<Iznajmljivanje> danasnja = new List<Iznajmljivanje>();
-            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            DateTime today = DateTime.Today.Date;
+            foreach (Iznajmljivanje iznajmljivanje in GetAll())
             {
-                if(iznajmljivanje.datumIznajmljivanja == DateTime.Today)
+                if (iznajmljivanje.datumIznajmljivanja.Date == today)
                 {
                     danasnja.Add(iznajmljivanje);
                 }
@@ -222,14 +223,16 @@ namespace SIMS_Projekat.Repository
         public List<Iznajmljivanje> GetDanasnjaVracanja()
         {
             List<Iznajmljivanje> danasnja = new List<Iznajmljivanje>();
-            foreach(Iznajmljivanje iznajmljivanje in GetAll())
+            DateTime today = DateTime.Today.Date;
+            foreach (Iznajmljivanje iznajmljivanje in GetAll())
             {
-                if(iznajmljivanje.datumVracanja == DateTime.Today)
+                if (iznajmljivanje.datumVracanja.HasValue && iznajmljivanje.datumVracanja.Value.Date == today)
                 {
                     danasnja.Add(iznajmljivanje);
                 }
             }
             return danasnja;
         }
+
     }
 }

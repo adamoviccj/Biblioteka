@@ -106,5 +106,66 @@
       "username": "jovan",
       "password": "jovan123"
     }
+  },
+  {
+    "broj clanske karte": "20235",
+    "email": "marijam@gmail.com",
+    "ime": "marija",
+    "prezime": "markovic",
+    "jmbg": "0806999123456",
+    "telefon": "0657890123",
+    "korisnicki nalog": {
+      "username": "marijam",
+      "password": "marija123"
+    }
+  },
+  {
+    "broj clanske karte": "20236",
+    "email": "milosr@gmail.com",
+    "ime": "milos",
+    "prezime": "radic",
+    "jmbg": "1903999222333",
+    "telefon": "0645129077",
+    "korisnicki nalog": {
+      "username": "milosr",
+      "password": "milos123"
+    }
+  },
+  {
+    "broj clanske karte": "20237",
+    "email": "tamara@gmail.com",
+    "ime": "tamara",
+    "prezime": "petrovic",
+    "jmbg": "2705999333444",
+    "telefon": "0638449111",
+    "korisnicki nalog": {
+      "username": "tamarap",
+      "password": "tamara123"
+    }
+  },
+  {
+    "broj clanske karte": "20238",
+    "email": "stefans@gmail.com",
+    "ime": "stefan",
+    "prezime": "simonovic",
+    "jmbg": "1001999444555",
+    "telefon": "0697184466",
+    "korisnicki nalog": {
+      "username": "stefans",
+      "password": "stefan123"
+    }
+  },
+  {
+    "broj clanske karte": "20239",
+    "email": "jelenaj@gmail.com",
+    "ime": "jelena",
+    "prezime": "jovanovic",
+    "jmbg": "1502999555666",
+    "telefon": "0665129077",
+    "korisnicki nalog": {
+      "username": "jelenaj",
+      "password": "jelena123"
+    }
   }
+
 ]

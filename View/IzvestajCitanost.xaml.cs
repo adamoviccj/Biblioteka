@@ -78,7 +78,8 @@ namespace SIMS_Projekat.View
                     keyValuePairs[izdanje.knjiga.nazivKnjige] = brojCitanja;
 
                 }
-            } else if (period == "nedelja")
+            }
+            else if (period == "nedelja")
             {
                 foreach (IzdanjeKnjige izdanje in izdanja)
                 {
@@ -86,7 +87,8 @@ namespace SIMS_Projekat.View
                     keyValuePairs[izdanje.knjiga.nazivKnjige] = brojCitanja;
 
                 }
-            } else if (period == "mesec")
+            }
+            else if (period == "mesec")
             {
                 foreach (IzdanjeKnjige izdanje in izdanja)
                 {
@@ -94,7 +96,8 @@ namespace SIMS_Projekat.View
                     keyValuePairs[izdanje.knjiga.nazivKnjige] = brojCitanja;
 
                 }
-            } else if (period == "godina")
+            }
+            else if (period == "godina")
             {
                 foreach (IzdanjeKnjige izdanje in izdanja)
                 {
@@ -104,7 +107,8 @@ namespace SIMS_Projekat.View
                 }
             }
 
-            List<KeyValuePair<string, int>> dataList = new List<KeyValuePair<string, int>>(keyValuePairs);
+            List<KeyValuePair<string, int>> dataList = new List<KeyValuePair<string, int>>(keyValuePairs).Take(10).ToList();
+            dataList = dataList.OrderByDescending(kvp => kvp.Value).ToList();
             izvestajCitanostDataGrid.ItemsSource = dataList;
 
 

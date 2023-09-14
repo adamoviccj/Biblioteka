@@ -52,5 +52,131 @@
       "prezime": "Tolstoj",
       "drzava": "Rusija"
     }
+  },
+  {
+    "nazivKnjige": "Gospodar prstenova: Prstenova druzina",
+    "opis": "Prva knjiga u serijalu Gospodar prstenova, epska fantastika.",
+    "autor": {
+      "ime": "J. R. R.",
+      "prezime": "Tolkien",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "Vlastelin prstenova: Dve kule",
+    "opis": "Druga knjiga u serijalu Gospodar prstenova, epska fantastika.",
+    "autor": {
+      "ime": "J. R. R.",
+      "prezime": "Tolkien",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "Vlastelin prstenova: Povratak kralja",
+    "opis": "Treća knjiga u serijalu Gospodar prstenova, epska fantastika.",
+    "autor": {
+      "ime": "J. R. R.",
+      "prezime": "Tolkien",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "1984",
+    "opis": "Distopijski roman o totalitarnom društvu.",
+    "autor": {
+      "ime": "Džordž",
+      "prezime": "Orvel",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "Lovac u žitu",
+    "opis": "Kultni roman o adolescenciji i traženju identiteta.",
+    "autor": {
+      "ime": "Džerom",
+      "prezime": "Selnđer",
+      "drzava": "SAD"
+    }
+  },
+  {
+    "nazivKnjige": "Rat i mir",
+    "opis": "Veliki roman o Napoleonovim ratovima.",
+    "autor": {
+      "ime": "Lav",
+      "prezime": "Tolstoj",
+      "drzava": "Rusija"
+    }
+  },
+  {
+    "nazivKnjige": "Krvna osveta",
+    "opis": "Triler roman o osveti i zavjeri.",
+    "autor": {
+      "ime": "Harlan",
+      "prezime": "Koben",
+      "drzava": "SAD"
+    }
+  },
+  {
+    "nazivKnjige": "Mali princ",
+    "opis": "Filozofski roman za djecu i odrasle.",
+    "autor": {
+      "ime": "Antoan de",
+      "prezime": "Sent Egziperi",
+      "drzava": "Francuska"
+    }
+  },
+  {
+    "nazivKnjige": "Ubiti pticu rugalicu",
+    "opis": "Klasik američke književnosti o rasizmu i pravdi.",
+    "autor": {
+      "ime": "Harper",
+      "prezime": "Li",
+      "drzava": "SAD"
+    }
+  },
+  {
+    "nazivKnjige": "Don Kihot",
+    "opis": "Romantična avantura o vitezu lutalici.",
+    "autor": {
+      "ime": "Miguel de",
+      "prezime": "Servantes",
+      "drzava": "Španija"
+    }
+  },
+  {
+    "nazivKnjige": "Oliver Tvist",
+    "opis": "Klasik engleske književnosti o siročetu i njegovim avanturama.",
+    "autor": {
+      "ime": "Čarls",
+      "prezime": "Dikens",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "Rat i mir",
+    "opis": "Veliki roman o Napoleonovim ratovima.",
+    "autor": {
+      "ime": "Lav",
+      "prezime": "Tolstoj",
+      "drzava": "Rusija"
+    }
+  },
+  {
+    "nazivKnjige": "Ljudi sa četiri prsta",
+    "opis": "Triler roman o tajanstvenim događajima u malom gradu.",
+    "autor": {
+      "ime": "J.K.",
+      "prezime": "Rouling",
+      "drzava": "UK"
+    }
+  },
+  {
+    "nazivKnjige": "Rat svetova",
+    "opis": "Naučnofantastični roman o invaziji vanzemaljaca na Zemlju.",
+    "autor": {
+      "ime": "H.G.",
+      "prezime": "Vels",
+      "drzava": "UK"
+    }
   }
 ]

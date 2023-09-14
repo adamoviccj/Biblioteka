@@ -1,6 +1,7 @@
 [
   {
     "id": "cfb0ab44-75a2-4718-995d-3ee106a8cf3a",
+    "iznos": 5000.0,
     "clan": {
       "broj clanske karte": "20231",
       "email": "markom@gmail.com",
@@ -14,11 +15,11 @@
       }
     },
     "datumUplate": "2023-09-12T14:12:32.8947782+02:00",
-    "iznos": 5000.0,
     "tipKazne": 1
   },
   {
     "id": "d0a3e9f1-a8b1-47c3-82a6-045285388996",
+    "iznos": 6000.0,
     "clan": {
       "broj clanske karte": "20231",
       "email": "markom@gmail.com",
@@ -31,12 +32,12 @@
         "password": "marko123"
       }
     },
-    "datumUplate": null,
-    "iznos": 6000.0,
+    "datumUplate": "2023-09-14T12:30:21.4437005+02:00",
     "tipKazne": 0
   },
   {
     "id": "c7cea9ce-6153-424c-924b-dd773c76d4fc",
+    "iznos": 7000.0,
     "clan": {
       "broj clanske karte": "20231",
       "email": "markom@gmail.com",
@@ -50,11 +51,11 @@
       }
     },
     "datumUplate": "2023-09-12T14:04:55.2430028+02:00",
-    "iznos": 7000.0,
     "tipKazne": 1
   },
   {
     "id": "ca847ac0-c7b3-4b9e-af25-cd8d3025d9ad",
+    "iznos": 713.0,
     "clan": {
       "broj clanske karte": "20232",
       "email": "anamilos@gmail.com",
@@ -68,7 +69,6 @@
       }
     },
     "datumUplate": "2023-08-29T14:45:29.1681263+02:00",
-    "iznos": 713.0,
     "tipKazne": 1
   }
 ]

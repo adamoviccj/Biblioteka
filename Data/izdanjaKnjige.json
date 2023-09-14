@@ -26,9 +26,9 @@
     "udk": "53",
     "jezik": "srpski",
     "godinaIzdanja": "2013",
-    "format": "978-86-521-4746-5",
+    "format": "13x20cm",
     "vrstaKoricenja": 0,
-    "citanost": 90,
+    "citanost": 91,
     "knjiga": {
       "nazivKnjige": "Alhemicar",
       "opis": "Zanosna, zivopisna i duboko ljudska, ova prica predstavlja vecni dokaz moci nasih snova da nas preobraze i svedoci o tome koliko je vazno slusati sopstveno srce.",
@@ -85,6 +85,160 @@
     "izdavac": {
       "naziv": "Vulkan",
       "drzava": "Srbija"
+    }
+  },
+  {
+    "isbn": "978-86-123-4567-8",
+    "udk": "54321",
+    "jezik": "engleski",
+    "godinaIzdanja": "2021",
+    "format": "14x21 cm",
+    "vrstaKoricenja": 1,
+    "citanost": 75,
+    "knjiga": {
+      "nazivKnjige": "Hari Poter i kamen mudrosti",
+      "opis": "Prva od sedam knjiga iz serijala o Hariju Poteru autorke J. K. Rouling.",
+      "autor": {
+        "ime": "J.K.",
+        "prezime": "Rouling",
+        "drzava": "UK"
+      }
+    },
+    "izdavac": {
+      "naziv": "Bloomsbury",
+      "drzava": "UK"
+    }
+  },
+  {
+    "isbn": "978-84-432-1234-5",
+    "udk": "43210",
+    "jezik": "španski",
+    "godinaIzdanja": "2020",
+    "format": "15x23 cm",
+    "vrstaKoricenja": 0,
+    "citanost": 65,
+    "knjiga": {
+      "nazivKnjige": "Don Kihot",
+      "opis": "Romantična avantura o vitezu lutalici.",
+      "autor": {
+        "ime": "Miguel de",
+        "prezime": "Servantes",
+        "drzava": "Španija"
+      }
+    },
+    "izdavac": {
+      "naziv": "Editorial Planeta",
+      "drzava": "Španija"
+    }
+  },
+  {
+    "isbn": "978-1-234-56789-0",
+    "udk": "98765",
+    "jezik": "engleski",
+    "godinaIzdanja": "2018",
+    "format": "14.5x22 cm",
+    "vrstaKoricenja": 0,
+    "citanost": 80,
+    "knjiga": {
+      "nazivKnjige": "Ubiti pticu rugalicu",
+      "opis": "Klasik američke književnosti o rasizmu i pravdi.",
+      "autor": {
+        "ime": "Harper",
+        "prezime": "Li",
+        "drzava": "SAD"
+      }
+    },
+    "izdavac": {
+      "naziv": "HarperCollins",
+      "drzava": "SAD"
+    }
+  },
+  {
+    "isbn": "978-84-123-4567-0",
+    "udk": "87654",
+    "jezik": "španski",
+    "godinaIzdanja": "2019",
+    "format": "14x21 cm",
+    "vrstaKoricenja": 1,
+    "citanost": 70,
+    "knjiga": {
+      "nazivKnjige": "Sto godina samoce",
+      "opis": "Jedna od najzanimljivijih knjizevnih avantura naseg veka.",
+      "autor": {
+        "ime": "Gabrijel",
+        "prezime": "Garsija Markez",
+        "drzava": "Kolumbija"
+      }
+    },
+    "izdavac": {
+      "naziv": "Sudamericana",
+      "drzava": "Kolumbija"
+    }
+  },
+  {
+    "isbn": "978-1-234-56789-1",
+    "udk": "45678",
+    "jezik": "engleski",
+    "godinaIzdanja": "2023",
+    "format": "16x24 cm",
+    "vrstaKoricenja": 1,
+    "citanost": 45,
+    "knjiga": {
+      "nazivKnjige": "1984",
+      "opis": "Distopijski roman o totalitarnom društvu.",
+      "autor": {
+        "ime": "Džordž",
+        "prezime": "Orvel",
+        "drzava": "UK"
+      }
+    },
+    "izdavac": {
+      "naziv": "Penguin Books",
+      "drzava": "UK"
+    }
+  },
+  {
+    "isbn": "978-1-234-56789-2",
+    "udk": "23456",
+    "jezik": "engleski",
+    "godinaIzdanja": "2021",
+    "format": "15x23 cm",
+    "vrstaKoricenja": 0,
+    "citanost": 60,
+    "knjiga": {
+      "nazivKnjige": "Rat svetova",
+      "opis": "Naučnofantastični roman o invaziji vanzemaljaca na Zemlju.",
+      "autor": {
+        "ime": "H.G.",
+        "prezime": "Vels",
+        "drzava": "UK"
+      }
+    },
+    "izdavac": {
+      "naziv": "Penguin Books",
+      "drzava": "UK"
+    }
+  },
+  {
+    "isbn": "978-1-234-56789-3",
+    "udk": "34567",
+    "jezik": "francuski",
+    "godinaIzdanja": "2020",
+    "format": "14x21 cm",
+    "vrstaKoricenja": 0,
+    "citanost": 70,
+    "knjiga": {
+      "nazivKnjige": "Mali princ",
+      "opis": "Filozofski roman za decu i odrasle.",
+      "autor": {
+        "ime": "Antoan de",
+        "prezime": "Sent Egziperi",
+        "drzava": "Francuska"
+      }
+    },
+    "izdavac": {
+      "naziv": "Gallimard",
+      "drzava": "Francuska"
     }
   }
 ]
